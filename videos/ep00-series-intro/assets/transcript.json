@@ -1,734 +1,734 @@
 [
   {
     "text": "What",
-    "start": 0.23,
-    "end": 0.34,
+    "start": 0.29,
+    "end": 0.33,
     "id": "w0"
   },
   {
     "text": "actually",
-    "start": 0.4,
-    "end": 1.01,
+    "start": 0.33,
+    "end": 0.87,
     "id": "w1"
   },
   {
     "text": "happens",
-    "start": 1.06,
-    "end": 1.63,
+    "start": 0.87,
+    "end": 1.37,
     "id": "w2"
   },
   {
     "text": "after",
-    "start": 1.63,
-    "end": 2.06,
+    "start": 1.38,
+    "end": 1.74,
     "id": "w3"
   },
   {
     "text": "you",
-    "start": 2.06,
-    "end": 2.32,
+    "start": 1.74,
+    "end": 1.95,
     "id": "w4"
   },
   {
     "text": "hit",
-    "start": 2.32,
-    "end": 2.58,
+    "start": 1.97,
+    "end": 2.18,
     "id": "w5"
   },
   {
     "text": "send?",
-    "start": 2.58,
-    "end": 3.16,
+    "start": 2.18,
+    "end": 3.14,
     "id": "w6"
   },
   {
     "text": "Hi,",
-    "start": 3.4,
-    "end": 3.57,
+    "start": 3.35,
+    "end": 3.56,
     "id": "w7"
   },
   {
     "text": "I'm",
-    "start": 3.69,
-    "end": 4.05,
+    "start": 3.56,
+    "end": 3.87,
     "id": "w8"
   },
   {
     "text": "Vinit,",
-    "start": 4.05,
-    "end": 4.84,
+    "start": 3.87,
+    "end": 4.51,
     "id": "w9"
   },
   {
     "text": "a",
-    "start": 4.98,
-    "end": 5.07,
+    "start": 4.62,
+    "end": 4.7,
     "id": "w10"
   },
   {
     "text": "senior",
-    "start": 5.07,
-    "end": 5.82,
+    "start": 4.7,
+    "end": 5.32,
     "id": "w11"
   },
   {
     "text": "AI",
-    "start": 5.84,
-    "end": 6,
+    "start": 5.33,
+    "end": 5.41,
     "id": "w12"
   },
   {
     "text": "architect.",
-    "start": 6.48,
-    "end": 7.41,
+    "start": 5.41,
+    "end": 6.82,
     "id": "w13"
   },
   {
     "text": "This",
-    "start": 7.7,
-    "end": 7.77,
+    "start": 6.82,
+    "end": 7.15,
     "id": "w14"
   },
   {
     "text": "series",
-    "start": 7.77,
-    "end": 8.24,
+    "start": 7.15,
+    "end": 7.57,
     "id": "w15"
   },
   {
     "text": "is",
-    "start": 8.24,
-    "end": 8.39,
+    "start": 7.58,
+    "end": 7.72,
     "id": "w16"
   },
   {
     "text": "all",
-    "start": 8.39,
-    "end": 8.59,
+    "start": 7.72,
+    "end": 7.88,
     "id": "w17"
   },
   {
     "text": "about",
-    "start": 8.69,
-    "end": 8.94,
+    "start": 7.96,
+    "end": 8.32,
     "id": "w18"
   },
   {
     "text": "AI",
-    "start": 9.04,
-    "end": 9.14,
+    "start": 8.32,
+    "end": 8.47,
     "id": "w19"
   },
   {
     "text": "inference,",
-    "start": 9.28,
-    "end": 10.08,
+    "start": 8.47,
+    "end": 9.29,
     "id": "w20"
   },
   {
     "text": "how",
-    "start": 10.08,
-    "end": 10.28,
+    "start": 9.29,
+    "end": 9.52,
     "id": "w21"
   },
   {
     "text": "models",
-    "start": 10.28,
-    "end": 10.75,
+    "start": 9.52,
+    "end": 9.97,
     "id": "w22"
   },
   {
     "text": "actually",
-    "start": 10.75,
-    "end": 11.03,
+    "start": 10.36,
+    "end": 10.57,
     "id": "w23"
   },
   {
     "text": "run.",
-    "start": 11.48,
-    "end": 11.8,
+    "start": 10.79,
+    "end": 11.08,
     "id": "w24"
   },
   {
     "text": "Let's",
-    "start": 12.02,
-    "end": 12.16,
+    "start": 11.35,
+    "end": 11.53,
     "id": "w25"
   },
   {
     "text": "follow",
-    "start": 12.2,
-    "end": 12.59,
+    "start": 11.53,
+    "end": 12.08,
     "id": "w26"
   },
   {
     "text": "one",
-    "start": 12.63,
-    "end": 12.81,
+    "start": 12.08,
+    "end": 12.34,
     "id": "w27"
   },
   {
     "text": "prompt.",
-    "start": 12.86,
-    "end": 13.64,
+    "start": 12.34,
+    "end": 13.3,
     "id": "w28"
   },
   {
     "text": "First",
-    "start": 13.87,
-    "end": 13.96,
+    "start": 13.65,
+    "end": 13.71,
     "id": "w29"
   },
   {
     "text": "stop,",
-    "start": 13.96,
-    "end": 14.29,
+    "start": 13.71,
+    "end": 14.17,
     "id": "w30"
   },
   {
     "text": "your",
-    "start": 14.41,
-    "end": 14.61,
+    "start": 14.17,
+    "end": 14.48,
     "id": "w31"
   },
   {
-    "text": "app,",
-    "start": 14.61,
-    "end": 14.93,
+    "text": "app.",
+    "start": 14.48,
+    "end": 14.96,
     "id": "w32"
   },
   {
-    "text": "what",
-    "start": 14.93,
-    "end": 15.13,
+    "text": "What",
+    "start": 14.96,
+    "end": 15.29,
     "id": "w33"
   },
   {
-    "text": "you're",
-    "start": 15.22,
-    "end": 15.57,
+    "text": "you",
+    "start": 15.29,
+    "end": 15.44,
     "id": "w34"
   },
   {
-    "text": "building",
-    "start": 15.57,
-    "end": 16.09,
+    "text": "are",
+    "start": 15.52,
+    "end": 15.59,
     "id": "w35"
   },
   {
-    "text": "shapes",
-    "start": 16.09,
-    "end": 16.46,
+    "text": "building",
+    "start": 15.66,
+    "end": 16.21,
     "id": "w36"
   },
   {
-    "text": "every",
-    "start": 16.46,
-    "end": 16.49,
+    "text": "shapes",
+    "start": 16.22,
+    "end": 16.63,
     "id": "w37"
   },
   {
-    "text": "choice",
-    "start": 16.96,
-    "end": 17.19,
+    "text": "every",
+    "start": 16.66,
+    "end": 16.99,
     "id": "w38"
   },
   {
-    "text": "after",
-    "start": 17.19,
-    "end": 17.21,
+    "text": "choice",
+    "start": 16.99,
+    "end": 17.23,
     "id": "w39"
   },
   {
-    "text": "it.",
-    "start": 17.66,
-    "end": 17.89,
+    "text": "after",
+    "start": 17.23,
+    "end": 17.43,
     "id": "w40"
   },
   {
-    "text": "Then",
-    "start": 18.16,
-    "end": 18.33,
+    "text": "it.",
+    "start": 17.76,
+    "end": 18.12,
     "id": "w41"
   },
   {
-    "text": "the",
-    "start": 18.46,
-    "end": 18.77,
+    "text": "Then",
+    "start": 18.12,
+    "end": 18.45,
     "id": "w42"
   },
   {
-    "text": "model.",
-    "start": 18.77,
-    "end": 19.76,
+    "text": "the",
+    "start": 18.45,
+    "end": 18.7,
     "id": "w43"
   },
   {
-    "text": "Tokens",
-    "start": 19.99,
-    "end": 20.1,
+    "text": "model.",
+    "start": 18.7,
+    "end": 19.37,
     "id": "w44"
   },
   {
-    "text": "flow",
-    "start": 20.16,
-    "end": 20.32,
+    "text": "Tokens",
+    "start": 19.71,
+    "end": 19.8,
     "id": "w45"
   },
   {
-    "text": "through",
-    "start": 20.32,
-    "end": 20.72,
+    "text": "flow",
+    "start": 19.8,
+    "end": 20.01,
     "id": "w46"
   },
   {
-    "text": "transformer",
-    "start": 20.72,
-    "end": 21.35,
+    "text": "through",
+    "start": 20.08,
+    "end": 20.57,
     "id": "w47"
   },
   {
-    "text": "blocks",
-    "start": 21.35,
-    "end": 21.69,
+    "text": "transformer",
+    "start": 20.57,
+    "end": 21.32,
     "id": "w48"
   },
   {
-    "text": "and",
-    "start": 21.69,
-    "end": 21.83,
+    "text": "blocks",
+    "start": 21.32,
+    "end": 21.64,
     "id": "w49"
   },
   {
-    "text": "attention,",
-    "start": 21.92,
-    "end": 22.42,
+    "text": "and",
+    "start": 21.72,
+    "end": 21.85,
     "id": "w50"
   },
   {
-    "text": "down",
-    "start": 22.42,
-    "end": 22.61,
+    "text": "attention.",
+    "start": 22.64,
+    "end": 22.94,
     "id": "w51"
   },
   {
-    "text": "to",
-    "start": 22.61,
-    "end": 23.08,
+    "text": "Down",
+    "start": 22.94,
+    "end": 23.105,
     "id": "w52"
   },
   {
-    "text": "the",
-    "start": 23.08,
-    "end": 23.12,
+    "text": "to",
+    "start": 23.105,
+    "end": 23.27,
     "id": "w53"
   },
   {
-    "text": "hardware,",
-    "start": 23.12,
-    "end": 23.79,
+    "text": "the",
+    "start": 23.27,
+    "end": 23.39,
     "id": "w54"
   },
   {
-    "text": "GPUs",
-    "start": 23.79,
-    "end": 24.01,
+    "text": "hardware.",
+    "start": 23.39,
+    "end": 23.94,
     "id": "w55"
   },
   {
-    "text": "like",
-    "start": 24.06,
-    "end": 24.24,
+    "text": "GPUs",
+    "start": 24.27,
+    "end": 24.37,
     "id": "w56"
   },
   {
-    "text": "Harper",
-    "start": 24.6,
-    "end": 25.01,
+    "text": "like",
+    "start": 24.37,
+    "end": 24.8,
     "id": "w57"
   },
   {
-    "text": "and",
-    "start": 25.13,
-    "end": 25.37,
+    "text": "Hopper",
+    "start": 24.8,
+    "end": 25.44,
     "id": "w58"
   },
   {
-    "text": "Blackwell,",
-    "start": 25.42,
-    "end": 26.59,
+    "text": "and",
+    "start": 25.44,
+    "end": 25.73,
     "id": "w59"
   },
   {
-    "text": "the",
-    "start": 26.66,
-    "end": 26.98,
+    "text": "BlackWen.",
+    "start": 25.83,
+    "end": 26.7,
     "id": "w60"
   },
   {
-    "text": "software",
-    "start": 26.98,
-    "end": 27.9,
+    "text": "The",
+    "start": 26.7,
+    "end": 27.03,
     "id": "w61"
   },
   {
-    "text": "that",
-    "start": 27.9,
-    "end": 27.93,
+    "text": "software",
+    "start": 27.03,
+    "end": 27.77,
     "id": "w62"
   },
   {
-    "text": "drives",
-    "start": 28.38,
-    "end": 28.84,
+    "text": "that",
+    "start": 27.84,
+    "end": 28.21,
     "id": "w63"
   },
   {
-    "text": "them",
-    "start": 29.44,
-    "end": 29.51,
+    "text": "drives",
+    "start": 28.21,
+    "end": 28.82,
     "id": "w64"
   },
   {
-    "text": "CUDA,",
-    "start": 29.51,
-    "end": 30.18,
+    "text": "them,",
+    "start": 28.82,
+    "end": 29.42,
     "id": "w65"
   },
   {
-    "text": "VLLM,",
-    "start": 30.18,
-    "end": 30.86,
+    "text": "CUDA,",
+    "start": 29.42,
+    "end": 30.02,
     "id": "w66"
   },
   {
-    "text": "and",
-    "start": 30.94,
-    "end": 30.95,
+    "text": "VLLM,",
+    "start": 30.12,
+    "end": 30.43,
     "id": "w67"
   },
   {
-    "text": "SG,",
-    "start": 31.7,
-    "end": 32.67,
+    "text": "and",
+    "start": 30.72,
+    "end": 30.9,
     "id": "w68"
   },
   {
-    "text": "Lang,",
-    "start": 32.67,
-    "end": 33.68,
+    "text": "SG-LANG.",
+    "start": 30.93,
+    "end": 31.72,
     "id": "w69"
   },
   {
-    "text": "the",
-    "start": 33.7,
-    "end": 33.72,
+    "text": "The",
+    "start": 31.94,
+    "end": 31.95,
     "id": "w70"
   },
   {
     "text": "tricks",
-    "start": 33.72,
-    "end": 33.95,
+    "start": 32.05,
+    "end": 32.35,
     "id": "w71"
   },
   {
     "text": "that",
-    "start": 33.95,
-    "end": 33.97,
+    "start": 32.42,
+    "end": 32.73,
     "id": "w72"
   },
   {
     "text": "make",
-    "start": 34.35,
-    "end": 34.46,
+    "start": 32.73,
+    "end": 33.04,
     "id": "w73"
   },
   {
     "text": "it",
-    "start": 34.52,
-    "end": 34.53,
+    "start": 33.04,
+    "end": 33.1,
     "id": "w74"
   },
   {
     "text": "fast,",
-    "start": 34.66,
-    "end": 35.13,
+    "start": 33.2,
+    "end": 33.7,
     "id": "w75"
   },
   {
     "text": "quantization,",
-    "start": 35.18,
-    "end": 36.34,
+    "start": 33.7,
+    "end": 34.88,
     "id": "w76"
   },
   {
     "text": "speculative",
-    "start": 36.34,
-    "end": 36.96,
+    "start": 35.29,
+    "end": 35.82,
     "id": "w77"
   },
   {
     "text": "decoding,",
-    "start": 37.4,
-    "end": 38.15,
+    "start": 35.82,
+    "end": 36.7,
     "id": "w78"
   },
   {
-    "text": "KB",
-    "start": 38.15,
-    "end": 38.32,
+    "text": "KV",
+    "start": 36.7,
+    "end": 36.94,
     "id": "w79"
   },
   {
     "text": "caching,",
-    "start": 38.32,
-    "end": 39.1,
+    "start": 36.94,
+    "end": 37.98,
     "id": "w80"
   },
   {
     "text": "beyond",
-    "start": 39.2,
-    "end": 39.62,
+    "start": 38.38,
+    "end": 38.52,
     "id": "w81"
   },
   {
     "text": "text,",
-    "start": 39.62,
-    "end": 40.1,
+    "start": 38.52,
+    "end": 39.48,
     "id": "w82"
   },
   {
     "text": "vision,",
-    "start": 40.18,
-    "end": 40.72,
+    "start": 39.81,
+    "end": 40.25,
     "id": "w83"
   },
   {
     "text": "speech,",
-    "start": 41.46,
-    "end": 41.7,
+    "start": 40.25,
+    "end": 41.02,
     "id": "w84"
   },
   {
     "text": "image,",
-    "start": 41.72,
-    "end": 42.44,
+    "start": 41.02,
+    "end": 41.68,
     "id": "w85"
   },
   {
     "text": "and",
-    "start": 42.44,
-    "end": 42.68,
+    "start": 41.7,
+    "end": 41.75,
     "id": "w86"
   },
   {
     "text": "video",
-    "start": 42.68,
-    "end": 43.09,
+    "start": 41.75,
+    "end": 43.02,
     "id": "w87"
   },
   {
     "text": "models,",
-    "start": 43.21,
-    "end": 43.74,
+    "start": 43.02,
+    "end": 43.21,
     "id": "w88"
   },
   {
     "text": "and",
-    "start": 43.74,
-    "end": 43.93,
+    "start": 43.5,
+    "end": 43.52,
     "id": "w89"
   },
   {
     "text": "production,",
-    "start": 44.02,
-    "end": 44.96,
+    "start": 43.52,
+    "end": 44.68,
     "id": "w90"
   },
   {
     "text": "scaling",
-    "start": 44.96,
-    "end": 45.28,
+    "start": 44.68,
+    "end": 45.29,
     "id": "w91"
   },
   {
     "text": "it",
-    "start": 45.28,
-    "end": 45.73,
+    "start": 45.36,
+    "end": 45.55,
     "id": "w92"
   },
   {
-    "text": "reliably,",
-    "start": 45.73,
-    "end": 46.51,
+    "text": "reliably",
+    "start": 45.55,
+    "end": 46.32,
     "id": "w93"
   },
   {
     "text": "at",
-    "start": 46.51,
-    "end": 46.67,
+    "start": 46.32,
+    "end": 46.51,
     "id": "w94"
   },
   {
     "text": "a",
-    "start": 46.67,
-    "end": 46.74,
+    "start": 46.51,
+    "end": 46.6,
     "id": "w95"
   },
   {
     "text": "cost",
-    "start": 46.74,
-    "end": 47.05,
+    "start": 46.6,
+    "end": 47.06,
     "id": "w96"
   },
   {
     "text": "that",
-    "start": 47.05,
-    "end": 47.41,
+    "start": 47.39,
+    "end": 47.48,
     "id": "w97"
   },
   {
     "text": "makes",
-    "start": 47.52,
-    "end": 47.82,
+    "start": 47.48,
+    "end": 48.01,
     "id": "w98"
   },
   {
     "text": "sense.",
-    "start": 47.82,
-    "end": 48.56,
+    "start": 48.01,
+    "end": 48.85,
     "id": "w99"
   },
   {
     "text": "And",
-    "start": 48.8,
-    "end": 48.81,
+    "start": 48.85,
+    "end": 49.21,
     "id": "w100"
   },
   {
     "text": "back",
-    "start": 48.81,
-    "end": 49.15,
+    "start": 49.21,
+    "end": 49.65,
     "id": "w101"
   },
   {
     "text": "comes",
-    "start": 49.15,
-    "end": 49.57,
+    "start": 49.65,
+    "end": 50.21,
     "id": "w102"
   },
   {
     "text": "your",
-    "start": 49.62,
-    "end": 49.92,
+    "start": 50.21,
+    "end": 50.65,
     "id": "w103"
   },
   {
     "text": "answer.",
-    "start": 49.92,
-    "end": 50.64,
+    "start": 50.65,
+    "end": 51.35,
     "id": "w104"
   },
   {
-    "text": "Next",
-    "start": 50.95,
-    "end": 51.04,
+    "text": "First",
+    "start": 52.01,
+    "end": 52.15,
     "id": "w105"
   },
   {
     "text": "episode,",
-    "start": 51.04,
-    "end": 51.71,
+    "start": 52.24,
+    "end": 53,
     "id": "w106"
   },
   {
     "text": "we",
-    "start": 51.78,
-    "end": 51.85,
+    "start": 53,
+    "end": 53.19,
     "id": "w107"
   },
   {
     "text": "start",
-    "start": 51.95,
-    "end": 52.31,
+    "start": 53.19,
+    "end": 53.66,
     "id": "w108"
   },
   {
     "text": "at",
-    "start": 52.31,
-    "end": 52.4,
+    "start": 53.66,
+    "end": 53.85,
     "id": "w109"
   },
   {
     "text": "chapter",
-    "start": 52.53,
-    "end": 53.04,
+    "start": 53.85,
+    "end": 53.97,
     "id": "w110"
   },
   {
-    "text": "0,",
-    "start": 53.04,
-    "end": 53.38,
+    "text": "0.",
+    "start": 54.51,
+    "end": 55.07,
     "id": "w111"
   },
   {
-    "text": "what",
-    "start": 53.42,
-    "end": 53.57,
+    "text": "What",
+    "start": 55.23,
+    "end": 55.43,
     "id": "w112"
   },
   {
     "text": "inference",
-    "start": 54,
-    "end": 54.29,
+    "start": 55.68,
+    "end": 56.26,
     "id": "w113"
   },
   {
     "text": "really",
-    "start": 54.74,
-    "end": 54.96,
+    "start": 56.51,
+    "end": 56.87,
     "id": "w114"
   },
   {
-    "text": "is.",
-    "start": 54.96,
-    "end": 55.34,
+    "text": "is?",
+    "start": 56.87,
+    "end": 57.4,
     "id": "w115"
   },
   {
-    "text": "Follow,",
-    "start": 55.63,
-    "end": 55.81,
+    "text": "Follow",
+    "start": 57.73,
+    "end": 57.86,
     "id": "w116"
   },
   {
     "text": "so",
-    "start": 55.93,
-    "end": 56.01,
+    "start": 57.96,
+    "end": 58.01,
     "id": "w117"
   },
   {
     "text": "you",
-    "start": 56.01,
-    "end": 56.19,
+    "start": 58.01,
+    "end": 58.24,
     "id": "w118"
   },
   {
     "text": "don't",
-    "start": 56.23,
-    "end": 56.51,
+    "start": 58.24,
+    "end": 58.62,
     "id": "w119"
   },
   {
     "text": "miss",
-    "start": 56.51,
-    "end": 56.76,
+    "start": 58.62,
+    "end": 58.93,
     "id": "w120"
   },
   {
     "text": "it.",
-    "start": 56.76,
-    "end": 56.92,
+    "start": 58.93,
+    "end": 59.16,
     "id": "w121"
   }
 ]

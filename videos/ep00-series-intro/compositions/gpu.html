@@ -60,9 +60,9 @@
     tl.to("#gpu-g1", { opacity: 0.3, duration: 0.2 }, 3.0);
     tl.to("#gpu-g2", { opacity: 1, duration: 0.2 }, 3.1);
     tl.fromTo("#gpu-dot", { x: 230, y: 520, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.00);
-    tl.to("#gpu-dot", { keyframes: [{ x: 850, y: 520 }, { x: 850, y: 960 }, { x: 230, y: 960 }, { x: 540, y: 760 }], duration: 1.83, ease: "power1.inOut" }, 1.20);
+    tl.to("#gpu-dot", { keyframes: [{ x: 850, y: 520 }, { x: 850, y: 960 }, { x: 230, y: 960 }, { x: 540, y: 760 }], duration: 1.80, ease: "power1.inOut" }, 1.20);
     tl.fromTo("#gpu-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
-    tl.to("#gpu-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 3.43);
+    tl.to("#gpu-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 3.40);
     window.__timelines["gpu"] = tl;
   </script>
 </template>
