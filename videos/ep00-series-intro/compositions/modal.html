@@ -1,0 +1,45 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.dg { position: absolute; left: 90px; top: 480px; width: 900px; height: 640px; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 800px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+
+.mod-t { width: 420px; height: 290px; overflow: hidden; }
+.mod-ic { position: absolute; left: 30px; top: 40px; width: 360px; height: 130px; }
+.mod-wv { position: absolute; top: 10px; width: 16px; height: 110px; background: #14213D; border-radius: 8px; transform-origin: 50% 50%; }
+.mod-fr { position: absolute; top: 10px; width: 52px; height: 80px; border: 6px solid #14213D; border-radius: 6px; }
+
+  </style>
+  <div id="root" data-composition-id="modal" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="modal-w" class="w">
+      <div id="modal-big" class="big" data-layout-ignore>6</div>
+      <div id="modal-kick" class="kick">Chapter 6 · Modalities</div>
+      <div id="modal-ttl" class="ttl">Beyond <span class="g">text</span></div>
+      <div id="modal-sub" class="sub">Embeddings, omni-modal models</div>
+      <div id="modal-dg" class="dg"><div class="pn mod-t" style="left:0px;top:0px"><div class="mod-ic"><svg viewBox="0 0 160 100" width="160" height="100"><path d="M8 50 Q80 -10 152 50 Q80 110 8 50Z" fill="none" stroke="#14213D" stroke-width="7"/><circle cx="80" cy="50" r="22" fill="#00C46A" stroke="#14213D" stroke-width="7"/></svg></div><div class="lb" style="left:30px;top:220px">Vision-language</div></div><div class="pn mod-t" style="left:450px;top:0px"><div class="mod-ic"><div class="mod-wv" style="left:0px"></div><div class="mod-wv" style="left:26px"></div><div class="mod-wv" style="left:52px"></div><div class="mod-wv" style="left:78px"></div><div class="mod-wv" style="left:104px"></div><div class="mod-wv" style="left:130px"></div><div class="mod-wv" style="left:156px"></div></div><div class="lb" style="left:30px;top:220px">Speech in &amp; out</div></div><div class="pn mod-t" style="left:0px;top:320px"><div class="mod-ic"><svg viewBox="0 0 160 110" width="160" height="110"><rect x="4" y="4" width="152" height="102" rx="10" fill="none" stroke="#14213D" stroke-width="7"/><path d="M12 98 L62 44 L96 78 L116 60 L148 98Z" fill="#14213D"/><circle cx="118" cy="32" r="13" fill="#00C46A"/></svg></div><div class="lb" style="left:30px;top:220px">Image gen</div></div><div class="pn mod-t" style="left:450px;top:320px"><div class="mod-ic"><div id="mod-strip" style="position:absolute;left:0;top:0;width:400px;height:100px"><div class="mod-fr" style="left:0px"></div><div class="mod-fr" style="left:64px"></div><div class="mod-fr" style="left:128px"></div><div class="mod-fr" style="left:192px"></div><div class="mod-fr" style="left:256px"></div><div class="mod-fr" style="left:320px"></div></div></div><div class="lb" style="left:30px;top:220px">Video gen</div></div></div>
+      <div id="modal-dot" class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#modal-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#modal-ttl", { scale: 1.4, opacity: 0, transformOrigin: "0% 50%" }, { scale: 1, opacity: 1, duration: 0.35, ease: "expo.out" }, 0.25);
+    tl.fromTo("#modal-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.4);
+    tl.fromTo("#modal-dg .mod-t", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, stagger: 0.15, ease: "back.out(1.6)" }, 0.4);
+    tl.fromTo("#modal-dg .mod-wv", { scaleY: 0.3 }, { scaleY: 1, duration: 0.25, stagger: { each: 0.06, yoyo: true, repeat: 7 }, ease: "sine.inOut" }, 1.0);
+    tl.fromTo("#mod-strip", { x: 0 }, { x: -128, duration: 3.2, ease: "none" }, 1.0);
+    tl.fromTo("#modal-dot", { x: 300, y: 650, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.4);
+    tl.to("#modal-dot", { keyframes: [{ x: 750, y: 650 }, { x: 300, y: 970 }, { x: 750, y: 970 }, { x: 540, y: 760 }], duration: 2.8, ease: "power1.inOut" }, 1.5999999999999999);
+    tl.fromTo("#modal-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.to("#modal-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.70);
+    window.__timelines["modal"] = tl;
+  </script>
+</template>

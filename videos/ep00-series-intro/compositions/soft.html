@@ -1,0 +1,40 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.dg { position: absolute; left: 90px; top: 480px; width: 900px; height: 640px; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 800px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+
+  </style>
+  <div id="root" data-composition-id="soft" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="soft-w" class="w">
+      <div id="soft-big" class="big" data-layout-ignore>4</div>
+      <div id="soft-kick" class="kick">Chapter 4 · Software</div>
+      <div id="soft-ttl" class="ttl">The <span class="g">software</span></div>
+      <div id="soft-sub" class="sub">Kernel fusion, model formats, benchmarking</div>
+      <div id="soft-dg" class="dg">
+        <div class="pn soft-l" style="left:0px;top:500px;width:880px;height:110px;"><div class="lb" style="left:30px;top:36px">CUDA kernels</div></div><div class="pn soft-l" style="left:0px;top:370px;width:880px;height:110px;"><div class="lb" style="left:30px;top:36px">PyTorch · ONNX · TensorRT</div></div><div class="pn soft-l" style="left:0px;top:240px;width:270px;height:110px;"><div class="lb" style="left:30px;top:36px">vLLM</div></div><div class="pn soft-l" style="left:300px;top:240px;width:280px;height:110px;"><div class="lb" style="left:30px;top:36px">SGLang</div></div><div class="pn soft-l" style="left:610px;top:240px;width:270px;height:110px;"><div class="lb" style="left:30px;top:36px">TRT-LLM</div></div><div class="pn soft-l" style="left:0px;top:110px;width:880px;height:110px;background:#00C46A;"><div class="lb" style="left:30px;top:36px">NVIDIA Dynamo</div></div>
+      </div>
+      <div id="soft-dot" class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#soft-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#soft-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
+    tl.fromTo("#soft-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.4);
+    tl.fromTo("#soft-dg .soft-l", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.28, ease: "back.out(1.5)" }, 0.5);
+    tl.fromTo("#soft-dot", { x: 540, y: 1050, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 2.4);
+    tl.to("#soft-dot", { keyframes: [{ x: 540, y: 920 }, { x: 360, y: 790 }, { x: 540, y: 660 }, { x: 540, y: 760 }], duration: 1.9, ease: "power1.inOut" }, 2.6);
+    tl.fromTo("#soft-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.to("#soft-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.50);
+    window.__timelines["soft"] = tl;
+  </script>
+</template>

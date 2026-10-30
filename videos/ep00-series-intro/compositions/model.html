@@ -1,0 +1,56 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.dg { position: absolute; left: 90px; top: 480px; width: 900px; height: 640px; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 800px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+
+.mdl-tok { position: absolute; top: 610px; width: 50px; height: 50px; border-radius: 10px; background: #00C46A; border: 4px solid #14213D; }
+.mdl-ex { width: 64px; height: 120px; }
+#mdl-moe { position: absolute; left: 600px; top: 60px; width: 300px; height: 400px; }
+
+  </style>
+  <div id="root" data-composition-id="model" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="model-w" class="w">
+      <div id="model-big" class="big" data-layout-ignore>2</div>
+      <div id="model-kick" class="kick">Chapter 2 · Models</div>
+      <div id="model-ttl" class="ttl">The <span class="g">model</span></div>
+      <div id="model-sub" class="sub">Attention, neural nets, image &amp; video gen</div>
+      <div id="model-dg" class="dg">
+        <div class="pn mdl-blk" style="left:0;top:460px;width:520px;height:110px"><div class="lb" style="left:28px;top:36px">Transformer block</div></div><div class="pn mdl-blk" style="left:0;top:320px;width:520px;height:110px"><div class="lb" style="left:28px;top:36px">Transformer block</div></div><div class="pn mdl-blk" style="left:0;top:180px;width:520px;height:110px"><div class="lb" style="left:28px;top:36px">Transformer block</div></div><div class="pn mdl-blk" style="left:0;top:40px;width:520px;height:110px"><div class="lb" style="left:28px;top:36px">Transformer block</div></div>
+        <div class="mdl-tok" style="left:60px"></div><div class="mdl-tok" style="left:150px"></div><div class="mdl-tok" style="left:240px"></div><div class="mdl-tok" style="left:330px"></div><div class="mdl-tok" style="left:420px"></div>
+        <div id="mdl-moe">
+          <div class="lb" style="left:0;top:0">Mixture</div><div class="lb" style="left:0;top:44px">of Experts</div>
+          <div class="pn" style="left:60px;top:110px;width:200px;height:60px"><div class="lb" style="left:30px;top:13px;font-size:30px">Router</div></div>
+          <div id="mdl-e0" class="pn mdl-ex" style="left:0px;top:200px"></div><div id="mdl-e1" class="pn mdl-ex" style="left:80px;top:200px"></div><div id="mdl-e2" class="pn mdl-ex" style="left:160px;top:200px"></div><div id="mdl-e3" class="pn mdl-ex" style="left:240px;top:200px"></div>
+        </div>
+      </div>
+      <div id="model-dot" class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#model-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#model-ttl", { clipPath: "inset(100% 0 0 0)", y: 60 }, { clipPath: "inset(0% 0 0 0)", y: 0, duration: 0.45, ease: "expo.out" }, 0.25);
+    tl.fromTo("#model-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.4);
+    tl.fromTo("#model-dg .mdl-blk", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.08, ease: "back.out(1.6)" }, 0.4);
+    tl.fromTo("#mdl-moe", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.9);
+    tl.fromTo("#model-dg .mdl-tok", { y: 0 }, { y: -640, duration: 2.2, stagger: 0.12, ease: "power1.inOut" }, 1.0);
+    tl.to("#model-dg .mdl-tok", { opacity: 0, duration: 0.2, stagger: 0.12 }, 3.0);
+    tl.fromTo("#mdl-e2", { backgroundColor: "#F3EBDD" }, { backgroundColor: "#00C46A", duration: 0.2 }, 1.8);
+    tl.to("#mdl-e2", { backgroundColor: "#F3EBDD", duration: 0.2 }, 2.4);
+    tl.fromTo("#mdl-e0", { backgroundColor: "#F3EBDD" }, { backgroundColor: "#00C46A", duration: 0.2 }, 2.4);
+    tl.fromTo("#model-dot", { x: 890, y: 860, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 3.4);
+    tl.to("#model-dot", { keyframes: [{ x: 890, y: 760 }, { x: 540, y: 760 }], duration: 1.2, ease: "power1.inOut" }, 3.6);
+    tl.fromTo("#model-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.to("#model-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.70);
+    window.__timelines["model"] = tl;
+  </script>
+</template>

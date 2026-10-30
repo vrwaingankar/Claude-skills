@@ -1,0 +1,46 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.dg { position: absolute; left: 90px; top: 480px; width: 900px; height: 640px; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 800px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+
+#next-k { position: absolute; left: 90px; top: 214px; font: 700 48px/1 Inter; opacity: .62; }
+#next-ep { position: absolute; left: 70px; top: 270px; font: 900 400px/1 Inter; letter-spacing: -0.06em; }
+#next-t { position: absolute; left: 84px; top: 690px; font: 900 150px/1 Inter; letter-spacing: -0.045em; }
+#next-ul { position: absolute; left: 90px; top: 860px; width: 760px; height: 18px; background: #00C46A; transform-origin: 0 50%; }
+#next-s { position: absolute; left: 90px; top: 930px; font: 700 50px/1.2 Inter; }
+#next-f { position: absolute; left: 90px; top: 1160px; font: 900 64px/1 Inter; letter-spacing: -0.02em; white-space: nowrap; }
+#next-big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; }
+
+  </style>
+  <div id="root" data-composition-id="next" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="next-w" class="w">
+      <div id="next-big" data-layout-ignore>0</div>
+      <div id="next-k">Next episode</div>
+      <div id="next-ep">Ep 1</div>
+      <div id="next-t">Inference</div>
+      <div id="next-ul"></div>
+      <div id="next-s">Chapter 0: what it really is</div>
+      <div id="next-f">Follow <span id="next-h" data-var-text="handle">@yourhandle</span> →</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#next-k", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.2);
+    tl.fromTo("#next-ep", { scale: 1.6, opacity: 0, transformOrigin: "0% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.3);
+    tl.fromTo("#next-t", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 0.9);
+    tl.fromTo("#next-ul", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.inOut" }, 1.3);
+    tl.fromTo("#next-s", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, 1.8);
+    tl.fromTo("#next-f", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 3.4);
+    tl.fromTo("#next-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    window.__timelines["next"] = tl;
+  </script>
+</template>

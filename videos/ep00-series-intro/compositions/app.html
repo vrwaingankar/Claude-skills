@@ -1,0 +1,54 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.dg { position: absolute; left: 90px; top: 480px; width: 900px; height: 640px; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 800px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+
+.app-row { position: absolute; left: 0; width: 820px; height: 100px; }
+.app-sw { position: absolute; left: 290px; top: 6px; width: 180px; height: 88px; border-radius: 44px; border: 4px solid #14213D; background: #F3EBDD; }
+.app-knob { position: absolute; left: 8px; top: 8px; width: 64px; height: 64px; border-radius: 50%; background: #14213D; }
+.app-bar { position: absolute; bottom: 30px; width: 44px; background: #14213D; transform-origin: 50% 100%; border-radius: 6px 6px 0 0; }
+#app-hist { position: absolute; left: 0; top: 260px; width: 900px; height: 360px; }
+#app-axis { position: absolute; left: 20px; right: 20px; bottom: 26px; height: 4px; background: #14213D; }
+
+  </style>
+  <div id="root" data-composition-id="app" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="app-w" class="w">
+      <div id="app-big" class="big" data-layout-ignore>1</div>
+      <div id="app-kick" class="kick">Chapter 1 · Prerequisites</div>
+      <div id="app-ttl" class="ttl">Your <span class="g">app</span></div>
+      <div id="app-sub" class="sub">Model selection, fine-tuning, distillation</div>
+      <div id="app-dg" class="dg">
+        <div class="app-row" style="top: 20px"><div class="lb" style="left:0;top:34px">Online</div><div class="app-sw"><div id="app-k1" class="app-knob"></div></div><div class="lb" style="left:510px;top:34px">Offline</div></div>
+        <div class="app-row" style="top: 140px"><div class="lb" style="left:0;top:34px">Consumer</div><div class="app-sw"><div id="app-k2" class="app-knob"></div></div><div class="lb" style="left:510px;top:34px">B2B</div></div>
+        <div id="app-hist" class="pn"><div class="app-bar" style="left:40px;height:36px;"></div><div class="app-bar" style="left:98px;height:68px;"></div><div class="app-bar" style="left:156px;height:116px;"></div><div class="app-bar" style="left:214px;height:172px;"></div><div class="app-bar" style="left:272px;height:200px;background:#00C46A;"></div><div class="app-bar" style="left:330px;height:184px;"></div><div class="app-bar" style="left:388px;height:148px;"></div><div class="app-bar" style="left:446px;height:108px;"></div><div class="app-bar" style="left:504px;height:76px;"></div><div class="app-bar" style="left:562px;height:52px;"></div><div class="app-bar" style="left:620px;height:36px;"></div><div class="app-bar" style="left:678px;height:26px;"></div><div class="app-bar" style="left:736px;height:20px;"></div><div class="app-bar" style="left:794px;height:44px;background:#00C46A;"></div><div id="app-axis"></div>
+          <div class="lb" style="left:250px;top:14px">p50</div><div class="lb" style="left:780px;top:14px">p99</div></div>
+      </div>
+      <div id="app-dot" class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#app-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#app-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
+    tl.fromTo("#app-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.4);
+    tl.fromTo("#app-dg .app-row", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, stagger: 0.12, ease: "expo.out" }, 0.4);
+    tl.fromTo("#app-k1", { x: 0 }, { x: 92, duration: 0.3, ease: "back.out(1.6)" }, 1.0);
+    tl.fromTo("#app-k2", { x: 0 }, { x: 92, duration: 0.3, ease: "back.out(1.6)" }, 1.3);
+    tl.fromTo("#app-hist", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.3 }, 1.5);
+    tl.fromTo("#app-dg .app-bar", { scaleY: 0 }, { scaleY: 1, duration: 0.4, stagger: 0.05, ease: "expo.out" }, 1.6);
+    tl.fromTo("#app-dot", { x: 500, y: 550, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.8);
+    tl.to("#app-dot", { keyframes: [{ x: 500, y: 670 }, { x: 370, y: 900 }, { x: 895, y: 1000 }, { x: 540, y: 760 }], duration: 2.8, ease: "power1.inOut" }, 2.0);
+    tl.fromTo("#app-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.to("#app-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.10);
+    window.__timelines["app"] = tl;
+  </script>
+</template>
