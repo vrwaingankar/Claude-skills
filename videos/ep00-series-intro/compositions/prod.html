@@ -40,10 +40,10 @@
     tl.fromTo("#prod-dg .prd-s", { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.03 }, 0.4);
     const slots = gsap.utils.toArray("#prod-dg .prd-s");
     slots.forEach((s) => { tl.to(s, { backgroundColor: "#00C46A", duration: 0.12 }, 1.0 + Number(s.dataset.k) * 0.16); });
-    tl.fromTo("#prod-dot", { x: 90, y: 670, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 0.6);
-    tl.to("#prod-dot", { keyframes: [{ x: 950, y: 500 }, { x: 540, y: 760 }], duration: 3.6, ease: "power1.inOut" }, 0.8);
+    tl.fromTo("#prod-dot", { x: 90, y: 670, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 0.60);
+    tl.to("#prod-dot", { keyframes: [{ x: 950, y: 500 }, { x: 540, y: 760 }], duration: 2.07, ease: "power1.inOut" }, 0.80);
     tl.fromTo("#prod-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
-    tl.to("#prod-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.50);
+    tl.to("#prod-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 3.97);
     window.__timelines["prod"] = tl;
   </script>
 </template>

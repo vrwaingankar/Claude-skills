@@ -30,11 +30,11 @@
     tl.fromTo("#soft-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
     tl.fromTo("#soft-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
     tl.fromTo("#soft-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.4);
-    tl.fromTo("#soft-dg .soft-l", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.28, ease: "back.out(1.5)" }, 0.5);
-    tl.fromTo("#soft-dot", { x: 540, y: 1050, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 2.4);
-    tl.to("#soft-dot", { keyframes: [{ x: 540, y: 920 }, { x: 360, y: 790 }, { x: 540, y: 660 }, { x: 540, y: 760 }], duration: 1.9, ease: "power1.inOut" }, 2.6);
+    tl.fromTo("#soft-dg .soft-l", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: (i) => [0, 0.4, 0.9, 3.2, 3.7, 4.1][i], ease: "back.out(1.5)" }, 1.7);
+    tl.fromTo("#soft-dot", { x: 540, y: 1050, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 5.07);
+    tl.to("#soft-dot", { keyframes: [{ x: 540, y: 920 }, { x: 360, y: 790 }, { x: 540, y: 660 }, { x: 540, y: 760 }], duration: 1.90, ease: "power1.inOut" }, 5.27);
     tl.fromTo("#soft-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
-    tl.to("#soft-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.50);
+    tl.to("#soft-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 7.17);
     window.__timelines["soft"] = tl;
   </script>
 </template>
