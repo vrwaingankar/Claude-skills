@@ -1,770 +1,848 @@
 [
   {
     "text": "You've",
-    "start": 0.15,
-    "end": 0.3,
+    "start": 0.16,
+    "end": 0.31,
     "id": "w0"
   },
   {
     "text": "got",
-    "start": 0.3,
-    "end": 0.45,
+    "start": 0.31,
+    "end": 0.47,
     "id": "w1"
   },
   {
     "text": "the",
-    "start": 0.45,
-    "end": 0.51,
+    "start": 0.47,
+    "end": 0.52,
     "id": "w2"
   },
   {
-    "text": "weights.",
-    "start": 0.61,
-    "end": 1.11,
+    "text": "weights,",
+    "start": 0.63,
+    "end": 1.12,
     "id": "w3"
   },
   {
-    "text": "You've",
-    "start": 1.2,
-    "end": 1.74,
+    "text": "you've",
+    "start": 1.12,
+    "end": 1.78,
     "id": "w4"
   },
   {
     "text": "got",
-    "start": 1.74,
-    "end": 2.05,
+    "start": 1.78,
+    "end": 2.11,
     "id": "w5"
   },
   {
     "text": "a",
-    "start": 2.05,
-    "end": 2.15,
+    "start": 2.11,
+    "end": 2.22,
     "id": "w6"
   },
   {
-    "text": "GPU.",
-    "start": 2.15,
-    "end": 2.61,
+    "text": "GPU,",
+    "start": 2.22,
+    "end": 2.69,
     "id": "w7"
   },
   {
-    "text": "Is",
-    "start": 2.61,
-    "end": 2.7,
+    "text": "is",
+    "start": 2.69,
+    "end": 2.81,
     "id": "w8"
   },
   {
     "text": "that",
-    "start": 2.7,
-    "end": 2.88,
+    "start": 2.83,
+    "end": 3,
     "id": "w9"
   },
   {
     "text": "inference?",
-    "start": 2.88,
-    "end": 3.43,
+    "start": 3.09,
+    "end": 3.94,
     "id": "w10"
   },
   {
-    "text": "A",
-    "start": 3.43,
-    "end": 3.955,
+    "text": "Hi,",
+    "start": 4.13,
+    "end": 4.32,
     "id": "w11"
   },
   {
-    "text": "model",
-    "start": 3.955,
-    "end": 4.48,
+    "text": "I'm",
+    "start": 4.32,
+    "end": 4.6,
     "id": "w12"
   },
   {
-    "text": "has",
-    "start": 4.48,
-    "end": 4.54,
+    "text": "Vanith,",
+    "start": 4.6,
+    "end": 5.37,
     "id": "w13"
   },
   {
-    "text": "two",
-    "start": 4.54,
-    "end": 4.91,
+    "text": "a",
+    "start": 5.37,
+    "end": 5.46,
     "id": "w14"
   },
   {
-    "text": "lives.",
-    "start": 4.91,
-    "end": 5.92,
+    "text": "senior",
+    "start": 5.46,
+    "end": 6.04,
     "id": "w15"
   },
   {
-    "text": "Training",
-    "start": 5.92,
-    "end": 6.44,
+    "text": "AI",
+    "start": 6.04,
+    "end": 6.23,
     "id": "w16"
   },
   {
-    "text": "learns",
-    "start": 6.44,
-    "end": 6.54,
+    "text": "architect",
+    "start": 6.23,
+    "end": 7.1,
     "id": "w17"
   },
   {
-    "text": "the",
-    "start": 6.85,
-    "end": 7.02,
+    "text": "and",
+    "start": 7.1,
+    "end": 7.38,
     "id": "w18"
   },
   {
-    "text": "weights.",
-    "start": 7.02,
-    "end": 7.64,
+    "text": "tech",
+    "start": 7.38,
+    "end": 7.62,
     "id": "w19"
   },
   {
-    "text": "Inference",
-    "start": 7.75,
-    "end": 7.89,
+    "text": "lead.",
+    "start": 8.24,
+    "end": 8.34,
     "id": "w20"
   },
   {
-    "text": "serves",
-    "start": 7.89,
-    "end": 8.69,
+    "text": "Last",
+    "start": 8.58,
+    "end": 8.66,
     "id": "w21"
   },
   {
-    "text": "them.",
-    "start": 8.69,
-    "end": 9.11,
+    "text": "time,",
+    "start": 8.66,
+    "end": 9.14,
     "id": "w22"
   },
   {
-    "text": "Classic",
-    "start": 9.36,
-    "end": 9.74,
+    "text": "one",
+    "start": 9.14,
+    "end": 9.32,
     "id": "w23"
   },
   {
-    "text": "ML",
-    "start": 9.74,
-    "end": 9.91,
+    "text": "prompt",
+    "start": 9.41,
+    "end": 9.86,
     "id": "w24"
   },
   {
-    "text": "was",
-    "start": 9.91,
-    "end": 10.17,
+    "text": "from",
+    "start": 9.86,
+    "end": 10.18,
     "id": "w25"
   },
   {
-    "text": "easy",
-    "start": 10.17,
-    "end": 10.52,
+    "text": "your",
+    "start": 10.18,
+    "end": 10.5,
     "id": "w26"
   },
   {
-    "text": "to",
-    "start": 10.52,
-    "end": 10.69,
+    "text": "app",
+    "start": 10.5,
+    "end": 10.71,
     "id": "w27"
   },
   {
-    "text": "serve.",
-    "start": 10.69,
-    "end": 11.42,
+    "text": "to",
+    "start": 10.71,
+    "end": 10.99,
     "id": "w28"
   },
   {
-    "text": "A",
-    "start": 11.44,
-    "end": 11.48,
+    "text": "the",
+    "start": 10.99,
+    "end": 11.14,
     "id": "w29"
   },
   {
-    "text": "small",
-    "start": 11.73,
-    "end": 12.06,
+    "text": "GPU",
+    "start": 11.16,
+    "end": 11.34,
     "id": "w30"
   },
   {
-    "text": "model",
-    "start": 12.06,
-    "end": 12.5,
+    "text": "and",
+    "start": 11.43,
+    "end": 11.58,
     "id": "w31"
   },
   {
-    "text": "on",
-    "start": 12.58,
-    "end": 12.76,
+    "text": "back.",
+    "start": 11.6,
+    "end": 12.03,
     "id": "w32"
   },
   {
-    "text": "a",
-    "start": 12.76,
-    "end": 13.165,
+    "text": "Today,",
+    "start": 12.48,
+    "end": 12.76,
     "id": "w33"
   },
   {
-    "text": "cheap",
-    "start": 13.165,
-    "end": 13.57,
+    "text": "chapter",
+    "start": 12.87,
+    "end": 13.35,
     "id": "w34"
   },
   {
-    "text": "CPU.",
-    "start": 13.57,
-    "end": 14.08,
+    "text": "zero.",
+    "start": 13.35,
+    "end": 13.91,
     "id": "w35"
   },
   {
-    "text": "Generative",
-    "start": 14.08,
-    "end": 14.72,
+    "text": "A",
+    "start": 13.91,
+    "end": 14.16,
     "id": "w36"
   },
   {
-    "text": "AI",
-    "start": 14.72,
-    "end": 15.28,
+    "text": "model",
+    "start": 14.16,
+    "end": 14.36,
     "id": "w37"
   },
   {
-    "text": "isn't.",
-    "start": 15.28,
-    "end": 16,
+    "text": "has",
+    "start": 14.36,
+    "end": 14.58,
     "id": "w38"
   },
   {
-    "text": "Put",
-    "start": 16,
-    "end": 16.24,
+    "text": "two",
+    "start": 14.58,
+    "end": 14.8,
     "id": "w39"
   },
   {
-    "text": "the",
-    "start": 16.24,
-    "end": 16.31,
+    "text": "lives.",
+    "start": 14.8,
+    "end": 15.44,
     "id": "w40"
   },
   {
-    "text": "weights",
-    "start": 16.42,
-    "end": 16.54,
+    "text": "Training",
+    "start": 15.68,
+    "end": 15.95,
     "id": "w41"
   },
   {
-    "text": "on",
-    "start": 16.54,
-    "end": 16.96,
+    "text": "learns",
+    "start": 15.95,
+    "end": 16.34,
     "id": "w42"
   },
   {
-    "text": "a",
-    "start": 16.96,
-    "end": 16.99,
+    "text": "the",
+    "start": 16.34,
+    "end": 16.53,
     "id": "w43"
   },
   {
-    "text": "GPU",
-    "start": 16.99,
-    "end": 17.23,
+    "text": "weights,",
+    "start": 16.53,
+    "end": 17.09,
     "id": "w44"
   },
   {
-    "text": "and",
-    "start": 17.34,
-    "end": 17.53,
+    "text": "inference",
+    "start": 17.09,
+    "end": 17.68,
     "id": "w45"
   },
   {
-    "text": "tokens",
-    "start": 17.53,
-    "end": 18.05,
+    "text": "serves",
+    "start": 17.68,
+    "end": 17.81,
     "id": "w46"
   },
   {
-    "text": "crawl",
+    "text": "them.",
     "start": 18.09,
-    "end": 18.52,
+    "end": 18.56,
     "id": "w47"
   },
   {
-    "text": "while",
-    "start": 18.52,
-    "end": 18.96,
+    "text": "Classic",
+    "start": 18.8,
+    "end": 19.09,
     "id": "w48"
   },
   {
-    "text": "requests",
-    "start": 18.97,
-    "end": 19.69,
+    "text": "ML",
+    "start": 19.19,
+    "end": 19.37,
     "id": "w49"
   },
   {
-    "text": "pile",
-    "start": 19.77,
-    "end": 20.06,
+    "text": "was",
+    "start": 19.37,
+    "end": 19.64,
     "id": "w50"
   },
   {
-    "text": "up.",
-    "start": 20.06,
-    "end": 20.36,
+    "text": "easy",
+    "start": 19.64,
+    "end": 20,
     "id": "w51"
   },
   {
-    "text": "It",
-    "start": 20.36,
-    "end": 20.765,
+    "text": "to",
+    "start": 20,
+    "end": 20.18,
     "id": "w52"
   },
   {
-    "text": "takes",
-    "start": 20.765,
-    "end": 21.17,
+    "text": "serve.",
+    "start": 20.18,
+    "end": 20.9,
     "id": "w53"
   },
   {
-    "text": "three",
-    "start": 21.17,
-    "end": 21.59,
+    "text": "A",
+    "start": 20.9,
+    "end": 21.16,
     "id": "w54"
   },
   {
-    "text": "layers.",
-    "start": 21.59,
-    "end": 22.37,
+    "text": "small",
+    "start": 21.16,
+    "end": 21.45,
     "id": "w55"
   },
   {
-    "text": "The",
-    "start": 22.46,
-    "end": 22.59,
+    "text": "model",
+    "start": 21.55,
+    "end": 21.9,
     "id": "w56"
   },
   {
-    "text": "runtime.",
-    "start": 22.86,
-    "end": 23.6,
+    "text": "on",
+    "start": 21.99,
+    "end": 22.07,
     "id": "w57"
   },
   {
-    "text": "One",
-    "start": 23.6,
-    "end": 23.84,
+    "text": "a",
+    "start": 22.15,
+    "end": 22.23,
     "id": "w58"
   },
   {
-    "text": "model",
-    "start": 23.84,
-    "end": 24.12,
+    "text": "cheap",
+    "start": 22.23,
+    "end": 22.7,
     "id": "w59"
   },
   {
-    "text": "on",
-    "start": 24.12,
-    "end": 24.72,
+    "text": "CPU.",
+    "start": 22.7,
+    "end": 23.29,
     "id": "w60"
   },
   {
-    "text": "one",
-    "start": 24.72,
-    "end": 24.73,
+    "text": "Generative",
+    "start": 23.56,
+    "end": 24.23,
     "id": "w61"
   },
   {
-    "text": "GPU",
-    "start": 24.73,
-    "end": 24.98,
+    "text": "AI",
+    "start": 24.23,
+    "end": 24.41,
     "id": "w62"
   },
   {
-    "text": "as",
-    "start": 24.98,
-    "end": 25.15,
+    "text": "isn't.",
+    "start": 24.41,
+    "end": 25.16,
     "id": "w63"
   },
   {
-    "text": "fast",
-    "start": 25.15,
-    "end": 25.44,
+    "text": "On",
+    "start": 25.16,
+    "end": 25.4,
     "id": "w64"
   },
   {
-    "text": "as",
-    "start": 25.5,
-    "end": 25.59,
+    "text": "a",
+    "start": 25.4,
+    "end": 25.43,
     "id": "w65"
   },
   {
-    "text": "it",
-    "start": 25.68,
-    "end": 25.82,
+    "text": "GPU,",
+    "start": 25.43,
+    "end": 25.88,
     "id": "w66"
   },
   {
-    "text": "goes.",
-    "start": 25.85,
-    "end": 26.41,
+    "text": "tokens",
+    "start": 25.88,
+    "end": 26.42,
     "id": "w67"
   },
   {
-    "text": "Infrastructure.",
-    "start": 26.46,
-    "end": 27.86,
+    "text": "crawl",
+    "start": 26.42,
+    "end": 26.87,
     "id": "w68"
   },
   {
-    "text": "Scale",
-    "start": 27.86,
-    "end": 28.12,
+    "text": "while",
+    "start": 26.87,
+    "end": 27.32,
     "id": "w69"
   },
   {
-    "text": "across",
-    "start": 28.12,
-    "end": 28.93,
+    "text": "requests",
+    "start": 27.32,
+    "end": 28.05,
     "id": "w70"
   },
   {
-    "text": "regions",
-    "start": 28.93,
-    "end": 29.38,
+    "text": "pile",
+    "start": 28.05,
+    "end": 28.4,
     "id": "w71"
   },
   {
-    "text": "and",
-    "start": 29.38,
-    "end": 29.58,
+    "text": "up.",
+    "start": 28.42,
+    "end": 28.84,
     "id": "w72"
   },
   {
-    "text": "clouds",
-    "start": 29.65,
-    "end": 30.13,
+    "text": "It",
+    "start": 28.84,
+    "end": 29.16,
     "id": "w73"
   },
   {
-    "text": "and",
-    "start": 30.13,
-    "end": 30.34,
+    "text": "takes",
+    "start": 29.16,
+    "end": 29.41,
     "id": "w74"
   },
   {
-    "text": "stay",
-    "start": 30.61,
-    "end": 30.8,
+    "text": "three",
+    "start": 29.41,
+    "end": 29.76,
     "id": "w75"
   },
   {
-    "text": "up.",
-    "start": 30.8,
-    "end": 31.44,
+    "text": "layers.",
+    "start": 29.76,
+    "end": 30.42,
     "id": "w76"
   },
   {
-    "text": "Tooling.",
-    "start": 31.68,
-    "end": 32.1,
+    "text": "The",
+    "start": 30.66,
+    "end": 30.68,
     "id": "w77"
   },
   {
-    "text": "The",
-    "start": 32.1,
-    "end": 32.3,
+    "text": "runtime,",
+    "start": 30.68,
+    "end": 31.4,
     "id": "w78"
   },
   {
-    "text": "right",
-    "start": 32.3,
-    "end": 32.55,
+    "text": "one",
+    "start": 31.49,
+    "end": 31.72,
     "id": "w79"
   },
   {
-    "text": "controls",
-    "start": 32.64,
-    "end": 33.16,
+    "text": "model,",
+    "start": 31.72,
+    "end": 32.29,
     "id": "w80"
   },
   {
-    "text": "for",
-    "start": 33.16,
-    "end": 33.36,
+    "text": "one",
+    "start": 32.37,
+    "end": 32.59,
     "id": "w81"
   },
   {
-    "text": "the",
-    "start": 33.36,
-    "end": 33.56,
+    "text": "GPU",
+    "start": 32.59,
+    "end": 32.79,
     "id": "w82"
   },
   {
-    "text": "engineers.",
-    "start": 33.56,
-    "end": 34.4,
+    "text": "full",
+    "start": 33.07,
+    "end": 33.2,
     "id": "w83"
   },
   {
-    "text": "Together",
-    "start": 34.4,
-    "end": 34.82,
+    "text": "speed.",
+    "start": 33.2,
+    "end": 33.86,
     "id": "w84"
   },
   {
-    "text": "the",
-    "start": 34.82,
-    "end": 34.99,
+    "text": "Infrastructure,",
+    "start": 34.21,
+    "end": 35.08,
     "id": "w85"
   },
   {
-    "text": "same",
-    "start": 34.99,
-    "end": 35.08,
+    "text": "scale",
+    "start": 35.08,
+    "end": 35.43,
     "id": "w86"
   },
   {
-    "text": "request",
-    "start": 35.08,
-    "end": 35.89,
+    "text": "across",
+    "start": 35.43,
+    "end": 35.83,
     "id": "w87"
   },
   {
-    "text": "streams.",
-    "start": 35.89,
-    "end": 36.16,
+    "text": "regions",
+    "start": 35.91,
+    "end": 36.33,
     "id": "w88"
   },
   {
-    "text": "Inside",
-    "start": 36.16,
-    "end": 36.64,
+    "text": "and",
+    "start": 36.33,
+    "end": 36.61,
     "id": "w89"
   },
   {
-    "text": "the",
-    "start": 36.64,
-    "end": 37.12,
+    "text": "clouds",
+    "start": 36.61,
+    "end": 36.97,
     "id": "w90"
   },
   {
-    "text": "runtime.",
-    "start": 37.12,
-    "end": 37.99,
+    "text": "and",
+    "start": 37.05,
+    "end": 37.2,
     "id": "w91"
   },
   {
-    "text": "CUDA.",
-    "start": 38.08,
-    "end": 38.72,
+    "text": "stay",
+    "start": 37.22,
+    "end": 37.4,
     "id": "w92"
   },
   {
-    "text": "PyTorch.",
-    "start": 38.79,
-    "end": 39.76,
+    "text": "up.",
+    "start": 37.47,
+    "end": 37.65,
     "id": "w93"
   },
   {
-    "text": "Engines",
-    "start": 39.76,
-    "end": 40.46,
+    "text": "Tooling,",
+    "start": 38.16,
+    "end": 38.44,
     "id": "w94"
   },
   {
-    "text": "like",
-    "start": 40.46,
-    "end": 40.52,
+    "text": "the",
+    "start": 38.55,
+    "end": 38.72,
     "id": "w95"
   },
   {
-    "text": "VLLM.",
-    "start": 40.86,
-    "end": 41.6,
+    "text": "right",
+    "start": 38.72,
+    "end": 39.05,
     "id": "w96"
   },
   {
-    "text": "SGLang",
-    "start": 41.6,
-    "end": 42.26,
+    "text": "controls",
+    "start": 39.05,
+    "end": 39.59,
     "id": "w97"
   },
   {
-    "text": "and",
-    "start": 42.26,
-    "end": 42.53,
+    "text": "for",
+    "start": 39.59,
+    "end": 39.78,
     "id": "w98"
   },
   {
-    "text": "TensorRT.",
-    "start": 42.6,
-    "end": 43.91,
+    "text": "the",
+    "start": 39.78,
+    "end": 39.99,
     "id": "w99"
   },
   {
-    "text": "LLM.",
-    "start": 43.91,
-    "end": 44.43,
+    "text": "engineers.",
+    "start": 39.99,
+    "end": 40.84,
     "id": "w100"
   },
   {
-    "text": "And",
-    "start": 44.43,
-    "end": 44.66,
+    "text": "Together,",
+    "start": 41.08,
+    "end": 41.51,
     "id": "w101"
   },
   {
-    "text": "kernels",
-    "start": 44.66,
-    "end": 45.04,
+    "text": "the",
+    "start": 41.51,
+    "end": 41.71,
     "id": "w102"
   },
   {
-    "text": "like",
-    "start": 45.04,
-    "end": 45.28,
+    "text": "same",
+    "start": 41.71,
+    "end": 41.98,
     "id": "w103"
   },
   {
-    "text": "FlashAttention.",
-    "start": 45.52,
-    "end": 46.39,
+    "text": "request",
+    "start": 41.98,
+    "end": 42.45,
     "id": "w104"
   },
   {
-    "text": "Plus",
-    "start": 46.48,
-    "end": 46.75,
+    "text": "streams.",
+    "start": 42.45,
+    "end": 43.16,
     "id": "w105"
   },
   {
-    "text": "six",
-    "start": 46.75,
-    "end": 46.96,
+    "text": "Inside",
+    "start": 43.4,
+    "end": 43.66,
     "id": "w106"
   },
   {
-    "text": "techniques.",
-    "start": 46.96,
-    "end": 47.87,
+    "text": "the",
+    "start": 43.66,
+    "end": 43.91,
     "id": "w107"
   },
   {
-    "text": "Batching,",
-    "start": 47.89,
-    "end": 48.54,
+    "text": "runtime,",
+    "start": 43.91,
+    "end": 44.66,
     "id": "w108"
   },
   {
-    "text": "caching,",
-    "start": 48.54,
-    "end": 49.2,
+    "text": "CUDA,",
+    "start": 44.66,
+    "end": 45.12,
     "id": "w109"
   },
   {
-    "text": "quantization,",
-    "start": 49.2,
-    "end": 50.18,
+    "text": "PyTorch",
+    "start": 45.18,
+    "end": 45.8,
     "id": "w110"
   },
   {
-    "text": "speculation,",
-    "start": 50.18,
-    "end": 51.12,
+    "text": "and",
+    "start": 45.81,
+    "end": 45.97,
     "id": "w111"
   },
   {
-    "text": "parallelism,",
-    "start": 51.12,
-    "end": 52,
+    "text": "engines",
+    "start": 45.98,
+    "end": 46.39,
     "id": "w112"
   },
   {
-    "text": "disaggregation.",
-    "start": 52.24,
-    "end": 53.26,
+    "text": "like",
+    "start": 46.39,
+    "end": 46.84,
     "id": "w113"
   },
   {
-    "text": "Each",
-    "start": 53.26,
-    "end": 53.56,
+    "text": "VLLM,",
+    "start": 47.1,
+    "end": 47.8,
     "id": "w114"
   },
   {
-    "text": "gets",
-    "start": 53.56,
-    "end": 53.84,
+    "text": "SG-Lang",
+    "start": 48.04,
+    "end": 48.64,
     "id": "w115"
   },
   {
-    "text": "its",
-    "start": 53.91,
-    "end": 54.08,
+    "text": "and",
+    "start": 48.64,
+    "end": 48.94,
     "id": "w116"
   },
   {
-    "text": "own",
-    "start": 54.08,
-    "end": 54.3,
+    "text": "TensorRT-LLM.",
+    "start": 49.03,
+    "end": 50.48,
     "id": "w117"
   },
   {
-    "text": "episode.",
-    "start": 54.3,
-    "end": 54.96,
+    "text": "Plus",
+    "start": 50.72,
+    "end": 50.79,
     "id": "w118"
   },
   {
-    "text": "Next",
-    "start": 55.05,
-    "end": 55.34,
+    "text": "six",
+    "start": 50.79,
+    "end": 51.01,
     "id": "w119"
   },
   {
-    "text": "up,",
-    "start": 55.34,
-    "end": 55.63,
+    "text": "techniques,",
+    "start": 51.11,
+    "end": 51.96,
     "id": "w120"
   },
   {
-    "text": "batching.",
-    "start": 55.63,
-    "end": 56.44,
+    "text": "batching,",
+    "start": 51.96,
+    "end": 52.59,
     "id": "w121"
   },
   {
-    "text": "Follow",
-    "start": 56.45,
-    "end": 56.89,
+    "text": "caching,",
+    "start": 52.59,
+    "end": 53.18,
     "id": "w122"
   },
   {
-    "text": "so",
-    "start": 56.89,
-    "end": 57.04,
+    "text": "quantization,",
+    "start": 53.18,
+    "end": 54.03,
     "id": "w123"
   },
   {
-    "text": "you",
-    "start": 57.04,
-    "end": 57.26,
+    "text": "speculation,",
+    "start": 54.29,
+    "end": 55.01,
     "id": "w124"
   },
   {
-    "text": "don't",
-    "start": 57.26,
-    "end": 57.61,
+    "text": "parallelism,",
+    "start": 55.01,
+    "end": 55.91,
     "id": "w125"
   },
   {
-    "text": "miss",
-    "start": 57.61,
-    "end": 57.86,
+    "text": "disaggregation.",
+    "start": 55.99,
+    "end": 57.28,
     "id": "w126"
   },
   {
-    "text": "it.",
-    "start": 58.12,
-    "end": 58.96,
+    "text": "Each",
+    "start": 57.54,
+    "end": 57.58,
     "id": "w127"
+  },
+  {
+    "text": "gets",
+    "start": 57.58,
+    "end": 57.83,
+    "id": "w128"
+  },
+  {
+    "text": "its",
+    "start": 57.93,
+    "end": 58.06,
+    "id": "w129"
+  },
+  {
+    "text": "own",
+    "start": 58.07,
+    "end": 58.27,
+    "id": "w130"
+  },
+  {
+    "text": "episode",
+    "start": 58.27,
+    "end": 58.77,
+    "id": "w131"
+  },
+  {
+    "text": "starting",
+    "start": 58.77,
+    "end": 59.33,
+    "id": "w132"
+  },
+  {
+    "text": "with",
+    "start": 59.33,
+    "end": 59.6,
+    "id": "w133"
+  },
+  {
+    "text": "batching.",
+    "start": 59.61,
+    "end": 60.42,
+    "id": "w134"
+  },
+  {
+    "text": "Follow",
+    "start": 60.66,
+    "end": 60.77,
+    "id": "w135"
+  },
+  {
+    "text": "so",
+    "start": 60.77,
+    "end": 60.89,
+    "id": "w136"
+  },
+  {
+    "text": "you",
+    "start": 60.89,
+    "end": 61.07,
+    "id": "w137"
+  },
+  {
+    "text": "don't",
+    "start": 61.07,
+    "end": 61.36,
+    "id": "w138"
+  },
+  {
+    "text": "miss",
+    "start": 61.36,
+    "end": 61.57,
+    "id": "w139"
+  },
+  {
+    "text": "it.",
+    "start": 61.65,
+    "end": 61.92,
+    "id": "w140"
   }
 ]

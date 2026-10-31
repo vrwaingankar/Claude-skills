@@ -50,6 +50,8 @@ Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed
 
 ## Episode log
 - **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). Next: **ep02 Batching**, then caching, quantization, speculation, parallelism, disaggregation (one each).
+- **Episode opening (Vinit's rule from ep01):** hook → his intro (same name card as ep00: photo, "Vinit", "Sr AI Architect · Tech Lead", spoken "Hi, I'm Vineeth, a senior AI architect and tech lead.") → a 2–3 s recap of the previous episode → the topic. Budget ~10 s for these three, and trim later lines to stay ≈60 s (ep01 ended at 62.9 s).
+- The name reads cleanest at speed 0.95: at 1.04 whisper heard "Vanith", so generate the name line at 0.95 even when the rest runs faster.
 - Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. Aim for **~130 words** of narration for 55–60 s. ep01's first draft (~180 words) ran 77 s.
 - Vinit sends source text from a book (Baseten's on inference). Paraphrase it, keep only its facts, and drop first-person company anecdotes.
 - When Vinit says "mix with more of X", keep X's spine and borrow one device each from the others.

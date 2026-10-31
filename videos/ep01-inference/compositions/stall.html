@@ -49,13 +49,13 @@ tl.fromTo("#stall-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, durati
     tl.fromTo("#stall-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
     tl.set("#stall-g-n", { rotation: 10, svgOrigin: "200 200" }, 0);
     tl.fromTo("#stall-wb .st-r", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.3, stagger: 0.06, ease: "power3.out" }, 0.6);
-    tl.fromTo("#stall-gpu", { y: 160, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.4)" }, 3.3);
-    tl.fromTo("#stall-wb", { y: 0 }, { y: 30, duration: 0.25, ease: "power2.in" }, 3.7);
-    tl.fromTo("#stall-toks .tok", { opacity: 0 }, { opacity: 1, duration: 0.08, stagger: (i) => [0, 0.5, 1.3, 1.5, 2.2, 2.6][i] }, 4.2);
-    tl.to("#stall-g-n", { keyframes: [{ rotation: -40 }, { rotation: -20 }, { rotation: -75 }], duration: 1.2, svgOrigin: "200 200", ease: "power1.inOut" }, 4.25);
-    tl.fromTo("#stall-q .st-q", { scale: 0 }, { scale: 1, duration: 0.2, stagger: 0.08, ease: "back.out(2)" }, 5.35);
+    tl.fromTo("#stall-gpu", { y: 160, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.4)" }, 2.1);
+    tl.fromTo("#stall-wb", { y: 0 }, { y: 30, duration: 0.25, ease: "power2.in" }, 2.45);
+    tl.fromTo("#stall-toks .tok", { opacity: 0 }, { opacity: 1, duration: 0.08, stagger: (i) => [0, 0.4, 1.0, 1.2, 1.7, 2.0][i] }, 2.8);
+    tl.to("#stall-g-n", { keyframes: [{ rotation: -40 }, { rotation: -20 }, { rotation: -75 }], duration: 1.2, svgOrigin: "200 200", ease: "power1.inOut" }, 2.85);
+    tl.fromTo("#stall-q .st-q", { scale: 0 }, { scale: 1, duration: 0.2, stagger: 0.08, ease: "back.out(2)" }, 4.4);
     tl.fromTo("#stall-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.0);
-    tl.to("#stall-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.4);
+    tl.to("#stall-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.13);
     window.__timelines["stall"] = tl;
   </script>
 </template>
