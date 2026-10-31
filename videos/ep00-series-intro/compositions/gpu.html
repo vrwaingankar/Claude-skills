@@ -51,18 +51,18 @@
       tl.fromTo(c, { backgroundColor: "#2B3B60" }, { backgroundColor: "#00C46A", duration: 0.15 }, 0.9 + k * 0.07);
       tl.to(c, { backgroundColor: "#2B3B60", duration: 0.3 }, 1.2 + k * 0.07);
     });
-    tl.fromTo("#gpu-ul", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.3 }, 1.95);
-    tl.to("#gpu-g0", { opacity: 1, duration: 0.2 }, 1.95);
-    tl.to("#gpu-ul", { x: 310, width: 300, duration: 0.4, ease: "power3.inOut" }, 2.5);
-    tl.to("#gpu-g0", { opacity: 0.3, duration: 0.2 }, 2.5);
-    tl.to("#gpu-g1", { opacity: 1, duration: 0.2 }, 2.6);
-    tl.to("#gpu-ul", { x: 680, width: 190, duration: 0.4, ease: "power3.inOut" }, 3.0);
-    tl.to("#gpu-g1", { opacity: 0.3, duration: 0.2 }, 3.0);
-    tl.to("#gpu-g2", { opacity: 1, duration: 0.2 }, 3.1);
-    tl.fromTo("#gpu-dot", { x: 230, y: 520, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.00);
-    tl.to("#gpu-dot", { keyframes: [{ x: 850, y: 520 }, { x: 850, y: 960 }, { x: 230, y: 960 }, { x: 540, y: 760 }], duration: 1.80, ease: "power1.inOut" }, 1.20);
+    tl.fromTo("#gpu-ul", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.3 }, 2.3);
+    tl.to("#gpu-g0", { opacity: 1, duration: 0.2 }, 2.3);
+    tl.to("#gpu-ul", { x: 310, width: 300, duration: 0.4, ease: "power3.inOut" }, 2.95);
+    tl.to("#gpu-g0", { opacity: 0.3, duration: 0.2 }, 2.95);
+    tl.to("#gpu-g1", { opacity: 1, duration: 0.2 }, 3.05);
+    tl.to("#gpu-ul", { x: 680, width: 190, duration: 0.4, ease: "power3.inOut" }, 3.5);
+    tl.to("#gpu-g1", { opacity: 0.3, duration: 0.2 }, 3.5);
+    tl.to("#gpu-g2", { opacity: 1, duration: 0.2 }, 3.6);
+    tl.fromTo("#gpu-dot", { x: 230, y: 520, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.63);
+    tl.to("#gpu-dot", { keyframes: [{ x: 850, y: 520 }, { x: 850, y: 960 }, { x: 230, y: 960 }, { x: 540, y: 760 }], duration: 1.80, ease: "power1.inOut" }, 1.83);
     tl.fromTo("#gpu-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
-    tl.to("#gpu-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 3.40);
+    tl.to("#gpu-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.03);
     window.__timelines["gpu"] = tl;
   </script>
 </template>

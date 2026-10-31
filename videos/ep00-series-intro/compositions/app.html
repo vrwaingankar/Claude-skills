@@ -46,9 +46,9 @@
     tl.fromTo("#app-hist", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.3 }, 1.5);
     tl.fromTo("#app-dg .app-bar", { scaleY: 0 }, { scaleY: 1, duration: 0.4, stagger: 0.05, ease: "expo.out" }, 1.6);
     tl.fromTo("#app-dot", { x: 500, y: 550, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 2.83);
-    tl.to("#app-dot", { keyframes: [{ x: 500, y: 670 }, { x: 370, y: 900 }, { x: 895, y: 1000 }, { x: 540, y: 760 }], duration: 2.80, ease: "power1.inOut" }, 3.03);
+    tl.to("#app-dot", { keyframes: [{ x: 500, y: 670 }, { x: 370, y: 900 }, { x: 895, y: 1000 }, { x: 540, y: 760 }], duration: 2.50, ease: "power1.inOut" }, 3.03);
     tl.fromTo("#app-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
-    tl.to("#app-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.13);
+    tl.to("#app-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.83);
     window.__timelines["app"] = tl;
   </script>
 </template>

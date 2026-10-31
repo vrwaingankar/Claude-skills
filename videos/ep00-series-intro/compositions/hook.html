@@ -47,9 +47,9 @@
     tl.fromTo("#hook-bub", { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 1.60);
     tl.fromTo("#hook-typ", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 2.10);
     tl.fromTo("#hook-typ span", { y: 0 }, { y: -10, duration: 0.18, yoyo: true, repeat: 3, stagger: 0.09, ease: "sine.inOut" }, 2.15);
-    tl.fromTo("#hook-dot", { x: 804, y: 1230, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.72);
-    tl.to("#hook-dot", { keyframes: [{ x: 700, y: 1000 }, { x: 540, y: 760 }], duration: 0.90, ease: "power2.inOut" }, 1.92);
-    tl.to("#hook-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 2.83);
+    tl.fromTo("#hook-dot", { x: 804, y: 1230, scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 1.75);
+    tl.to("#hook-dot", { keyframes: [{ x: 700, y: 1000 }, { x: 540, y: 760 }], duration: 0.90, ease: "power2.inOut" }, 1.95);
+    tl.to("#hook-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 2.87);
     window.__timelines["hook"] = tl;
   </script>
 </template>

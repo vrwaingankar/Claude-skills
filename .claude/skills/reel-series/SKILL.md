@@ -1,6 +1,6 @@
 ---
 name: reel-series
-description: Lessons and scripts from making Vinit's AI-inference Instagram Reel series (ep00 onward) with HyperFrames - his cloned voiceover (Chatterbox), pronunciations, retiming scenes to the voice, sound levels, this cloud environment's network quirks, and the delivery checklist. Read it before starting or changing any episode in videos/, and before any voiceover work for Vinit.
+description: Lessons and scripts from making Vinit's AI-inference Instagram Reel series (ep00 onward) with HyperFrames - the narrator voice (stock Kokoro male, not his cloned voice), pronunciations, retiming scenes to the voice, sound levels, this cloud environment's network quirks, and the delivery checklist. Read it before starting or changing any episode in videos/, and before any voiceover work for Vinit.
 ---
 
 # Vinit's reel series: what ep00 taught us
@@ -10,6 +10,7 @@ Read `/hyperframes` first for the render contract; this file holds only what is 
 ## The series
 - Instagram Reel, 1080×1920, 30 fps, **55–60 s**. One folder per episode: `videos/epNN-<slug>/` with STORYLINES.md → SPEC.md → SCRIPT.md, then index.html + `compositions/` (one scene per script line).
 - Look carried over from ep00 (keep it unless Vinit asks): sand ground #E6D8BF with a 4% navy grid, ink navy #14213D, one green accent #00C46A, Inter 900 titles at x=90, engineering line art, the endless zoom through a green dot at (540,760). Handle on the end card: **@vr_waingankar**. Photo: `videos/ep00-series-intro/assets/vinit.jpg`.
+- Vinit is a **Senior AI Architect and Tech Lead** (name card: "Sr AI Architect · Tech Lead"). His name is spelled **Vinit** on screen but said **"Vineeth"** (vi-NEETH).
 - Vinit follows on his iPhone: keep replies short, send files with SendUserFile, and send A/B samples when a choice is his to make (he picked the voice from three samples).
 
 ## Environment gotchas (cloud session)
@@ -23,25 +24,24 @@ Read `/hyperframes` first for the render contract; this file holds only what is 
 - Use Python 3.11 venvs in the scratchpad (`uv venv -p 3.11`); run scripts with `python -I`.
 - Background "wait then run" loops: never `pgrep -f "<pattern>"` with a pattern that also appears in the waiting command itself. It matches itself and waits forever (cost us ~20 min). Wait on a PID or an output file instead, or just run jobs one after another.
 
-## Voiceover: Vinit's cloned voice
-**Privacy**: the raw voice sample is never committed and never leaves the scratchpad. The generated `assets/vo.m4a` is fine to commit. Use the sample only for tone, never its words.
+## Voiceover: stock male narrator (decided after ep00)
+**Don't clone Vinit's voice.** He tried it (Chatterbox, several settings) and it didn't sound good; he asked for a default male voice.
+Use **Kokoro** (Apache-2.0, PyPI `kokoro>=0.9.4`, weights `hexgrad/Kokoro-82M`), voice **`am_michael`**, speed **0.95** (`scripts/kokoro_vo.py`). It runs in seconds on CPU, and the shared `en_core_web_sm` download works.
 
-1. **Reference**: trim to the speech (his ep00 sample: speech ran 10.6–38 s of a 39 s m4a; the start was near-silent), mono 24 kHz, `highpass=f=70,loudnorm=I=-18:TP=-2`, then remove pauses so Chatterbox's ~6–10 s conditioning window is all speech:
-   `silenceremove=stop_periods=-1:stop_duration=0.15:stop_threshold=-40dB:stop_silence=0.12`.
-2. **Settings Vinit chose ("C")**: `cfg_weight=0.3, exaggeration=0.6, temperature=0.7` (faster and more expressive). The defaults (0.5/0.5) were slower; 0.8/0.3 was slow and flat. The accent tends toward American; that is a model limit, and setting C was the best available.
-3. **Write the script for the ear**, not the screen (TTS text only; on-screen text stays correct):
-   | Say | Write in the TTS line |
-   | --- | --- |
-   | Vinit (his name) | `Vineet` |
-   | vLLM | `vee-ell-ell-em` |
-   | SGLang (S-G-Lang, never "S-ghi-lang") | `ess-jee-lang` |
-   | KV cache | `K V caching` |
-   | What you're | `What you are` (contraction got slurred) |
-   "ess gee lang" was read as "S-ghi-lang"; "V L L M, S G Lang" was slow and garbled. Add new terms here as they come up.
-4. **One clip per script line** (`scripts/clone_voice.py`, jobs file `name|seed|cfg|exag|text`). CPU speed is ~1.5–2 min per line, so 11 lines take ~20 min: run in the background and tell Vinit the ETA.
-5. **Verify every line**: transcribe each clip on its own and compare with the script. Retake any slip with another seed (seeds 7 and 11 both worked). ep00 slips: "Pokins" (Tokens), "work your building", "influence" (inference), "Blackwidth". Make 2–4 takes of the hardest lines (acronyms, names) and keep the cleanest; send Vinit the takes when it's his ear that decides.
-6. **Assemble** (`scripts/build_vo.py`): trim each clip's edge silence
-   (`silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,areverse,` same again`,areverse`), apply up to 1.04× `atempo` to land in 55–60 s, join with pauses (0.3 s normal; ~0.8–1.1 s after the hook, after dense lines and before the payoff), then `loudnorm=I=-16:TP=-1.5:LRA=9` → AAC 192k `assets/vo.m4a`.
+1. **Pronunciation overrides** (Kokoro markup `[word](/phonemes/)`; check with `KPipeline(lang_code="a").g2p("word")[0]`):
+   | Word | In the TTS line | Why |
+   | --- | --- | --- |
+   | Vinit | `[Vineeth](/vɪnˈiθ/)` | plain "Vineeth" is stressed VIN-eeth; he wants vi-NEETH |
+   | CUDA | `[CUDA](/kˈudə/)` | otherwise spelled out C-U-D-A |
+   | vLLM, SGLang, KV, Hopper, Blackwell, quantization | write as-is | Kokoro gets these right (SGLang → S-G-Lang) |
+   Add new terms here as episodes need them.
+2. **Verify every line**: transcribe each clip on its own and compare with the script. All 11 ep00 lines were clean first time (whisper writes the name as "Veneeth", which is right).
+3. **Length**: Kokoro at 1.0 ran 48 s for the ep00 script. Speed 0.95 plus 0.45 s pauses (1.0 after the hook, 0.9 after a dense line, 0.8–1.1 before the payoff and the end card) landed at 58 s.
+4. **Assemble** (`scripts/build_vo.py`): trim each clip's edge silence
+   (`silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,areverse,` same again`,areverse`), join with pauses, then `loudnorm=I=-16:TP=-1.5:LRA=9` → AAC 192k `assets/vo.m4a`.
+
+### If voice cloning ever comes back (history from ep00)
+Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed and is used for tone only; use a pause-free reference; Vinit preferred `cfg_weight=0.3, exaggeration=0.6`. Chatterbox misreads acronyms (spell them out: `vee-ell-ell-em`, `ess-jee-lang`), slurs contractions, drifts to an American accent, and needs 1.5–2 min per line on CPU with retakes.
 
 ## Retime the film to the voice
 - The voice is the clock. `scripts/retime_to_vo.py <project> <layout.json>` sets each scene to start **0.15 s before its line** (frame-snapped), the root duration to the VO length, each camera exit at duration − 0.5 s, and the dot's travel to finish before the exit. It also moves the SFX and adds the `<audio id="vo">`. It can be re-run after VO changes.

@@ -39,6 +39,7 @@ for k, t in sfx.items():
     idx = re.sub(rf'(<audio id="{k}"[^>]*data-volume=")[0-9.]+', rf"\g<1>{v}", idx)
 idx = re.sub(r"<!-- Voiceover goes here[^\n]*-->",
              f'<audio id="vo" class="clip" src="assets/vo.m4a" data-start="0" data-duration="{fmt(total)}" data-track-index="2" data-volume="1"></audio>', idx)
+idx = re.sub(r'(<audio id="vo"[^>]*data-duration=")[0-9.]+', rf"\g<1>{fmt(total)}", idx)
 open(f"{proj}/index.html", "w").write(idx)
 
 POS = re.compile(r"(, )([0-9.]+)(\);\s*)$")

@@ -1,6 +1,6 @@
 """Join per-line VO clips into one voiceover and write its line layout.
 
-usage: python build_vo.py <clip_dir> <out.wav> <layout.json> [tempo]
+usage: python build_vo.py <clip_dir> <out.wav> <layout.json> [tempo]   (clips: 44.1 kHz l00.wav…)
   clip_dir holds l00.wav, l01.wav, ... already silence-trimmed (see SKILL.md).
   Edit GAPS to taste: one pause after each line except the last.
 Then: ffmpeg -i out.wav -af "loudnorm=I=-16:TP=-1.5:LRA=9" -c:a aac -b:a 192k assets/vo.m4a
@@ -10,9 +10,9 @@ import numpy as np, soundfile as sf
 
 clip_dir, out_wav, layout = sys.argv[1:4]
 tempo = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0
-LEAD, TAIL = 0.2, 0.8
+LEAD, TAIL = 0.2, 1.2
 # ep00: longer pause after the hook (room for its on-screen beat), after a dense line, and before the end card.
-GAPS = [1.0, 0.3, 0.3, 0.3, 0.8, 0.3, 0.3, 0.3, 0.7, 1.1]
+GAPS = [1.0, 0.45, 0.45, 0.45, 0.9, 0.45, 0.45, 0.45, 0.8, 1.1]
 
 clips = sorted(glob.glob(f"{clip_dir}/l[0-9][0-9].wav"))
 assert len(GAPS) == len(clips) - 1, f"{len(clips)} clips need {len(clips) - 1} gaps"

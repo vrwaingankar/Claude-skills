@@ -1,10 +1,9 @@
 # Review — ep00 final (voiced)
 
-Voice: Vinit's voice cloned locally with Chatterbox (MIT) from a private sample (not in the repo); one clip per SCRIPT.md line,
-silence-trimmed, 1.04x tempo, joined with 0.3–1.1 s pauses, loudness-normalised to -16 LUFS → `assets/vo.m4a` (60.0 s).
-V2 (Vinit's pick "C"): cfg_weight 0.3, exaggeration 0.6, pause-free reference; name spelled "Vineet" for pronunciation,
-vLLM/SGLang spelled "vee-ell-ell-em", "ess-jee-lang"; each line checked against its transcript, slips retaken.
-Word timings: `assets/transcript.json` (whisper small.en).
+Voice (v3, final): stock male narrator, Kokoro `am_michael` at 0.95x (Vinit dropped his cloned voice). Name said "Vineeth"
+via phoneme override, CUDA forced to "koo-da"; every line checked against its own transcript (all clean). Clips trimmed,
+joined with 0.45–1.1 s pauses, loudness-normalised to -16 LUFS → `assets/vo.m4a` (58.0 s). Name card now reads
+"Sr AI Architect · Tech Lead". Word timings: `assets/transcript.json`.
 
 Retime: every chapter scene starts 0.15 s before its line (cut leads the voice), exits at its own end − 0.5 s,
 the prompt dot's travel ends just before each dive. Beats synced to words: GPU underline on "Hopper"/"Blackwell",

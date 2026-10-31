@@ -5,7 +5,7 @@ Read it naturally, at your normal Reel pace (~55 s). The times are only a guide:
 | ~Time | Line | On screen |
 | --- | --- | --- |
 | 0–3 s | What actually happens after you hit send? | Chat box, prompt typed, send pulses |
-| 3–8 s | Hi, I'm Vinit, a senior AI architect. This series is all about AI inference: how models actually run. | Name card: **Vinit · Sr AI Architect** |
+| 3–8 s | Hi, I'm Vinit (say "Vineeth"), a senior AI architect and tech lead. This series is all about AI inference: how models actually run. | Name card: **Vinit · Sr AI Architect · Tech Lead** |
 | 8–14 s | Let's follow one prompt. First stop: your app. What you're building shapes every choice after it. | Zoom into the app · **01 Prerequisites** |
 | 14–19 s | Then the model. Tokens flow through transformer blocks and attention. | **02 Models** |
 | 19–24 s | Down to the hardware: GPUs like Hopper and Blackwell. | **03 Hardware** |
