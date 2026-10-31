@@ -1,6 +1,6 @@
 # Ep 01 — Voiceover script (Chapter 0: Inference)
 
-Narrator: Kokoro `am_michael`, speed 1.0. `CUDA` is written `[CUDA](/kˈudə/)` in the TTS line. Source: Vinit's notes on inference (paraphrased).
+Narrator: Kokoro `am_michael`, speed 1.0 (name line 0.95). `CUDA` is written `[CUDA](/kˈudə/)` in the TTS line. Source: Vinit's notes on inference (paraphrased).
 
 | # | Line | On screen |
 | --- | --- | --- |
@@ -14,6 +14,6 @@ Narrator: Kokoro `am_michael`, speed 1.0. `CUDA` is written `[CUDA](/kˈudə/)` 
 | 7 | Infrastructure: scale across regions and clouds, and stay up. | Layer 2 · Infrastructure |
 | 8 | Tooling: the right controls for the engineers. | Layer 3 · Tooling |
 | 9 | Together, the same request streams. | Together · stream flows |
-| 10 | Inside the runtime: CUDA, PyTorch, and engines like vLLM, SGLang and TensorRT LLM. | Runtime stack (+ FlashAttention on screen) |
+| 10 | Inside the runtime: CUDA, PyTorch, engines like vLLM, SGLang and TensorRT LLM, and kernels like FlashAttention. | Runtime stack |
 | 11 | Plus six techniques: batching, caching, quantization, speculation, parallelism, disaggregation. | Six dials |
 | 12 | Each gets its own episode, starting with batching. Follow so you don't miss it. | Next: Ep 2 · Batching |

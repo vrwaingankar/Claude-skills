@@ -33,7 +33,7 @@
       <div id="stack-pt" class="sl pn" style="top:820px"><div class="lb">PyTorch</div></div>
       <div id="stack-e0" class="eng pn" style="left:90px"><div class="lb">vLLM</div></div>
       <div id="stack-e1" class="eng pn" style="left:398px"><div class="lb">SGLang</div></div>
-      <div id="stack-e2" class="eng pn" style="left:706px"><div class="lb">TensorRT-LLM</div></div>
+      <div id="stack-e2" class="eng pn" style="left:706px"><div class="lb" style="left:20px;font-size:30px">TensorRT-LLM</div></div>
       <div class="lb" style="left:90px;top:640px;opacity:.62">inference engines</div>
       <div id="stack-fa"><div class="lb">⚡ FlashAttention</div></div>
       <div id="stack-sub" class="sub">From the kernel up to the engine</div>
@@ -45,12 +45,12 @@ tl.fromTo("#stack-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, durati
     tl.fromTo("#stack-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
     tl.fromTo("#stack-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.3);
     tl.fromTo("#stack-gpu", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.4)" }, 0.8);
-    tl.fromTo("#stack-cuda", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 1.65);
-    tl.fromTo("#stack-pt", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 2.2);
-    tl.fromTo("#stack-e0, #stack-e1, #stack-e2", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: (i) => [0, 0.65, 2.0][i], ease: "back.out(1.5)" }, 3.75);
-    tl.fromTo("#stack-fa", { scale: 0, opacity: 0, transformOrigin: "0% 50%" }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 6.15);
+    tl.fromTo("#stack-cuda", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 1.75);
+    tl.fromTo("#stack-pt", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 2.3);
+    tl.fromTo("#stack-e0, #stack-e1, #stack-e2", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: (i) => [0, 0.88, 2.02][i], ease: "back.out(1.5)" }, 4.1);
+    tl.fromTo("#stack-fa", { scale: 0, opacity: 0, transformOrigin: "0% 50%" }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 8.5);
     tl.fromTo("#stack-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 4.0);
-    tl.to("#stack-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.87);
+    tl.to("#stack-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 9.17);
     window.__timelines["stack"] = tl;
   </script>
 </template>

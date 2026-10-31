@@ -85,7 +85,7 @@ S["hook"] = scene("hook", """
     tl.to("#hook-gpu .cell", {{ backgroundColor: "#2B3B60", duration: 0.3 }}, 2.8);
     tl.fromTo("#hook-q", {{ scale: 1 }}, {{ scale: 1.25, duration: 0.3, ease: "back.out(2)" }}, 3.0);
     tl.fromTo("#hook-qbar", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.4, ease: "power3.inOut" }}, 2.9);
-    {EXIT("hook", 3.70)}
+    {EXIT("hook", 3.67)}
 """)
 
 # 0b intro (same name card as ep00) -------------------------------------------
@@ -105,7 +105,7 @@ S["intro"] = scene("intro", """
 """, f"""
     {ENTER("intro")}
     tl.fromTo("#intro-ph", {{ clipPath: "inset(100% 0 0 0)" }}, {{ clipPath: "inset(0% 0 0 0)", duration: 0.5, ease: "expo.out" }}, 0.1);
-    tl.fromTo("#intro-img", {{ scale: 1.18 }}, {{ scale: 1.04, duration: 3.6, ease: "power1.out" }}, 0.1);
+    tl.fromTo("#intro-img", {{ scale: 1.18 }}, {{ scale: 1.04, duration: 3.8, ease: "power1.out" }}, 0.1);
     tl.fromTo("#intro-name", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }}, 0.55);
     tl.fromTo("#intro-role", {{ opacity: 0, x: -30 }}, {{ opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }}, 1.2);
     tl.fromTo("#intro-rule", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.5, ease: "power3.inOut" }}, 1.4);
@@ -145,7 +145,7 @@ S["recap"] = scene("recap", """
     tl.to("#recap-phone .ans", {{ opacity: 1, duration: 0.2 }}, 3.6);
     tl.to("#recap-dot", {{ scale: 0, duration: 0.15 }}, 3.7);
     tl.to("#recap-zero", {{ opacity: 0.22, scale: 1.12, duration: 0.5, ease: "power3.out" }}, 4.45);
-    {EXIT("recap", 5.07)}
+    {EXIT("recap", 5.17)}
 """)
 
 # 1 phases ----------------------------------------------------------------
@@ -185,7 +185,7 @@ S["phases"] = scene("phases", """
     tl.to("#phases-top, #phases-tt, #phases-wa", {{ opacity: 0.35, duration: 0.3 }}, 3.55);
     tl.fromTo("#phases-ul", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.35, ease: "power3.inOut" }}, 3.55);
     tl.fromTo("#phases-ans .tok", {{ opacity: 0, x: -20 }}, {{ opacity: 1, x: 0, duration: 0.12, stagger: 0.06 }}, 3.9);
-    {EXIT("phases", 4.17)}
+    {EXIT("phases", 4.33)}
 """, origin="540px 1080px")
 
 # 2 classic ---------------------------------------------------------------
@@ -229,8 +229,8 @@ S["classic"] = scene("classic", """
     tl.to("#classic-g-n", {{ rotation: 72, duration: 0.45, svgOrigin: "200 200", ease: "back.out(1.4)" }}, 3.1);
     tl.fromTo("#classic-ok", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "power3.out" }}, 3.2);
     tl.fromTo("#classic-sub", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 1.3);
-    tl.fromTo("#classic-cl", {{ scale: 1 }}, {{ scale: 1.3, duration: 0.15, yoyo: true, repeat: 1 }}, 3.95);
-    {EXIT("classic", 4.23)}
+    tl.fromTo("#classic-cl", {{ scale: 1 }}, {{ scale: 1.3, duration: 0.15, yoyo: true, repeat: 1 }}, 4.3);
+    {EXIT("classic", 4.33)}
 """)
 
 # 3 stall -----------------------------------------------------------------
@@ -265,7 +265,7 @@ S["stall"] = scene("stall", """
     tl.to("#stall-g-n", {{ keyframes: [{{ rotation: -40 }}, {{ rotation: -20 }}, {{ rotation: -75 }}], duration: 1.2, svgOrigin: "200 200", ease: "power1.inOut" }}, 2.85);
     tl.fromTo("#stall-q .st-q", {{ scale: 0 }}, {{ scale: 1, duration: 0.2, stagger: 0.08, ease: "back.out(2)" }}, 4.4);
     tl.fromTo("#stall-sub", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 1.0);
-    {EXIT("stall", 5.13)}
+    {EXIT("stall", 5.20)}
 """)
 
 # 4-7 the stack (one frame that rebuilds) -----------------------------------
@@ -323,17 +323,17 @@ S["runtime"] = stack_scene("runtime", set(), '<span class="g">Runtime</span>', "
     tl.fromTo("#runtime-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 1.85);
     tl.fromTo("#runtime-rt", { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.4)" }, 1.9);
     tl.fromTo("#runtime-gpu", { y: 0 }, { y: -14, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out" }, 2.6);
-    tl.fromTo("#runtime-gpu .cell", { backgroundColor: "#2B3B60" }, { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.05 }, 3.6);
+    tl.fromTo("#runtime-gpu .cell", { backgroundColor: "#2B3B60" }, { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.05 }, 3.7);
     tl.fromTo("#runtime-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 2.3);
 """, enter=True)
 
 S["infra"] = stack_scene("infra", {"rt"}, '<span class="g">Infrastructure</span>', "Clusters · regions · clouds, no silos", """
     tl.set("#infra-gpu .cell", { backgroundColor: "#00C46A" }, 0);
     tl.fromTo("#infra-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.1);
-    tl.fromTo(".infra-inst", { opacity: 0, y: 200, scale: 0.5 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: (i) => [0.0, 1.75, 2.3][i], ease: "back.out(1.4)" }, 0.3);
+    tl.fromTo(".infra-inst", { opacity: 0, y: 200, scale: 0.5 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: (i) => [0.0, 1.8, 2.45][i], ease: "back.out(1.4)" }, 0.3);
     tl.fromTo("#infra-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 0.6);
-    tl.fromTo("#infra-up", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1.4, duration: 0.25, ease: "back.out(2)" }, 3.42);
-    tl.to("#infra-up", { scale: 1, duration: 0.2 }, 3.67);
+    tl.fromTo("#infra-up", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1.4, duration: 0.25, ease: "back.out(2)" }, 3.5);
+    tl.to("#infra-up", { scale: 1, duration: 0.2 }, 3.75);
 """, kick="Three layers · 2 of 3")
 
 S["tooling"] = stack_scene("tooling", {"rt", "inf"}, '<span class="g">Tooling</span>', "Control for engineers, without the toil", """
@@ -372,7 +372,7 @@ S["stack"] = scene("stack", """
       <div id="stack-pt" class="sl pn" style="top:820px"><div class="lb">PyTorch</div></div>
       <div id="stack-e0" class="eng pn" style="left:90px"><div class="lb">vLLM</div></div>
       <div id="stack-e1" class="eng pn" style="left:398px"><div class="lb">SGLang</div></div>
-      <div id="stack-e2" class="eng pn" style="left:706px"><div class="lb">TensorRT-LLM</div></div>
+      <div id="stack-e2" class="eng pn" style="left:706px"><div class="lb" style="left:20px;font-size:30px">TensorRT-LLM</div></div>
       <div class="lb" style="left:90px;top:640px;opacity:.62">inference engines</div>
       <div id="stack-fa"><div class="lb">⚡ FlashAttention</div></div>
       <div id="stack-sub" class="sub">From the kernel up to the engine</div>
@@ -381,12 +381,12 @@ S["stack"] = scene("stack", """
     tl.fromTo("#stack-kick", {{ opacity: 0 }}, {{ opacity: 0.62, duration: 0.3 }}, 0.15);
     tl.fromTo("#stack-ttl", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }}, 0.3);
     tl.fromTo("#stack-gpu", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.4)" }}, 0.8);
-    tl.fromTo("#stack-cuda", {{ y: -500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }}, 1.65);
-    tl.fromTo("#stack-pt", {{ y: -500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }}, 2.2);
-    tl.fromTo("#stack-e0, #stack-e1, #stack-e2", {{ y: -500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, stagger: (i) => [0, 0.65, 2.0][i], ease: "back.out(1.5)" }}, 3.75);
-    tl.fromTo("#stack-fa", {{ scale: 0, opacity: 0, transformOrigin: "0% 50%" }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 6.15);
+    tl.fromTo("#stack-cuda", {{ y: -500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }}, 1.75);
+    tl.fromTo("#stack-pt", {{ y: -500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }}, 2.3);
+    tl.fromTo("#stack-e0, #stack-e1, #stack-e2", {{ y: -500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, stagger: (i) => [0, 0.88, 2.02][i], ease: "back.out(1.5)" }}, 4.1);
+    tl.fromTo("#stack-fa", {{ scale: 0, opacity: 0, transformOrigin: "0% 50%" }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 8.5);
     tl.fromTo("#stack-sub", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 4.0);
-    {EXIT("stack", 6.87)}
+    {EXIT("stack", 9.17)}
 """)
 
 # 9 dials -----------------------------------------------------------------
@@ -411,9 +411,9 @@ S["dials"] = scene("dials", """
     tl.fromTo("#dials-ttl", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }}, 0.3);
     tl.fromTo(".dl", {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, stagger: 0.06, ease: "back.out(1.6)" }}, 0.5);
     tl.set("#dials-w line", {{ rotation: -80, svgOrigin: "200 200" }}, 0);
-    {"".join(f'tl.to("#dials-g{i}-n", {{ rotation: 70, duration: 0.4, svgOrigin: "200 200", ease: "back.out(1.6)" }}, {t});' + chr(10) + "    " for i, t in enumerate([1.7, 2.25, 2.95, 3.85, 4.72, 5.55]))}
+    {"".join(f'tl.to("#dials-g{i}-n", {{ rotation: 70, duration: 0.4, svgOrigin: "200 200", ease: "back.out(1.6)" }}, {t});' + chr(10) + "    " for i, t in enumerate([1.74, 2.3, 2.96, 3.9, 4.82, 5.58]))}
     tl.fromTo("#dials-sub", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 4.2);
-    {EXIT("dials", 6.27)}
+    {EXIT("dials", 6.47)}
 """)
 
 # 10 next -----------------------------------------------------------------
@@ -436,10 +436,10 @@ S["next"] = scene("next", """
     {ENTER("next")}
     tl.fromTo("#next-k", {{ opacity: 0 }}, {{ opacity: 0.62, duration: 0.3 }}, 0.2);
     tl.fromTo("#next-ep", {{ scale: 1.6, opacity: 0, transformOrigin: "0% 50%" }}, {{ scale: 1, opacity: 1, duration: 0.4, ease: "expo.out" }}, 0.4);
-    tl.fromTo("#next-t", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 2.55);
+    tl.fromTo("#next-t", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 2.6);
     tl.fromTo("#next-ul", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.6, ease: "power3.inOut" }}, 2.85);
     tl.fromTo("#next-s", {{ opacity: 0, x: -30 }}, {{ opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }}, 2.9);
-    tl.fromTo("#next-f", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 3.3);
+    tl.fromTo("#next-f", {{ clipPath: "inset(0 100% 0 0)" }}, {{ clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }}, 3.4);
 """)
 
 os.makedirs(f"{OUT}/compositions", exist_ok=True)
