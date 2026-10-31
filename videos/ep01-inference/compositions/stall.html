@@ -1,0 +1,61 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#stall-wb { left: 90px; top: 500px; width: 420px; height: 370px; }
+.st-r { position: absolute; left: 24px; width: 364px; height: 18px; border-radius: 9px; background: #14213D; opacity: .8; }
+#stall-toks { position: absolute; left: 600px; top: 520px; width: 400px; height: 60px; }
+.st-q { position: absolute; width: 44px; height: 44px; border-radius: 50%; background: #D9442B; }
+  </style>
+  <div id="root" data-composition-id="stall" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="stall-w" class="w">
+<div id="stall-big" class="big" data-layout-ignore>0</div>
+      <div id="stall-kick" class="kick">Now</div>
+      <div id="stall-ttl" class="ttl">Generative <span class="g">AI</span></div>
+      <div id="stall-wb" class="pn"><div class="lb" style="left:24px;top:-50px">weights</div><div class="st-r" style="top:24px"></div><div class="st-r" style="top:60px"></div><div class="st-r" style="top:96px"></div><div class="st-r" style="top:132px"></div><div class="st-r" style="top:168px"></div><div class="st-r" style="top:204px"></div><div class="st-r" style="top:240px"></div><div class="st-r" style="top:276px"></div><div class="st-r" style="top:312px"></div></div>
+      <div id="stall-gpu" class="gpu pn" style="left:150px;top:920px;"><div class="die"><div class="cell" style="left:8px;top:8px"></div><div class="cell" style="left:46px;top:8px"></div><div class="cell" style="left:84px;top:8px"></div><div class="cell" style="left:122px;top:8px"></div><div class="cell" style="left:8px;top:40px"></div><div class="cell" style="left:46px;top:40px"></div><div class="cell" style="left:84px;top:40px"></div><div class="cell" style="left:122px;top:40px"></div><div class="cell" style="left:8px;top:72px"></div><div class="cell" style="left:46px;top:72px"></div><div class="cell" style="left:84px;top:72px"></div><div class="cell" style="left:122px;top:72px"></div></div></div>
+      <div class="lb" style="left:600px;top:470px">tokens</div>
+      <div id="stall-toks"><div class="tok" style="left:0px;top:10px"></div><div class="tok" style="left:66px;top:10px"></div><div class="tok" style="left:132px;top:10px"></div><div class="tok" style="left:198px;top:10px"></div><div class="tok" style="left:264px;top:10px"></div><div class="tok" style="left:330px;top:10px"></div></div>
+      <svg id="stall-g" style="position:absolute;left:600px;top:640px" width="380" height="228" viewBox="0 0 400 240">
+  <path d="M40 200 A160 160 0 0 1 86.9 86.9" fill="none" stroke="#D9442B" stroke-width="26"/>
+  <path d="M86.9 86.9 A160 160 0 0 1 313.1 86.9" fill="none" stroke="#14213D" stroke-opacity=".25" stroke-width="26"/>
+  <path d="M313.1 86.9 A160 160 0 0 1 360 200" fill="none" stroke="#00C46A" stroke-width="26"/>
+  <line id="stall-g-n" x1="200" y1="200" x2="200" y2="62" stroke="#14213D" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="200" cy="200" r="18" fill="#14213D"/></svg>
+      <div class="lb" style="left:600px;top:880px">response speed</div>
+      <div class="lb" style="left:600px;top:950px">requests waiting</div>
+      <div id="stall-q"><div class="st-q" style="left:600px;top:1010px"></div><div class="st-q" style="left:664px;top:1010px"></div><div class="st-q" style="left:728px;top:1010px"></div><div class="st-q" style="left:792px;top:1010px"></div><div class="st-q" style="left:856px;top:1010px"></div><div class="st-q" style="left:920px;top:1010px"></div><div class="st-q" style="left:600px;top:1070px"></div><div class="st-q" style="left:664px;top:1070px"></div><div class="st-q" style="left:728px;top:1070px"></div><div class="st-q" style="left:792px;top:1070px"></div><div class="st-q" style="left:856px;top:1070px"></div><div class="st-q" style="left:920px;top:1070px"></div></div>
+      <div id="stall-sub" class="sub">Weights + GPUs ≠ fast, reliable inference</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#stall-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#stall-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#stall-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
+    tl.set("#stall-g-n", { rotation: 10, svgOrigin: "200 200" }, 0);
+    tl.fromTo("#stall-wb .st-r", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.3, stagger: 0.06, ease: "power3.out" }, 0.6);
+    tl.fromTo("#stall-gpu", { y: 160, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.4)" }, 3.3);
+    tl.fromTo("#stall-wb", { y: 0 }, { y: 30, duration: 0.25, ease: "power2.in" }, 3.7);
+    tl.fromTo("#stall-toks .tok", { opacity: 0 }, { opacity: 1, duration: 0.08, stagger: (i) => [0, 0.5, 1.3, 1.5, 2.2, 2.6][i] }, 4.2);
+    tl.to("#stall-g-n", { keyframes: [{ rotation: -40 }, { rotation: -20 }, { rotation: -75 }], duration: 1.2, svgOrigin: "200 200", ease: "power1.inOut" }, 4.25);
+    tl.fromTo("#stall-q .st-q", { scale: 0 }, { scale: 1, duration: 0.2, stagger: 0.08, ease: "back.out(2)" }, 5.35);
+    tl.fromTo("#stall-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.0);
+    tl.to("#stall-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.4);
+    window.__timelines["stall"] = tl;
+  </script>
+</template>

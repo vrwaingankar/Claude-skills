@@ -1,0 +1,56 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.sl { position: absolute; left: 90px; width: 900px; height: 96px; }
+.sl .lb { left: 30px; top: 30px; }
+.eng { position: absolute; top: 690px; width: 284px; height: 110px; }
+.eng .lb { left: 26px; top: 38px; }
+#stack-fa { position: absolute; left: 560px; top: 940px; width: 400px; height: 76px; background: #00C46A; border: 4px solid #14213D; border-radius: 14px; }
+#stack-fa .lb { left: 22px; top: 20px; }
+  </style>
+  <div id="root" data-composition-id="stack" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="stack-w" class="w">
+<div id="stack-big" class="big" data-layout-ignore>0</div>
+      <div id="stack-kick" class="kick">Inside the runtime</div>
+      <div id="stack-ttl" class="ttl">The <span class="g">stack</span></div>
+      <div id="stack-gpu" class="sl pn" style="top:1040px;background:#14213D"><div class="lb" style="color:#E6D8BF">GPU</div></div>
+      <div id="stack-cuda" class="sl pn" style="top:930px"><div class="lb">CUDA</div></div>
+      <div id="stack-pt" class="sl pn" style="top:820px"><div class="lb">PyTorch</div></div>
+      <div id="stack-e0" class="eng pn" style="left:90px"><div class="lb">vLLM</div></div>
+      <div id="stack-e1" class="eng pn" style="left:398px"><div class="lb">SGLang</div></div>
+      <div id="stack-e2" class="eng pn" style="left:706px"><div class="lb">TensorRT-LLM</div></div>
+      <div class="lb" style="left:90px;top:640px;opacity:.62">inference engines</div>
+      <div id="stack-fa"><div class="lb">⚡ FlashAttention</div></div>
+      <div id="stack-sub" class="sub">From the kernel up to the engine</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#stack-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#stack-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#stack-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.3);
+    tl.fromTo("#stack-gpu", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.4)" }, 0.9);
+    tl.fromTo("#stack-cuda", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 1.8);
+    tl.fromTo("#stack-pt", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 2.35);
+    tl.fromTo("#stack-e0, #stack-e1, #stack-e2", { y: -500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: (i) => [0, 0.88, 2.02][i], ease: "back.out(1.5)" }, 4.1);
+    tl.fromTo("#stack-fa", { scale: 0, opacity: 0, transformOrigin: "0% 50%" }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 8.5);
+    tl.fromTo("#stack-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 6.9);
+    tl.to("#stack-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 9.2);
+    window.__timelines["stack"] = tl;
+  </script>
+</template>

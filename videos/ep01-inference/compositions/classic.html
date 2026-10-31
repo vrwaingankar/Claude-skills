@@ -1,0 +1,72 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#classic-cpu { left: 90px; top: 560px; width: 400px; height: 400px; }
+.cl-pin { position: absolute; width: 16px; height: 34px; background: #14213D; border-radius: 4px; }
+.cl-node { position: absolute; width: 60px; height: 60px; border-radius: 50%; border: 4px solid #14213D; background: #F3EBDD; }
+.cl-edge { position: absolute; height: 5px; background: #14213D; transform-origin: 0 50%; }
+#classic-ok { position: absolute; left: 640px; top: 900px; font: 900 64px/1 Inter; color: #00C46A; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="classic" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="classic-w" class="w">
+<div id="classic-big" class="big" data-layout-ignore>0</div>
+      <div id="classic-kick" class="kick">Before generative AI</div>
+      <div id="classic-ttl" class="ttl">Classic <span class="g">ML</span></div>
+      <div id="classic-cpu" class="pn">
+        <div class="cl-pin" style="left:60px;top:-40px"></div><div class="cl-pin" style="left:60px;top:400px"></div><div class="cl-pin" style="left:120px;top:-40px"></div><div class="cl-pin" style="left:120px;top:400px"></div><div class="cl-pin" style="left:180px;top:-40px"></div><div class="cl-pin" style="left:180px;top:400px"></div><div class="cl-pin" style="left:240px;top:-40px"></div><div class="cl-pin" style="left:240px;top:400px"></div><div class="cl-pin" style="left:300px;top:-40px"></div><div class="cl-pin" style="left:300px;top:400px"></div>
+        <div class="cl-edge" style="left:200px;top:110px;width:120px;transform:rotate(130deg)"></div>
+        <div class="cl-edge" style="left:200px;top:110px;width:120px;transform:rotate(50deg)"></div>
+        <div class="cl-edge" style="left:122px;top:200px;width:90px;transform:rotate(120deg)"></div>
+        <div class="cl-edge" style="left:122px;top:200px;width:90px;transform:rotate(60deg)"></div>
+        <div class="cl-node" style="left:170px;top:80px"></div>
+        <div class="cl-node" style="left:92px;top:172px"></div>
+        <div class="cl-node" style="left:248px;top:172px"></div>
+        <div class="cl-node" style="left:42px;top:262px"></div>
+        <div class="cl-node" style="left:142px;top:262px"></div>
+        <div id="classic-cl" class="lb" style="left:150px;top:346px">CPU</div>
+      </div>
+      <svg id="classic-g" style="position:absolute;left:580px;top:560px" width="410" height="246" viewBox="0 0 400 240">
+  <path d="M40 200 A160 160 0 0 1 86.9 86.9" fill="none" stroke="#D9442B" stroke-width="26"/>
+  <path d="M86.9 86.9 A160 160 0 0 1 313.1 86.9" fill="none" stroke="#14213D" stroke-opacity=".25" stroke-width="26"/>
+  <path d="M313.1 86.9 A160 160 0 0 1 360 200" fill="none" stroke="#00C46A" stroke-width="26"/>
+  <line id="classic-g-n" x1="200" y1="200" x2="200" y2="62" stroke="#14213D" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="200" cy="200" r="18" fill="#14213D"/></svg>
+      <div class="lb" style="left:640px;top:830px">response speed</div>
+      <div id="classic-ok">instant</div>
+      <div id="classic-sub" class="sub">Small model · cheap CPU · simple stack</div>
+      <div id="classic-dot" class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#classic-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#classic-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#classic-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
+    tl.set("#classic-g-n", { rotation: -80, svgOrigin: "200 200" }, 0);
+    tl.fromTo("#classic-cpu .cl-node", { scale: 0 }, { scale: 1, duration: 0.3, stagger: 0.07, ease: "back.out(1.6)" }, 0.5);
+    tl.fromTo("#classic-dot", { x: 1000, y: 760, scale: 0 }, { scale: 1, duration: 0.15 }, 2.6);
+    tl.to("#classic-dot", { keyframes: [{ x: 290, y: 640 }, { x: 200, y: 850 }], duration: 0.45, ease: "power2.in" }, 2.75);
+    tl.to("#classic-dot", { scale: 0, duration: 0.1 }, 3.2);
+    tl.to("#classic-g-n", { rotation: 72, duration: 0.45, svgOrigin: "200 200", ease: "back.out(1.4)" }, 3.1);
+    tl.fromTo("#classic-ok", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "power3.out" }, 3.2);
+    tl.fromTo("#classic-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 1.3);
+    tl.fromTo("#classic-cl", { scale: 1 }, { scale: 1.3, duration: 0.15, yoyo: true, repeat: 1 }, 4.3);
+    tl.to("#classic-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.4);
+    window.__timelines["classic"] = tl;
+  </script>
+</template>

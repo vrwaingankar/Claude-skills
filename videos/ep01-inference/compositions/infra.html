@@ -1,0 +1,56 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.ttl.sm { font-size: 112px; }
+.slot { position: absolute; left: 90px; width: 900px; border: 4px dashed rgba(20,33,61,.35); border-radius: 18px; }
+#infra-rt { left: 90px; top: 880px; width: 900px; height: 250px; }
+#infra-tl { left: 90px; top: 450px; width: 900px; height: 120px; }
+.inst { position: absolute; top: 610px; width: 280px; height: 230px; }
+.inst .mini { position: absolute; left: 60px; top: 70px; width: 160px; height: 100px; background: #14213D; border-radius: 10px; }
+.layer-n { position: absolute; left: 26px; top: 20px; font: 900 34px/1 Inter; white-space: nowrap; }
+.trk { position: absolute; top: 54px; width: 170px; height: 10px; border-radius: 5px; background: #14213D; opacity: .3; }
+.knob { position: absolute; top: 40px; width: 38px; height: 38px; border-radius: 50%; background: #14213D; }
+#infra-up { position: absolute; left: 880px; top: 845px; width: 26px; height: 26px; border-radius: 50%; background: #00C46A; }
+  </style>
+  <div id="root" data-composition-id="infra" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="infra-w" class="w">
+<div id="infra-big" class="big" data-layout-ignore>0</div>
+      <div id="infra-kick" class="kick">Three layers · 2 of 3</div>
+      <div id="infra-ttl" class="ttl sm"><span class="g">Infrastructure</span></div>
+      <div class="slot infra-slot" style="top:440px;height:140px"></div><div class="slot infra-slot" style="top:600px;height:250px"></div><div class="slot infra-slot" style="top:870px;height:270px"></div>
+      <div id="infra-rt" class="pn"><div class="layer-n">1 · Runtime</div></div>
+      <div id="infra-gpu" class="gpu pn" style="left:390px;top:940px;"><div class="die"><div class="cell" style="left:8px;top:8px"></div><div class="cell" style="left:46px;top:8px"></div><div class="cell" style="left:84px;top:8px"></div><div class="cell" style="left:122px;top:8px"></div><div class="cell" style="left:8px;top:40px"></div><div class="cell" style="left:46px;top:40px"></div><div class="cell" style="left:84px;top:40px"></div><div class="cell" style="left:122px;top:40px"></div><div class="cell" style="left:8px;top:72px"></div><div class="cell" style="left:46px;top:72px"></div><div class="cell" style="left:84px;top:72px"></div><div class="cell" style="left:122px;top:72px"></div></div></div>
+      <div class="inst pn infra-inst" style="opacity:0;left:90px"><div class="layer-n">Cluster</div><div class="mini"></div></div>
+      <div class="inst pn infra-inst" style="opacity:0;left:400px"><div class="layer-n">Region</div><div class="mini"></div></div>
+      <div class="inst pn infra-inst" style="opacity:0;left:710px"><div class="layer-n">Cloud</div><div class="mini"></div></div>
+      <div id="infra-up" style="opacity:0"></div>
+      <div id="infra-tl" class="pn" style="opacity:0"><div class="layer-n" style="top:42px">3 · Tooling</div><div class="trk" style="left:270px"></div><div class="knob infra-knob" style="left:270px"></div><div class="trk" style="left:475px"></div><div class="knob infra-knob" style="left:475px"></div><div class="trk" style="left:680px"></div><div class="knob infra-knob" style="left:680px"></div></div>
+      <div id="infra-sub" class="sub">Clusters · regions · clouds, no silos</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.set("#infra-gpu .cell", { backgroundColor: "#00C46A" }, 0);
+    tl.fromTo("#infra-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.1);
+    tl.fromTo(".infra-inst", { opacity: 0, y: 200, scale: 0.5 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: (i) => [0.0, 1.8, 2.45][i], ease: "back.out(1.4)" }, 0.3);
+    tl.fromTo("#infra-sub", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.inOut" }, 0.6);
+    tl.fromTo("#infra-up", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1.4, duration: 0.25, ease: "back.out(2)" }, 3.35);
+    tl.to("#infra-up", { scale: 1, duration: 0.2 }, 3.6);
+    window.__timelines["infra"] = tl;
+  </script>
+</template>

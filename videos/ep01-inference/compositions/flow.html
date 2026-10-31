@@ -1,0 +1,63 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#flow-w { transform-origin: 540px 1010px; }
+.ttl.sm { font-size: 112px; }
+.slot { position: absolute; left: 90px; width: 900px; border: 4px dashed rgba(20,33,61,.35); border-radius: 18px; }
+#flow-rt { left: 90px; top: 880px; width: 900px; height: 250px; }
+#flow-tl { left: 90px; top: 450px; width: 900px; height: 120px; }
+.inst { position: absolute; top: 610px; width: 280px; height: 230px; }
+.inst .mini { position: absolute; left: 60px; top: 70px; width: 160px; height: 100px; background: #14213D; border-radius: 10px; }
+.layer-n { position: absolute; left: 26px; top: 20px; font: 900 34px/1 Inter; white-space: nowrap; }
+.trk { position: absolute; top: 54px; width: 170px; height: 10px; border-radius: 5px; background: #14213D; opacity: .3; }
+.knob { position: absolute; top: 40px; width: 38px; height: 38px; border-radius: 50%; background: #14213D; }
+#flow-up { position: absolute; left: 880px; top: 845px; width: 26px; height: 26px; border-radius: 50%; background: #00C46A; }
+#flow-stream { position: absolute; left: 600px; top: 1180px; width: 400px; height: 60px; overflow: hidden; }
+#flow-sub { display: none; }
+  </style>
+  <div id="root" data-composition-id="flow" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="flow-w" class="w">
+<div id="flow-big" class="big" data-layout-ignore>0</div>
+      <div id="flow-kick" class="kick">Three layers</div>
+      <div id="flow-ttl" class="ttl sm">Together</div>
+      <div class="slot flow-slot" style="top:440px;height:140px"></div><div class="slot flow-slot" style="top:600px;height:250px"></div><div class="slot flow-slot" style="top:870px;height:270px"></div>
+      <div id="flow-rt" class="pn"><div class="layer-n">1 · Runtime</div></div>
+      <div id="flow-gpu" class="gpu pn" style="left:390px;top:940px;"><div class="die"><div class="cell" style="left:8px;top:8px"></div><div class="cell" style="left:46px;top:8px"></div><div class="cell" style="left:84px;top:8px"></div><div class="cell" style="left:122px;top:8px"></div><div class="cell" style="left:8px;top:40px"></div><div class="cell" style="left:46px;top:40px"></div><div class="cell" style="left:84px;top:40px"></div><div class="cell" style="left:122px;top:40px"></div><div class="cell" style="left:8px;top:72px"></div><div class="cell" style="left:46px;top:72px"></div><div class="cell" style="left:84px;top:72px"></div><div class="cell" style="left:122px;top:72px"></div></div></div>
+      <div class="inst pn flow-inst" style="left:90px"><div class="layer-n">Cluster</div><div class="mini"></div></div>
+      <div class="inst pn flow-inst" style="left:400px"><div class="layer-n">Region</div><div class="mini"></div></div>
+      <div class="inst pn flow-inst" style="left:710px"><div class="layer-n">Cloud</div><div class="mini"></div></div>
+      <div id="flow-up"></div>
+      <div id="flow-tl" class="pn"><div class="layer-n" style="top:42px">3 · Tooling</div><div class="trk" style="left:270px"></div><div class="knob flow-knob" style="left:270px"></div><div class="trk" style="left:475px"></div><div class="knob flow-knob" style="left:475px"></div><div class="trk" style="left:680px"></div><div class="knob flow-knob" style="left:680px"></div></div>
+      <div id="flow-sub" class="sub"></div>
+      <div id="flow-stream"><div class="tok" style="left:300px;top:10px;background:#00C46A"></div><div class="tok" style="left:366px;top:10px;background:#00C46A"></div><div class="tok" style="left:432px;top:10px;background:#00C46A"></div><div class="tok" style="left:498px;top:10px;background:#00C46A"></div><div class="tok" style="left:564px;top:10px;background:#00C46A"></div><div class="tok" style="left:630px;top:10px;background:#00C46A"></div><div class="tok" style="left:696px;top:10px;background:#00C46A"></div><div class="tok" style="left:762px;top:10px;background:#00C46A"></div></div>
+      <div class="lb" style="left:90px;top:1192px">tokens streaming</div>
+      <div id="flow-dot" class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.set("#flow-gpu .cell", { backgroundColor: "#00C46A" }, 0);
+    tl.set(".flow-knob", { x: (i) => [100, 50, 132][i] }, 0);
+    tl.fromTo("#flow-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 0.1);
+    tl.fromTo("#flow-dot", { x: 540, y: 380, scale: 0 }, { scale: 1, duration: 0.15 }, 0.6);
+    tl.to("#flow-dot", { keyframes: [{ x: 540, y: 510 }, { x: 540, y: 725 }, { x: 540, y: 1010 }], duration: 0.7, ease: "power1.inOut" }, 0.75);
+    tl.fromTo("#flow-stream .tok", { x: 0, opacity: 0 }, { x: -260, opacity: 1, duration: 0.5, stagger: 0.06, ease: "none" }, 1.4);
+    tl.to("#flow-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 1.9);
+    window.__timelines["flow"] = tl;
+  </script>
+</template>

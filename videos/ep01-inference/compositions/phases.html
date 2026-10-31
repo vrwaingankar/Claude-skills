@@ -1,0 +1,62 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#phases-w { transform-origin: 540px 1080px; }
+#phases-top { position: absolute; left: 0; top: 180px; width: 1080px; height: 560px; background: #14213D; }
+#phases-bot { position: absolute; left: 0; top: 760px; width: 1080px; height: 560px; }
+.ph-t { position: absolute; left: 90px; font: 900 104px/1 Inter; letter-spacing: -0.03em; }
+#phases-tt { top: 230px; color: #E6D8BF; }
+#phases-it { top: 800px; }
+.ph-d { position: absolute; width: 28px; height: 28px; border-radius: 6px; background: #E6D8BF; }
+#phases-wa { left: 680px; top: 430px; width: 300px; height: 230px; background: #2B3B60; border-color: #E6D8BF; }
+#phases-wb { left: 90px; top: 960px; width: 300px; height: 230px; }
+.ph-row { position: absolute; left: 26px; width: 248px; height: 14px; border-radius: 7px; background: #E6D8BF; transform-origin: 0 50%; }
+#phases-wb .ph-row { background: #14213D; }
+#phases-arrow { position: absolute; left: 420px; top: 1064px; width: 120px; height: 8px; background: #14213D; }
+#phases-ans { left: 570px; top: 990px; width: 420px; height: 170px; }
+#phases-ul { position: absolute; left: 90px; top: 912px; width: 470px; height: 16px; background: #00C46A; transform-origin: 0 50%; }
+.ph-l { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="phases" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="phases-w" class="w">
+<div id="phases-top"></div>
+      <div id="phases-bot"></div>
+      <div id="phases-tt" class="ph-t">Training</div>
+      <div class="ph-l" style="left:90px;top:360px;color:#E6D8BF;opacity:.8">data → weights</div>
+      <div id="phases-dots"><div class="ph-d" style="left:90px;top:470px"></div><div class="ph-d" style="left:150px;top:470px"></div><div class="ph-d" style="left:210px;top:470px"></div><div class="ph-d" style="left:270px;top:470px"></div><div class="ph-d" style="left:330px;top:470px"></div><div class="ph-d" style="left:390px;top:470px"></div><div class="ph-d" style="left:90px;top:530px"></div><div class="ph-d" style="left:150px;top:530px"></div><div class="ph-d" style="left:210px;top:530px"></div><div class="ph-d" style="left:270px;top:530px"></div><div class="ph-d" style="left:330px;top:530px"></div><div class="ph-d" style="left:390px;top:530px"></div><div class="ph-d" style="left:90px;top:590px"></div><div class="ph-d" style="left:150px;top:590px"></div><div class="ph-d" style="left:210px;top:590px"></div><div class="ph-d" style="left:270px;top:590px"></div><div class="ph-d" style="left:330px;top:590px"></div><div class="ph-d" style="left:390px;top:590px"></div></div>
+      <div id="phases-wa" class="pn"><div class="ph-row" style="top:30px"></div><div class="ph-row" style="top:70px"></div><div class="ph-row" style="top:110px"></div><div class="ph-row" style="top:150px"></div><div class="ph-row" style="top:190px"></div></div>
+      <div id="phases-it" class="ph-t">Inference</div>
+      <div id="phases-ul"></div>
+      <div id="phases-wb" class="pn"><div class="ph-row" style="top:30px"></div><div class="ph-row" style="top:70px"></div><div class="ph-row" style="top:110px"></div><div class="ph-row" style="top:150px"></div><div class="ph-row" style="top:190px"></div></div>
+      <div id="phases-arrow"></div>
+      <div id="phases-ans" class="pn"><div class="tok" style="left:26px;top:64px"></div><div class="tok" style="left:92px;top:64px"></div><div class="tok" style="left:158px;top:64px"></div><div class="tok" style="left:224px;top:64px"></div><div class="tok" style="left:290px;top:64px"></div><div class="tok" style="left:356px;top:64px"></div></div>
+      <div class="ph-l" style="left:570px;top:1200px">served in production</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#phases-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#phases-dots .ph-d", { x: 0, opacity: 1 }, { x: 560, opacity: 0, duration: 0.6, stagger: 0.04, ease: "power2.in" }, 1.9);
+    tl.fromTo("#phases-wa .ph-row", { scaleX: 0 }, { scaleX: 1, duration: 0.3, stagger: 0.08, ease: "power3.out" }, 2.6);
+    tl.to("#phases-top, #phases-tt, #phases-wa", { opacity: 0.35, duration: 0.3 }, 3.55);
+    tl.fromTo("#phases-ul", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.inOut" }, 3.55);
+    tl.fromTo("#phases-ans .tok", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.12, stagger: 0.06 }, 3.9);
+    tl.to("#phases-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.33);
+    window.__timelines["phases"] = tl;
+  </script>
+</template>

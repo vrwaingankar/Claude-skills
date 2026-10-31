@@ -48,6 +48,20 @@ Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed
 - **Word-synced beats are manual.** Take word times from **per-line** transcripts plus the layout's line starts. The whole-file transcript drifts ±0.5 s. Beat at scene time = word time in clip + (line start − scene start ≈ 0.14 s). ep00 synced beats: GPU names highlight on "Hopper"/"Blackwell"; software stack layers drop on "CUDA", "vLLM", "SGLang" (function stagger `(i) => [...][i]`); end-card follow line on "Follow"; the "chapter 0" subline on "chapter zero".
 - A line that is long relative to its visuals leaves dead air: add a beat (ep00 added a small scale punch on "Inference"), or lengthen the pause instead of stretching the line.
 
+## Episode log
+- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). Next: **ep02 Batching**, then caching, quantization, speculation, parallelism, disaggregation (one each).
+- Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. Aim for **~130 words** of narration for 55–60 s. ep01's first draft (~180 words) ran 77 s.
+- Vinit sends source text from a book (Baseten's on inference). Paraphrase it, keep only its facts, and drop first-person company anecdotes.
+- When Vinit says "mix with more of X", keep X's spine and borrow one device each from the others.
+
+## Build lessons (ep01)
+- `videos/ep01-inference/gen_scenes.py` generates every scene from one shared CSS and helper set (GPU card, gauge, stack layers). Copy it for the next episode and change the scene bodies.
+- **SVG gauge needles**: set the start with `tl.set(sel, { rotation, svgOrigin: "200 200" }, 0)`, then `tl.to(..., { rotation, svgOrigin })`. A `fromTo` whose from-state lacks `svgOrigin` rotates around the wrong point and the needle vanishes.
+- **Hidden-at-start elements**: put `opacity:0` inline in the markup, not `tl.set(..., 0)` (lint: a set at 0 doesn't render on frame 0).
+- **Green text on sand fails contrast** (1.6:1). Use a green underline bar or highlight (`.g`) instead of coloured text.
+- "One frame that rebuilds" across scenes: give the scenes identical element positions and render earlier layers statically, with no entrance/exit zoom between them. That makes hard match cuts.
+- Keep slider and track geometry inside its panel's inner width (900 px panel → ≤ 860 px of content).
+
 ## Craft rules `hyperframes check` enforced on ep00
 - Text must stay on screen at least **0.5 s + 0.3 s per word** (5 words → 2.0 s, 7 → 2.6 s). The hook's input text and the answer bubble both tripped it: start text earlier or give the scene more room in the VO.
 - Nothing may stay still for more than **3 s**: add a beat or use `data-hold` deliberately.
