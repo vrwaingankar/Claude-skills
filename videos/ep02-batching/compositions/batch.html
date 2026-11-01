@@ -1,0 +1,54 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.bt-r { height: 84px; }
+#batch-tray { position: absolute; left: 90px; top: 500px; width: 900px; height: 420px; border: 4px dashed rgba(20,33,61,.4); border-radius: 22px; }
+.bt-m { position: absolute; left: 90px; width: 900px; height: 34px; border-radius: 17px; background: rgba(20,33,61,.12); overflow: hidden; }
+.bt-f { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; border-radius: 17px; transform-origin: 0 50%; }
+  </style>
+  <div id="root" data-composition-id="batch" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="batch-w" class="w">
+<div id="batch-big" class="big" data-layout-ignore>2</div>
+      <div id="batch-kick" class="kick">Technique 1</div>
+      <div id="batch-ttl" class="ttl"><span class="g">Batching</span></div>
+      <div id="batch-tray" style="opacity:0"><div class="lb" style="left:24px;top:-50px">one batch</div></div>
+      <div id="batch-reqs"><div class="bt-r pn" style="left:120px;top:520px;width:300px"><div class="lb" style="left:20px;top:22px">request</div></div><div class="bt-r pn" style="left:560px;top:560px;width:360px"><div class="lb" style="left:20px;top:22px">request</div></div><div class="bt-r pn" style="left:180px;top:690px;width:340px"><div class="lb" style="left:20px;top:22px">request</div></div><div class="bt-r pn" style="left:600px;top:720px;width:300px"><div class="lb" style="left:20px;top:22px">request</div></div></div>
+      <div id="batch-gpu" class="gpu pn" style="left:390px;top:950px;"><div class="die"><div class="cell" style="left:8px;top:8px"></div><div class="cell" style="left:46px;top:8px"></div><div class="cell" style="left:84px;top:8px"></div><div class="cell" style="left:122px;top:8px"></div><div class="cell" style="left:8px;top:40px"></div><div class="cell" style="left:46px;top:40px"></div><div class="cell" style="left:84px;top:40px"></div><div class="cell" style="left:122px;top:40px"></div><div class="cell" style="left:8px;top:72px"></div><div class="cell" style="left:46px;top:72px"></div><div class="cell" style="left:84px;top:72px"></div><div class="cell" style="left:122px;top:72px"></div></div></div>
+      <div class="lb" style="left:90px;top:1150px">work per GPU step</div>
+      <div class="bt-m" style="top:1200px"><div id="batch-work" class="bt-f" style="background:#14213D"></div></div>
+      <div class="lb" style="left:90px;top:1252px">cost per token</div>
+      <div class="bt-m" style="top:1290px"><div id="batch-cost" class="bt-f" style="background:#576A99"></div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#batch-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#batch-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#batch-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.2);
+    tl.set("#batch-work", { scaleX: 0.25 }, 0);
+    tl.set("#batch-cost", { scaleX: 0.85 }, 0);
+    tl.fromTo("#batch-reqs .bt-r", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "expo.out" }, 0.4);
+    tl.to("#batch-tray", { opacity: 1, duration: 0.2 }, 1.2);
+    tl.to("#batch-reqs .bt-r", { x: (i) => [-10, -450, -70, -490][i], y: (i) => [0, 50, 10, 70][i], duration: 0.45, stagger: 0.06, ease: "power3.inOut" }, 1.25);
+    tl.to("#batch-gpu .cell", { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }, 2.75);
+    tl.to("#batch-work", { scaleX: 0.92, duration: 0.5, ease: "power3.out" }, 3.65);
+    tl.to("#batch-cost", { scaleX: 0.32, duration: 0.5, ease: "power3.out" }, 4.65);
+    tl.to("#batch-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.33);
+    window.__timelines["batch"] = tl;
+  </script>
+</template>

@@ -49,12 +49,19 @@ Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed
 - A line that is long relative to its visuals leaves dead air: add a beat (ep00 added a small scale punch on "Inference"), or lengthen the pause instead of stretching the line.
 
 ## Episode log
-- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). Next: **ep02 Batching**, then caching, quantization, speculation, parallelism, disaggregation (one each).
+- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). **ep02** Batching (grid + bus hook + two clocks, 67 s). Next: **ep03 Continuous batching, in depth**, then caching, quantization, speculation, parallelism, disaggregation.
+- Vinit tends to answer "Mix" to the three storylines: keep the clearest one as the spine, the most visual opener as the hook, and the bold one as the ending.
 - **Episode opening (Vinit's rule from ep01):** hook → his intro (same name card as ep00: photo, "Vinit", "Sr AI Architect · Tech Lead", spoken "Hi, I'm Vineeth, a senior AI architect and tech lead.") → a 2–3 s recap of the previous episode → the topic. Budget ~10 s for these three; running to ~65 s is fine.
 - The name reads cleanest at speed 0.95: at 1.04 whisper heard "Vanith", so generate the name line at 0.95 even when the rest runs faster.
 - Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. Aim for **~130 words** of narration for 55–60 s. ep01's first draft (~180 words) ran 77 s.
 - Vinit sends source text from a book (Baseten's on inference). Paraphrase it, keep only its facts, and drop first-person company anecdotes.
 - When Vinit says "mix with more of X", keep X's spine and borrow one device each from the others.
+
+## Build lessons (ep02)
+- Start a new episode by copying `videos/ep02-batching/{gen_scenes.py,build_index.py}`. Both import the shared look from `scripts/reel_lib.py` (BASE CSS, `gpu()`, `gauge()`, `scene()`, `ENTER`, `EXIT`, `BIG`). Keep the VO text in `vo_lines.py` and the layout in `vo_layout.json` inside the episode folder.
+- Children of a `.pn` panel are positioned relative to the panel. Don't reuse page coordinates for them (ep02's chat tokens rendered off-screen that way).
+- Check SFX files for leading silence. `error.mp3` starts with 0.6 s of silence, and check flags it.
+- The recurring name line ("Hi, I'm Vineeth…") is identical every episode: generate it at 0.95 and reuse it.
 
 ## Build lessons (ep01)
 - `videos/ep01-inference/gen_scenes.py` generates every scene from one shared CSS and helper set (GPU card, gauge, stack layers). Copy it for the next episode and change the scene bodies.

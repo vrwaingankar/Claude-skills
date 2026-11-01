@@ -1,0 +1,51 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.tk-t { width: 62px; height: 62px; }
+#tokens-kv { left: 90px; top: 690px; width: 900px; height: 130px; }
+.tk-kv { position: absolute; top: 62px; width: 62px; height: 44px; border-radius: 8px; background: #3E5280; }
+.tk-bar { position: absolute; left: 90px; height: 64px; border-radius: 12px; background: #14213D; transform-origin: 0 50%; }
+  </style>
+  <div id="root" data-composition-id="tokens" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="tokens-w" class="w">
+<div id="tokens-big" class="big" data-layout-ignore>2</div>
+      <div id="tokens-kick" class="kick">Why LLMs are different</div>
+      <div id="tokens-ttl" class="ttl" style="font-size:112px">Token by <span class="g">token</span></div>
+      <div class="tok tk-t" style="left:90px;top:540px"></div><div class="tok tk-t" style="left:164px;top:540px"></div><div class="tok tk-t" style="left:238px;top:540px"></div><div class="tok tk-t" style="left:312px;top:540px"></div><div class="tok tk-t" style="left:386px;top:540px"></div><div class="tok tk-t" style="left:460px;top:540px"></div><div class="tok tk-t" style="left:534px;top:540px"></div><div class="tok tk-t" style="left:608px;top:540px"></div><div class="tok tk-t" style="left:682px;top:540px"></div><div class="tok tk-t" style="left:756px;top:540px"></div><div class="tok tk-t" style="left:830px;top:540px"></div>
+      <div id="tokens-kv" class="pn"><div class="lb" style="left:24px;top:16px">KV cache · past tokens</div><div class="tk-kv" style="left:24px"></div><div class="tk-kv" style="left:100px"></div><div class="tk-kv" style="left:176px"></div><div class="tk-kv" style="left:252px"></div><div class="tk-kv" style="left:328px"></div><div class="tk-kv" style="left:404px"></div><div class="tk-kv" style="left:480px"></div><div class="tk-kv" style="left:556px"></div><div class="tk-kv" style="left:632px"></div><div class="tk-kv" style="left:708px"></div><div class="tk-kv" style="left:784px"></div></div>
+      <div class="lb" style="left:90px;top:900px">lengths vary</div>
+      <div id="tokens-b1" class="tk-bar" style="top:960px;width:120px"></div><div id="tokens-l1" class="lb" style="left:230px;top:976px">50 tokens</div>
+      <div id="tokens-b2" class="tk-bar" style="top:1070px;width:900px;background:#3E5280"></div><div id="tokens-l2" class="lb" style="left:90px;top:1160px">500 tokens</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#tokens-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#tokens-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#tokens-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.3);
+    tl.fromTo(".tk-t", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.12, stagger: 0.16, ease: "back.out(2)" }, 1.15);
+    tl.fromTo("#tokens-kv", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 2.7);
+    tl.fromTo(".tk-kv", { opacity: 0 }, { opacity: 1, duration: 0.08, stagger: 0.12 }, 2.75);
+    tl.fromTo("#tokens-b1", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.out" }, 4.9);
+    tl.fromTo("#tokens-l1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 4.95);
+    tl.fromTo("#tokens-b2", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power1.inOut" }, 6.05);
+    tl.fromTo("#tokens-l2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.1);
+    tl.to("#tokens-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 7.0);
+    window.__timelines["tokens"] = tl;
+  </script>
+</template>

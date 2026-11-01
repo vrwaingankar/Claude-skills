@@ -1,0 +1,113 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.gd-c { position: absolute; width: 90px; height: 94px; border: 3px solid rgba(20,33,61,.25); border-radius: 10px; background: #F3EBDD; overflow: hidden; }
+.gd-f, .gd-i { position: absolute; inset: 0; opacity: 0; }
+.gd-i { background: repeating-linear-gradient(45deg, rgba(20,33,61,.28) 0 6px, transparent 6px 14px); }
+.gd-ph { position: absolute; top: 540px; width: 6px; height: 470px; background: #14213D; border-radius: 3px; }
+.gd-m { position: absolute; left: 90px; top: 1120px; width: 800px; height: 40px; border-radius: 20px; background: rgba(20,33,61,.12); overflow: hidden; }
+.gd-mf { position: absolute; inset: 0; border-radius: 20px; background: #14213D; transform-origin: 0 50%; }
+.gd-q { position: absolute; left: 930px; width: 70px; height: 94px; border-radius: 10px; background: #00C46A; border: 3px solid #14213D; }
+  </style>
+  <div id="root" data-composition-id="static" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="static-w" class="w">
+<div id="static-big" class="big" data-layout-ignore>2</div>
+      <div id="static-kick" class="kick">Rule 1 · wait for the longest</div>
+      <div id="static-ttl" class="ttl"><span class="g">Static</span></div>
+      <div class="lb" style="left:90px;top:500px;opacity:.62">GPU slots × token steps</div>
+      <div class="gd-c" style="left:90px;top:560px"><div id="static-r0c0f" class="gd-f" style="background:#14213D"></div><div id="static-r0c0i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:190px;top:560px"><div id="static-r0c1f" class="gd-f" style="background:#14213D"></div><div id="static-r0c1i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:290px;top:560px"><div id="static-r0c2f" class="gd-f" style="background:#14213D"></div><div id="static-r0c2i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:390px;top:560px"><div id="static-r0c3f" class="gd-f" style="background:#14213D"></div><div id="static-r0c3i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:490px;top:560px"><div id="static-r0c4f" class="gd-f" style="background:#14213D"></div><div id="static-r0c4i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:590px;top:560px"><div id="static-r0c5f" class="gd-f" style="background:#14213D"></div><div id="static-r0c5i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:690px;top:560px"><div id="static-r0c6f" class="gd-f" style="background:#14213D"></div><div id="static-r0c6i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:790px;top:560px"><div id="static-r0c7f" class="gd-f" style="background:#14213D"></div><div id="static-r0c7i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:90px;top:672px"><div id="static-r1c0f" class="gd-f" style="background:#2B3B60"></div><div id="static-r1c0i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:190px;top:672px"><div id="static-r1c1f" class="gd-f" style="background:#2B3B60"></div><div id="static-r1c1i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:290px;top:672px"><div id="static-r1c2f" class="gd-f" style="background:#2B3B60"></div><div id="static-r1c2i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:390px;top:672px"><div id="static-r1c3f" class="gd-f" style="background:transparent"></div><div id="static-r1c3i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:490px;top:672px"><div id="static-r1c4f" class="gd-f" style="background:transparent"></div><div id="static-r1c4i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:590px;top:672px"><div id="static-r1c5f" class="gd-f" style="background:transparent"></div><div id="static-r1c5i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:690px;top:672px"><div id="static-r1c6f" class="gd-f" style="background:transparent"></div><div id="static-r1c6i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:790px;top:672px"><div id="static-r1c7f" class="gd-f" style="background:transparent"></div><div id="static-r1c7i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:90px;top:784px"><div id="static-r2c0f" class="gd-f" style="background:#3E5280"></div><div id="static-r2c0i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:190px;top:784px"><div id="static-r2c1f" class="gd-f" style="background:#3E5280"></div><div id="static-r2c1i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:290px;top:784px"><div id="static-r2c2f" class="gd-f" style="background:#3E5280"></div><div id="static-r2c2i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:390px;top:784px"><div id="static-r2c3f" class="gd-f" style="background:#3E5280"></div><div id="static-r2c3i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:490px;top:784px"><div id="static-r2c4f" class="gd-f" style="background:#3E5280"></div><div id="static-r2c4i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:590px;top:784px"><div id="static-r2c5f" class="gd-f" style="background:transparent"></div><div id="static-r2c5i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:690px;top:784px"><div id="static-r2c6f" class="gd-f" style="background:transparent"></div><div id="static-r2c6i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:790px;top:784px"><div id="static-r2c7f" class="gd-f" style="background:transparent"></div><div id="static-r2c7i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:90px;top:896px"><div id="static-r3c0f" class="gd-f" style="background:#576A99"></div><div id="static-r3c0i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:190px;top:896px"><div id="static-r3c1f" class="gd-f" style="background:#576A99"></div><div id="static-r3c1i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:290px;top:896px"><div id="static-r3c2f" class="gd-f" style="background:transparent"></div><div id="static-r3c2i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:390px;top:896px"><div id="static-r3c3f" class="gd-f" style="background:transparent"></div><div id="static-r3c3i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:490px;top:896px"><div id="static-r3c4f" class="gd-f" style="background:transparent"></div><div id="static-r3c4i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:590px;top:896px"><div id="static-r3c5f" class="gd-f" style="background:transparent"></div><div id="static-r3c5i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:690px;top:896px"><div id="static-r3c6f" class="gd-f" style="background:transparent"></div><div id="static-r3c6i" class="gd-i"></div></div>
+      <div class="gd-c" style="left:790px;top:896px"><div id="static-r3c7f" class="gd-f" style="background:transparent"></div><div id="static-r3c7i" class="gd-i"></div></div>
+      <div id="static-ph" class="gd-ph" style="left:82px"></div>
+      <div class="lb" style="left:90px;top:1070px">GPU busy</div>
+      <div class="gd-m"><div id="static-m" class="gd-mf"></div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#static-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#static-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#static-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
+    tl.to("#static-r0c0f", { opacity: 1, duration: 0.12 }, 0.9);
+    tl.to("#static-r0c1f", { opacity: 1, duration: 0.12 }, 1.45);
+    tl.to("#static-r0c2f", { opacity: 1, duration: 0.12 }, 2.0);
+    tl.to("#static-r0c3f", { opacity: 1, duration: 0.12 }, 2.55);
+    tl.to("#static-r0c4f", { opacity: 1, duration: 0.12 }, 3.1);
+    tl.to("#static-r0c5f", { opacity: 1, duration: 0.12 }, 3.65);
+    tl.to("#static-r0c6f", { opacity: 1, duration: 0.12 }, 4.2);
+    tl.to("#static-r0c7f", { opacity: 1, duration: 0.12 }, 4.75);
+    tl.to("#static-r1c0f", { opacity: 1, duration: 0.12 }, 0.9);
+    tl.to("#static-r1c1f", { opacity: 1, duration: 0.12 }, 1.45);
+    tl.to("#static-r1c2f", { opacity: 1, duration: 0.12 }, 2.0);
+    tl.to("#static-r1c3i", { opacity: 1, duration: 0.12 }, 2.55);
+    tl.to("#static-r1c4i", { opacity: 1, duration: 0.12 }, 3.1);
+    tl.to("#static-r1c5i", { opacity: 1, duration: 0.12 }, 3.65);
+    tl.to("#static-r1c6i", { opacity: 1, duration: 0.12 }, 4.2);
+    tl.to("#static-r1c7i", { opacity: 1, duration: 0.12 }, 4.75);
+    tl.to("#static-r2c0f", { opacity: 1, duration: 0.12 }, 0.9);
+    tl.to("#static-r2c1f", { opacity: 1, duration: 0.12 }, 1.45);
+    tl.to("#static-r2c2f", { opacity: 1, duration: 0.12 }, 2.0);
+    tl.to("#static-r2c3f", { opacity: 1, duration: 0.12 }, 2.55);
+    tl.to("#static-r2c4f", { opacity: 1, duration: 0.12 }, 3.1);
+    tl.to("#static-r2c5i", { opacity: 1, duration: 0.12 }, 3.65);
+    tl.to("#static-r2c6i", { opacity: 1, duration: 0.12 }, 4.2);
+    tl.to("#static-r2c7i", { opacity: 1, duration: 0.12 }, 4.75);
+    tl.to("#static-r3c0f", { opacity: 1, duration: 0.12 }, 0.9);
+    tl.to("#static-r3c1f", { opacity: 1, duration: 0.12 }, 1.45);
+    tl.to("#static-r3c2i", { opacity: 1, duration: 0.12 }, 2.0);
+    tl.to("#static-r3c3i", { opacity: 1, duration: 0.12 }, 2.55);
+    tl.to("#static-r3c4i", { opacity: 1, duration: 0.12 }, 3.1);
+    tl.to("#static-r3c5i", { opacity: 1, duration: 0.12 }, 3.65);
+    tl.to("#static-r3c6i", { opacity: 1, duration: 0.12 }, 4.2);
+    tl.to("#static-r3c7i", { opacity: 1, duration: 0.12 }, 4.75);
+    tl.fromTo("#static-ph", { x: 0 }, { x: 800, duration: 4.40, ease: "none" }, 0.9);
+    tl.to("#static-m", { keyframes: [{ scaleX: 1, duration: 0.01 }, { scaleX: 0.75, duration: 0.3 }, { scaleX: 0.5, duration: 0.6 }, { scaleX: 0.25, duration: 0.6 }], ease: "power2.out" }, 1.9);
+    tl.fromTo("#static-w .gd-i", { scale: 1 }, { scale: 0.86, duration: 0.15, yoyo: true, repeat: 1 }, 5.05);
+    tl.to("#static-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.63);
+    window.__timelines["static"] = tl;
+  </script>
+</template>

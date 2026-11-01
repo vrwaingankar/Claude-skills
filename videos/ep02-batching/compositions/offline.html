@@ -1,0 +1,64 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#offline-w { transform-origin: 800px 900px; }
+.ck-l { position: absolute; left: 0; top: 180px; width: 536px; height: 1140px; background: #14213D; }
+.ck-h { position: absolute; top: 220px; font: 900 96px/1 Inter; letter-spacing: -0.03em; }
+.ck-t { position: absolute; width: 70px; height: 50px; border-radius: 8px; background: #E6D8BF; }
+.ck-m { position: absolute; left: 60px; width: 420px; height: 30px; border-radius: 15px; background: rgba(230,216,191,.2); overflow: hidden; }
+.ck-mf { position: absolute; inset: 0; border-radius: 15px; transform-origin: 0 50%; }
+.ck-lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+#offline-chat { left: 590px; top: 400px; width: 440px; height: 300px; }
+.ck-sw { position: absolute; top: 820px; width: 190px; height: 190px; border-radius: 50%; border: 8px solid #14213D; background: #F3EBDD; }
+.ck-hand { position: absolute; left: 89px; top: 20px; width: 6px; height: 76px; background: #14213D; border-radius: 3px; transform-origin: 50% 100%; }
+
+#offline-chat .ck-s { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="offline" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="offline-w" class="w">
+<div id="offline-lw">
+      <div id="offline-left" class="ck-l"></div>
+      <div id="offline-oh" class="ck-h" style="left:60px;color:#E6D8BF">Offline</div>
+      <div id="offline-tk"><div class="ck-t" style="left:60px;top:420px"></div><div class="ck-t" style="left:144px;top:420px"></div><div class="ck-t" style="left:228px;top:420px"></div><div class="ck-t" style="left:312px;top:420px"></div><div class="ck-t" style="left:396px;top:420px"></div><div class="ck-t" style="left:60px;top:484px"></div><div class="ck-t" style="left:144px;top:484px"></div><div class="ck-t" style="left:228px;top:484px"></div><div class="ck-t" style="left:312px;top:484px"></div><div class="ck-t" style="left:396px;top:484px"></div><div class="ck-t" style="left:60px;top:548px"></div><div class="ck-t" style="left:144px;top:548px"></div><div class="ck-t" style="left:228px;top:548px"></div><div class="ck-t" style="left:312px;top:548px"></div><div class="ck-t" style="left:396px;top:548px"></div><div class="ck-t" style="left:60px;top:612px"></div><div class="ck-t" style="left:144px;top:612px"></div><div class="ck-t" style="left:228px;top:612px"></div><div class="ck-t" style="left:312px;top:612px"></div><div class="ck-t" style="left:396px;top:612px"></div><div class="ck-t" style="left:60px;top:676px"></div><div class="ck-t" style="left:144px;top:676px"></div><div class="ck-t" style="left:228px;top:676px"></div><div class="ck-t" style="left:312px;top:676px"></div><div class="ck-t" style="left:396px;top:676px"></div></div>
+      <div class="ck-lb" style="left:60px;top:780px;color:#E6D8BF">millions of tickets</div>
+      <div class="ck-lb" style="left:60px;top:900px;color:#E6D8BF">throughput</div>
+      <div class="ck-m" style="top:950px"><div id="offline-tp" class="ck-mf" style="background:#00C46A"></div></div>
+      <div class="ck-lb" style="left:60px;top:1030px;color:#E6D8BF">cost per token</div>
+      <div class="ck-m" style="top:1080px"><div id="offline-cs" class="ck-mf" style="background:#E6D8BF"></div></div>
+      </div>
+      <div id="offline-rw" style="opacity:0.55">
+      <div id="offline-nh" class="ck-h" style="left:590px">Online</div>
+      <div id="offline-chat" class="pn"><div class="ck-lb" style="left:24px;top:24px">live chat</div><div style="position:absolute;left:0;top:0"><div class="tok ck-s" style="left:24px;top:90px;width:52px;height:38px"></div><div class="tok ck-s" style="left:88px;top:90px;width:52px;height:38px"></div><div class="tok ck-s" style="left:152px;top:90px;width:52px;height:38px"></div><div class="tok ck-s" style="left:216px;top:90px;width:52px;height:38px"></div><div class="tok ck-s" style="left:280px;top:90px;width:52px;height:38px"></div><div class="tok ck-s" style="left:344px;top:90px;width:52px;height:38px"></div><div class="tok ck-s" style="left:24px;top:144px;width:52px;height:38px"></div><div class="tok ck-s" style="left:88px;top:144px;width:52px;height:38px"></div><div class="tok ck-s" style="left:152px;top:144px;width:52px;height:38px"></div><div class="tok ck-s" style="left:216px;top:144px;width:52px;height:38px"></div><div class="tok ck-s" style="left:280px;top:144px;width:52px;height:38px"></div><div class="tok ck-s" style="left:344px;top:144px;width:52px;height:38px"></div></div></div>
+      <div class="ck-sw" style="left:600px"><div id="offline-h1" class="ck-hand"></div></div>
+      <div class="ck-sw" style="left:830px"><div id="offline-h2" class="ck-hand"></div></div>
+      <div class="ck-lb" style="left:620px;top:1040px">first token</div>
+      <div class="ck-lb" style="left:840px;top:1040px">between</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#offline-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.set("#offline-tp", { scaleX: 0.3 }, 0);
+    tl.set("#offline-cs", { scaleX: 0.8 }, 0);
+    tl.fromTo("#offline-tk .ck-t", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.15, stagger: 0.04, ease: "power2.out" }, 1.1);
+    tl.to("#offline-tp", { scaleX: 0.95, duration: 0.5, ease: "power3.out" }, 3.55);
+    tl.to("#offline-cs", { scaleX: 0.25, duration: 0.5, ease: "power3.out" }, 4.1);
+    window.__timelines["offline"] = tl;
+  </script>
+</template>

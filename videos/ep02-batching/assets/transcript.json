@@ -1,0 +1,950 @@
+[
+  {
+    "text": "Your",
+    "start": 0.24,
+    "end": 0.33,
+    "id": "w0"
+  },
+  {
+    "text": "GPU",
+    "start": 0.33,
+    "end": 0.58,
+    "id": "w1"
+  },
+  {
+    "text": "is",
+    "start": 0.58,
+    "end": 0.68,
+    "id": "w2"
+  },
+  {
+    "text": "probably",
+    "start": 0.74,
+    "end": 1.39,
+    "id": "w3"
+  },
+  {
+    "text": "sitting",
+    "start": 1.4,
+    "end": 1.96,
+    "id": "w4"
+  },
+  {
+    "text": "idle,",
+    "start": 2.03,
+    "end": 2.37,
+    "id": "w5"
+  },
+  {
+    "text": "here's",
+    "start": 2.76,
+    "end": 3.2,
+    "id": "w6"
+  },
+  {
+    "text": "why.",
+    "start": 3.2,
+    "end": 3.8,
+    "id": "w7"
+  },
+  {
+    "text": "Hi,",
+    "start": 3.96,
+    "end": 4.11,
+    "id": "w8"
+  },
+  {
+    "text": "I'm",
+    "start": 4.11,
+    "end": 4.34,
+    "id": "w9"
+  },
+  {
+    "text": "Vanith,",
+    "start": 4.34,
+    "end": 4.95,
+    "id": "w10"
+  },
+  {
+    "text": "a",
+    "start": 5.03,
+    "end": 5.08,
+    "id": "w11"
+  },
+  {
+    "text": "senior",
+    "start": 5.08,
+    "end": 5.6,
+    "id": "w12"
+  },
+  {
+    "text": "AI",
+    "start": 5.6,
+    "end": 5.76,
+    "id": "w13"
+  },
+  {
+    "text": "architect",
+    "start": 5.76,
+    "end": 6.13,
+    "id": "w14"
+  },
+  {
+    "text": "and",
+    "start": 6.56,
+    "end": 6.81,
+    "id": "w15"
+  },
+  {
+    "text": "tech",
+    "start": 6.81,
+    "end": 7.03,
+    "id": "w16"
+  },
+  {
+    "text": "lead.",
+    "start": 7.51,
+    "end": 7.8,
+    "id": "w17"
+  },
+  {
+    "text": "Last",
+    "start": 8.04,
+    "end": 8.08,
+    "id": "w18"
+  },
+  {
+    "text": "time,",
+    "start": 8.08,
+    "end": 8.48,
+    "id": "w19"
+  },
+  {
+    "text": "three",
+    "start": 8.54,
+    "end": 8.86,
+    "id": "w20"
+  },
+  {
+    "text": "layers",
+    "start": 8.86,
+    "end": 9.29,
+    "id": "w21"
+  },
+  {
+    "text": "and",
+    "start": 9.29,
+    "end": 9.5,
+    "id": "w22"
+  },
+  {
+    "text": "six",
+    "start": 9.5,
+    "end": 9.71,
+    "id": "w23"
+  },
+  {
+    "text": "techniques.",
+    "start": 9.71,
+    "end": 10.68,
+    "id": "w24"
+  },
+  {
+    "text": "Today,",
+    "start": 10.92,
+    "end": 11.18,
+    "id": "w25"
+  },
+  {
+    "text": "the",
+    "start": 11.18,
+    "end": 11.36,
+    "id": "w26"
+  },
+  {
+    "text": "first",
+    "start": 11.42,
+    "end": 11.75,
+    "id": "w27"
+  },
+  {
+    "text": "one,",
+    "start": 11.75,
+    "end": 12.1,
+    "id": "w28"
+  },
+  {
+    "text": "batching.",
+    "start": 12.1,
+    "end": 12.92,
+    "id": "w29"
+  },
+  {
+    "text": "Batching",
+    "start": 13,
+    "end": 13.51,
+    "id": "w30"
+  },
+  {
+    "text": "groups",
+    "start": 13.59,
+    "end": 14.03,
+    "id": "w31"
+  },
+  {
+    "text": "requests.",
+    "start": 14.03,
+    "end": 14.72,
+    "id": "w32"
+  },
+  {
+    "text": "So",
+    "start": 14.72,
+    "end": 14.96,
+    "id": "w33"
+  },
+  {
+    "text": "each",
+    "start": 14.96,
+    "end": 15.27,
+    "id": "w34"
+  },
+  {
+    "text": "GPU",
+    "start": 15.27,
+    "end": 15.54,
+    "id": "w35"
+  },
+  {
+    "text": "step",
+    "start": 15.54,
+    "end": 15.87,
+    "id": "w36"
+  },
+  {
+    "text": "does",
+    "start": 15.95,
+    "end": 16.28,
+    "id": "w37"
+  },
+  {
+    "text": "more",
+    "start": 16.28,
+    "end": 16.65,
+    "id": "w38"
+  },
+  {
+    "text": "work",
+    "start": 16.65,
+    "end": 17.03,
+    "id": "w39"
+  },
+  {
+    "text": "and",
+    "start": 17.04,
+    "end": 17.09,
+    "id": "w40"
+  },
+  {
+    "text": "tokens",
+    "start": 17.48,
+    "end": 17.92,
+    "id": "w41"
+  },
+  {
+    "text": "cost",
+    "start": 17.92,
+    "end": 18.01,
+    "id": "w42"
+  },
+  {
+    "text": "less.",
+    "start": 18.68,
+    "end": 18.76,
+    "id": "w43"
+  },
+  {
+    "text": "But",
+    "start": 19,
+    "end": 19.03,
+    "id": "w44"
+  },
+  {
+    "text": "LLMs",
+    "start": 19.03,
+    "end": 19.35,
+    "id": "w45"
+  },
+  {
+    "text": "write",
+    "start": 19.43,
+    "end": 19.82,
+    "id": "w46"
+  },
+  {
+    "text": "token",
+    "start": 19.82,
+    "end": 20.26,
+    "id": "w47"
+  },
+  {
+    "text": "by",
+    "start": 20.26,
+    "end": 20.44,
+    "id": "w48"
+  },
+  {
+    "text": "token",
+    "start": 20.44,
+    "end": 20.92,
+    "id": "w49"
+  },
+  {
+    "text": "with",
+    "start": 20.92,
+    "end": 21.09,
+    "id": "w50"
+  },
+  {
+    "text": "a",
+    "start": 21.09,
+    "end": 21.52,
+    "id": "w51"
+  },
+  {
+    "text": "KV",
+    "start": 21.52,
+    "end": 21.63,
+    "id": "w52"
+  },
+  {
+    "text": "cache",
+    "start": 21.63,
+    "end": 21.96,
+    "id": "w53"
+  },
+  {
+    "text": "and",
+    "start": 21.96,
+    "end": 22.73,
+    "id": "w54"
+  },
+  {
+    "text": "links",
+    "start": 22.73,
+    "end": 22.88,
+    "id": "w55"
+  },
+  {
+    "text": "vary.",
+    "start": 22.88,
+    "end": 23.5,
+    "id": "w56"
+  },
+  {
+    "text": "50",
+    "start": 23.76,
+    "end": 23.99,
+    "id": "w57"
+  },
+  {
+    "text": "tokens",
+    "start": 23.99,
+    "end": 24.46,
+    "id": "w58"
+  },
+  {
+    "text": "here,",
+    "start": 24.46,
+    "end": 24.91,
+    "id": "w59"
+  },
+  {
+    "text": "500",
+    "start": 24.92,
+    "end": 25.62,
+    "id": "w60"
+  },
+  {
+    "text": "there.",
+    "start": 25.62,
+    "end": 26.28,
+    "id": "w61"
+  },
+  {
+    "text": "Static",
+    "start": 26.52,
+    "end": 26.69,
+    "id": "w62"
+  },
+  {
+    "text": "batching",
+    "start": 26.69,
+    "end": 27.23,
+    "id": "w63"
+  },
+  {
+    "text": "waits",
+    "start": 27.23,
+    "end": 27.57,
+    "id": "w64"
+  },
+  {
+    "text": "for",
+    "start": 27.57,
+    "end": 27.77,
+    "id": "w65"
+  },
+  {
+    "text": "the",
+    "start": 27.77,
+    "end": 27.97,
+    "id": "w66"
+  },
+  {
+    "text": "longest",
+    "start": 27.97,
+    "end": 28.45,
+    "id": "w67"
+  },
+  {
+    "text": "request.",
+    "start": 28.45,
+    "end": 29.2,
+    "id": "w68"
+  },
+  {
+    "text": "Short",
+    "start": 29.44,
+    "end": 29.61,
+    "id": "w69"
+  },
+  {
+    "text": "ones",
+    "start": 29.62,
+    "end": 29.95,
+    "id": "w70"
+  },
+  {
+    "text": "finish",
+    "start": 29.95,
+    "end": 30.44,
+    "id": "w71"
+  },
+  {
+    "text": "and",
+    "start": 30.47,
+    "end": 30.7,
+    "id": "w72"
+  },
+  {
+    "text": "their",
+    "start": 30.7,
+    "end": 31.12,
+    "id": "w73"
+  },
+  {
+    "text": "slots",
+    "start": 31.12,
+    "end": 31.53,
+    "id": "w74"
+  },
+  {
+    "text": "sit",
+    "start": 31.53,
+    "end": 31.59,
+    "id": "w75"
+  },
+  {
+    "text": "idle.",
+    "start": 31.95,
+    "end": 32.4,
+    "id": "w76"
+  },
+  {
+    "text": "Dynamic",
+    "start": 32.64,
+    "end": 32.87,
+    "id": "w77"
+  },
+  {
+    "text": "batching",
+    "start": 32.87,
+    "end": 33.41,
+    "id": "w78"
+  },
+  {
+    "text": "starts",
+    "start": 33.41,
+    "end": 33.82,
+    "id": "w79"
+  },
+  {
+    "text": "when",
+    "start": 33.82,
+    "end": 34.09,
+    "id": "w80"
+  },
+  {
+    "text": "the",
+    "start": 34.09,
+    "end": 34.29,
+    "id": "w81"
+  },
+  {
+    "text": "batch",
+    "start": 34.29,
+    "end": 34.62,
+    "id": "w82"
+  },
+  {
+    "text": "fills",
+    "start": 34.62,
+    "end": 34.77,
+    "id": "w83"
+  },
+  {
+    "text": "or",
+    "start": 35.15,
+    "end": 35.18,
+    "id": "w84"
+  },
+  {
+    "text": "a",
+    "start": 35.18,
+    "end": 35.27,
+    "id": "w85"
+  },
+  {
+    "text": "timer",
+    "start": 35.27,
+    "end": 35.6,
+    "id": "w86"
+  },
+  {
+    "text": "runs",
+    "start": 35.6,
+    "end": 36.36,
+    "id": "w87"
+  },
+  {
+    "text": "out.",
+    "start": 36.36,
+    "end": 36.68,
+    "id": "w88"
+  },
+  {
+    "text": "Better",
+    "start": 36.92,
+    "end": 37.11,
+    "id": "w89"
+  },
+  {
+    "text": "but",
+    "start": 37.11,
+    "end": 37.27,
+    "id": "w90"
+  },
+  {
+    "text": "still",
+    "start": 37.35,
+    "end": 37.67,
+    "id": "w91"
+  },
+  {
+    "text": "waiting.",
+    "start": 37.67,
+    "end": 38.4,
+    "id": "w92"
+  },
+  {
+    "text": "Continuous",
+    "start": 38.64,
+    "end": 39.18,
+    "id": "w93"
+  },
+  {
+    "text": "batching",
+    "start": 39.18,
+    "end": 39.79,
+    "id": "w94"
+  },
+  {
+    "text": "works",
+    "start": 39.8,
+    "end": 40.19,
+    "id": "w95"
+  },
+  {
+    "text": "token",
+    "start": 40.19,
+    "end": 40.58,
+    "id": "w96"
+  },
+  {
+    "text": "by",
+    "start": 40.58,
+    "end": 40.71,
+    "id": "w97"
+  },
+  {
+    "text": "token.",
+    "start": 40.72,
+    "end": 41.4,
+    "id": "w98"
+  },
+  {
+    "text": "When",
+    "start": 41.64,
+    "end": 41.7,
+    "id": "w99"
+  },
+  {
+    "text": "one",
+    "start": 41.7,
+    "end": 41.92,
+    "id": "w100"
+  },
+  {
+    "text": "request",
+    "start": 41.92,
+    "end": 42.44,
+    "id": "w101"
+  },
+  {
+    "text": "finishes,",
+    "start": 42.44,
+    "end": 43.2,
+    "id": "w102"
+  },
+  {
+    "text": "a",
+    "start": 43.2,
+    "end": 43.28,
+    "id": "w103"
+  },
+  {
+    "text": "new",
+    "start": 43.28,
+    "end": 43.53,
+    "id": "w104"
+  },
+  {
+    "text": "one",
+    "start": 43.53,
+    "end": 43.73,
+    "id": "w105"
+  },
+  {
+    "text": "takes",
+    "start": 44.15,
+    "end": 44.19,
+    "id": "w106"
+  },
+  {
+    "text": "its",
+    "start": 44.19,
+    "end": 44.44,
+    "id": "w107"
+  },
+  {
+    "text": "slot.",
+    "start": 44.44,
+    "end": 45.04,
+    "id": "w108"
+  },
+  {
+    "text": "No",
+    "start": 45.04,
+    "end": 45.28,
+    "id": "w109"
+  },
+  {
+    "text": "idle",
+    "start": 45.28,
+    "end": 45.45,
+    "id": "w110"
+  },
+  {
+    "text": "slots,",
+    "start": 45.46,
+    "end": 45.96,
+    "id": "w111"
+  },
+  {
+    "text": "much",
+    "start": 45.96,
+    "end": 46.19,
+    "id": "w112"
+  },
+  {
+    "text": "higher",
+    "start": 46.27,
+    "end": 46.67,
+    "id": "w113"
+  },
+  {
+    "text": "throughput.",
+    "start": 46.67,
+    "end": 47.44,
+    "id": "w114"
+  },
+  {
+    "text": "VLLM",
+    "start": 47.75,
+    "end": 48.09,
+    "id": "w115"
+  },
+  {
+    "text": "and",
+    "start": 48.09,
+    "end": 48.44,
+    "id": "w116"
+  },
+  {
+    "text": "TGI",
+    "start": 48.44,
+    "end": 48.78,
+    "id": "w117"
+  },
+  {
+    "text": "made",
+    "start": 48.78,
+    "end": 49.25,
+    "id": "w118"
+  },
+  {
+    "text": "it",
+    "start": 49.25,
+    "end": 49.48,
+    "id": "w119"
+  },
+  {
+    "text": "popular.",
+    "start": 49.48,
+    "end": 50.72,
+    "id": "w120"
+  },
+  {
+    "text": "Offline",
+    "start": 50.96,
+    "end": 51.23,
+    "id": "w121"
+  },
+  {
+    "text": "jobs,",
+    "start": 51.23,
+    "end": 51.66,
+    "id": "w122"
+  },
+  {
+    "text": "like",
+    "start": 51.66,
+    "end": 51.87,
+    "id": "w123"
+  },
+  {
+    "text": "millions",
+    "start": 51.95,
+    "end": 52.54,
+    "id": "w124"
+  },
+  {
+    "text": "of",
+    "start": 52.54,
+    "end": 52.68,
+    "id": "w125"
+  },
+  {
+    "text": "support",
+    "start": 52.68,
+    "end": 53.05,
+    "id": "w126"
+  },
+  {
+    "text": "tickets,",
+    "start": 53.48,
+    "end": 53.9,
+    "id": "w127"
+  },
+  {
+    "text": "want",
+    "start": 53.9,
+    "end": 53.97,
+    "id": "w128"
+  },
+  {
+    "text": "throughput",
+    "start": 54.69,
+    "end": 54.89,
+    "id": "w129"
+  },
+  {
+    "text": "and",
+    "start": 54.89,
+    "end": 55.1,
+    "id": "w130"
+  },
+  {
+    "text": "low",
+    "start": 55.1,
+    "end": 55.31,
+    "id": "w131"
+  },
+  {
+    "text": "cost.",
+    "start": 55.31,
+    "end": 55.64,
+    "id": "w132"
+  },
+  {
+    "text": "Live",
+    "start": 56.08,
+    "end": 56.17,
+    "id": "w133"
+  },
+  {
+    "text": "chat",
+    "start": 56.17,
+    "end": 56.43,
+    "id": "w134"
+  },
+  {
+    "text": "wants",
+    "start": 56.51,
+    "end": 56.91,
+    "id": "w135"
+  },
+  {
+    "text": "speed.",
+    "start": 56.91,
+    "end": 57.59,
+    "id": "w136"
+  },
+  {
+    "text": "Time",
+    "start": 57.84,
+    "end": 57.93,
+    "id": "w137"
+  },
+  {
+    "text": "to",
+    "start": 57.93,
+    "end": 58.09,
+    "id": "w138"
+  },
+  {
+    "text": "first",
+    "start": 58.09,
+    "end": 58.5,
+    "id": "w139"
+  },
+  {
+    "text": "token",
+    "start": 58.5,
+    "end": 58.91,
+    "id": "w140"
+  },
+  {
+    "text": "and",
+    "start": 58.91,
+    "end": 59.16,
+    "id": "w141"
+  },
+  {
+    "text": "the",
+    "start": 59.16,
+    "end": 59.41,
+    "id": "w142"
+  },
+  {
+    "text": "gap",
+    "start": 59.41,
+    "end": 59.66,
+    "id": "w143"
+  },
+  {
+    "text": "between",
+    "start": 59.66,
+    "end": 59.93,
+    "id": "w144"
+  },
+  {
+    "text": "tokens.",
+    "start": 60.36,
+    "end": 60.85,
+    "id": "w145"
+  },
+  {
+    "text": "Next",
+    "start": 61.28,
+    "end": 61.37,
+    "id": "w146"
+  },
+  {
+    "text": "episode,",
+    "start": 61.37,
+    "end": 62.11,
+    "id": "w147"
+  },
+  {
+    "text": "continuous",
+    "start": 62.11,
+    "end": 62.94,
+    "id": "w148"
+  },
+  {
+    "text": "batching",
+    "start": 62.94,
+    "end": 63.41,
+    "id": "w149"
+  },
+  {
+    "text": "in",
+    "start": 63.41,
+    "end": 63.8,
+    "id": "w150"
+  },
+  {
+    "text": "depth.",
+    "start": 63.8,
+    "end": 64.29,
+    "id": "w151"
+  },
+  {
+    "text": "Follow",
+    "start": 64.72,
+    "end": 64.87,
+    "id": "w152"
+  },
+  {
+    "text": "so",
+    "start": 64.87,
+    "end": 65,
+    "id": "w153"
+  },
+  {
+    "text": "you",
+    "start": 65,
+    "end": 65.16,
+    "id": "w154"
+  },
+  {
+    "text": "don't",
+    "start": 65.22,
+    "end": 65.51,
+    "id": "w155"
+  },
+  {
+    "text": "miss",
+    "start": 65.51,
+    "end": 65.77,
+    "id": "w156"
+  },
+  {
+    "text": "it.",
+    "start": 65.77,
+    "end": 66.12,
+    "id": "w157"
+  }
+]
