@@ -8,7 +8,7 @@ description: Lessons and scripts from making Vinit's AI-inference Instagram Reel
 Read `/hyperframes` first for the render contract; this file holds only what is specific to this series and this environment. Add to it whenever an episode teaches something new.
 
 ## The series
-- Instagram Reel, 1080×1920, 30 fps, **~60 s; a few seconds over is fine** (Vinit OK'd ~63 s on ep01). Don't cut facts or rush the voice to hit 60. One folder per episode: `videos/epNN-<slug>/` with STORYLINES.md → SPEC.md → SCRIPT.md, then index.html + `compositions/` (one scene per script line).
+- Instagram Reel, 1080×1920, 30 fps, **up to ~80 s is fine** (Vinit, ep02: "even if it's 79 seconds, that's fine"). Keep the facts and a natural pace rather than cutting to hit 60. Aim for 60–80 s. One folder per episode: `videos/epNN-<slug>/` with STORYLINES.md → SPEC.md → SCRIPT.md, then index.html + `compositions/` (one scene per script line).
 - Look carried over from ep00 (keep it unless Vinit asks): sand ground #E6D8BF with a 4% navy grid, ink navy #14213D, one green accent #00C46A, Inter 900 titles at x=90, engineering line art, the endless zoom through a green dot at (540,760). Handle on the end card: **@vr_waingankar**. Photo: `videos/ep00-series-intro/assets/vinit.jpg`.
 - Vinit is a **Senior AI Architect and Tech Lead** (name card: "Sr AI Architect · Tech Lead"). His name is spelled **Vinit** on screen but said **"Vineeth"** (vi-NEETH).
 - Vinit follows on his iPhone: keep replies short, send files with SendUserFile, and send A/B samples when a choice is his to make (he picked the voice from three samples).
@@ -51,9 +51,9 @@ Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed
 ## Episode log
 - **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). **ep02** Batching (grid + bus hook + two clocks, 67 s). Next: **ep03 Continuous batching, in depth**, then caching, quantization, speculation, parallelism, disaggregation.
 - Vinit tends to answer "Mix" to the three storylines: keep the clearest one as the spine, the most visual opener as the hook, and the bold one as the ending.
-- **Episode opening (Vinit's rule from ep01):** hook → his intro (same name card as ep00: photo, "Vinit", "Sr AI Architect · Tech Lead", spoken "Hi, I'm Vineeth, a senior AI architect and tech lead.") → a 2–3 s recap of the previous episode → the topic. Budget ~10 s for these three; running to ~65 s is fine.
+- **Episode opening (Vinit's rule from ep01):** hook → his intro (same name card as ep00: photo, "Vinit", "Sr AI Architect · Tech Lead", spoken "Hi, I'm Vineeth, a senior AI architect and tech lead.") → a 2–3 s recap of the previous episode → the topic. Budget ~10 s for these three.
 - The name reads cleanest at speed 0.95: at 1.04 whisper heard "Vanith", so generate the name line at 0.95 even when the rest runs faster.
-- Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. Aim for **~130 words** of narration for 55–60 s. ep01's first draft (~180 words) ran 77 s.
+- Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. About **130 words** is ~60 s of narration and **~180 words** is ~80 s. ep01's first draft (~180 words) ran 77 s.
 - Vinit sends source text from a book (Baseten's on inference). Paraphrase it, keep only its facts, and drop first-person company anecdotes.
 - When Vinit says "mix with more of X", keep X's spine and borrow one device each from the others.
 
