@@ -43,13 +43,13 @@
 tl.fromTo("#dynamic-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
     tl.fromTo("#dynamic-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
     tl.fromTo("#dynamic-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
-    tl.fromTo("#dynamic-reqs .dy-r", { x: -500, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, stagger: 0.55, ease: "power3.out" }, 0.6);
-    tl.to("#dynamic-arc", { strokeDashoffset: 0, duration: 2.75, ease: "none" }, 1.0);
-    tl.to("#dynamic-reqs", { y: 300, scale: 0.5, opacity: 0, transformOrigin: "50% 100%", duration: 0.4, ease: "power2.in" }, 3.75);
-    tl.to("#dynamic-gpu .cell", { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }, 4.0);
-    tl.fromTo("#dynamic-wl", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 4.6);
-    tl.fromTo("#dynamic-wait .dy-w", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.15, ease: "back.out(1.6)" }, 4.7);
-    tl.to("#dynamic-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.5);
+    tl.fromTo("#dynamic-reqs .dy-r", { x: -500, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, stagger: 0.55, ease: "power3.out" }, 1.5);
+    tl.to("#dynamic-arc", { strokeDashoffset: 0, duration: 3.9, ease: "none" }, 1.6);
+    tl.to("#dynamic-reqs", { y: 300, scale: 0.5, opacity: 0, transformOrigin: "50% 100%", duration: 0.4, ease: "power2.in" }, 5.5);
+    tl.to("#dynamic-gpu .cell", { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }, 5.75);
+    tl.fromTo("#dynamic-wl", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.2);
+    tl.fromTo("#dynamic-wait .dy-w", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.15, ease: "back.out(1.6)" }, 6.8);
+    tl.to("#dynamic-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 7.37);
     window.__timelines["dynamic"] = tl;
   </script>
 </template>

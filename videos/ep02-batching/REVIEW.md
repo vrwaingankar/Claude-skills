@@ -1,6 +1,6 @@
 # Review — ep02 Batching
 
-67.1 s, check clean (0 findings), mix ≈ −16 LUFS. All 12 VO lines verified against their own transcripts
+v2 80.1 s (full first-draft script: "keeping the past in a KV cache", "no padding", "which one wins depends on your clock"), all beats re-synced; check clean (0 findings), mix ≈ −16 LUFS. All 12 VO lines verified against their own transcripts
 (whisper spells "KV cache" as "KV cash" and "lengths" as "links": sound is right).
 Review frames: hook bus with idle seats on frame 0; name card; Ep 1 recap with the Batching chip lit; requests packed into one
 batch; token row + KV cache + 50/500 bars; static grid going idle (GPU busy meter drops); dynamic timer gate; continuous grid

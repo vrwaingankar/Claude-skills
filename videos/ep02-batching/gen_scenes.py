@@ -10,8 +10,8 @@ CLIP = lambda sel, t, d=0.45: f'tl.fromTo("{sel}", {{ clipPath: "inset(0 100% 0 
 KICK = lambda n, t=0.15: f'tl.fromTo("#{n}-kick", {{ opacity: 0 }}, {{ opacity: 0.62, duration: 0.3 }}, {t});'
 HATCH = "repeating-linear-gradient(45deg, rgba(20,33,61,.28) 0 6px, transparent 6px 14px)"
 ROWC = ["#14213D", "#2B3B60", "#3E5280", "#576A99"]
-DUR = {"hook": 3.767, "intro": 4.0, "recap": 5.167, "batch": 5.833, "tokens": 7.5, "static": 6.133, "dynamic": 6.0,
-       "cont": 6.633, "thru": 5.7, "offline": 5.133, "online": 5.2, "next": 6.067}
+DUR = {"hook": 3.767, "intro": 4.0, "recap": 6.467, "batch": 7.0, "tokens": 9.867, "static": 7.4, "dynamic": 7.867,
+       "cont": 7.333, "thru": 7.567, "offline": 7.6, "online": 5.167, "next": 6.1}
 X = lambda n: round(DUR[n] - 0.5, 2)
 
 # 0 hook: the GPU as a bus with one rider --------------------------------------
@@ -79,9 +79,9 @@ S["recap"] = scene("recap", """
     {ENTER("recap")}
     {KICK("recap")}
     {CLIP("#recap-ttl", 0.25)}
-    tl.fromTo(".rc-l", {{ opacity: 0, x: -40 }}, {{ opacity: 1, x: 0, duration: 0.3, stagger: 0.12, ease: "expo.out" }}, 0.75);
-    tl.fromTo(".rc-c", {{ opacity: 0, scale: 0.6 }}, {{ opacity: 1, scale: 1, duration: 0.3, stagger: 0.06, ease: "back.out(1.6)" }}, 1.85);
-    tl.to("#recap-c0", {{ backgroundColor: "#00C46A", scale: 1.12, duration: 0.3, ease: "back.out(2)" }}, 4.3);
+    tl.fromTo(".rc-l", {{ opacity: 0, x: -40 }}, {{ opacity: 1, x: 0, duration: 0.3, stagger: 0.12, ease: "expo.out" }}, 0.9);
+    tl.fromTo(".rc-c", {{ opacity: 0, scale: 0.6 }}, {{ opacity: 1, scale: 1, duration: 0.3, stagger: 0.06, ease: "back.out(1.6)" }}, 1.8);
+    tl.to("#recap-c0", {{ backgroundColor: "#00C46A", scale: 1.12, duration: 0.3, ease: "back.out(2)" }}, 5.2);
     {EXIT("recap", X("recap"))}
 """)
 
@@ -110,11 +110,11 @@ S["batch"] = scene("batch", """
     tl.set("#batch-work", {{ scaleX: 0.25 }}, 0);
     tl.set("#batch-cost", {{ scaleX: 0.85 }}, 0);
     tl.fromTo("#batch-reqs .bt-r", {{ opacity: 0, y: -40 }}, {{ opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "expo.out" }}, 0.4);
-    tl.to("#batch-tray", {{ opacity: 1, duration: 0.2 }}, 1.2);
-    tl.to("#batch-reqs .bt-r", {{ x: (i) => [-10, -450, -70, -490][i], y: (i) => [0, 50, 10, 70][i], duration: 0.45, stagger: 0.06, ease: "power3.inOut" }}, 1.25);
-    tl.to("#batch-gpu .cell", {{ backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }}, 2.75);
-    tl.to("#batch-work", {{ scaleX: 0.92, duration: 0.5, ease: "power3.out" }}, 3.65);
-    tl.to("#batch-cost", {{ scaleX: 0.32, duration: 0.5, ease: "power3.out" }}, 4.65);
+    tl.to("#batch-tray", {{ opacity: 1, duration: 0.2 }}, 1.45);
+    tl.to("#batch-reqs .bt-r", {{ x: (i) => [-10, -450, -70, -490][i], y: (i) => [0, 50, 10, 70][i], duration: 0.45, stagger: 0.06, ease: "power3.inOut" }}, 1.5);
+    tl.to("#batch-gpu .cell", {{ backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }}, 3.1);
+    tl.to("#batch-work", {{ scaleX: 0.92, duration: 0.5, ease: "power3.out" }}, 3.95);
+    tl.to("#batch-cost", {{ scaleX: 0.32, duration: 0.5, ease: "power3.out" }}, 5.85);
     {EXIT("batch", X("batch"))}
 """)
 
@@ -139,13 +139,13 @@ S["tokens"] = scene("tokens", """
     {ENTER("tokens")}
     {KICK("tokens")}
     {CLIP("#tokens-ttl", 0.3)}
-    tl.fromTo(".tk-t", {{ opacity: 0, scale: 0.4 }}, {{ opacity: 1, scale: 1, duration: 0.12, stagger: 0.16, ease: "back.out(2)" }}, 1.15);
-    tl.fromTo("#tokens-kv", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.3 }}, 2.7);
-    tl.fromTo(".tk-kv", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.08, stagger: 0.12 }}, 2.75);
-    tl.fromTo("#tokens-b1", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.3, ease: "power2.out" }}, 4.9);
-    tl.fromTo("#tokens-l1", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 4.95);
-    tl.fromTo("#tokens-b2", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.9, ease: "power1.inOut" }}, 6.05);
-    tl.fromTo("#tokens-l2", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 6.1);
+    tl.fromTo(".tk-t", {{ opacity: 0, scale: 0.4 }}, {{ opacity: 1, scale: 1, duration: 0.12, stagger: 0.16, ease: "back.out(2)" }}, 1.25);
+    tl.fromTo("#tokens-kv", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.3 }}, 4.5);
+    tl.fromTo(".tk-kv", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.08, stagger: 0.08 }}, 4.6);
+    tl.fromTo("#tokens-b1", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.3, ease: "power2.out" }}, 7.1);
+    tl.fromTo("#tokens-l1", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 7.15);
+    tl.fromTo("#tokens-b2", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.7, ease: "power1.inOut" }}, 8.45);
+    tl.fromTo("#tokens-l2", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 8.5);
     {EXIT("tokens", X("tokens"))}
 """)
 
@@ -182,7 +182,7 @@ def grid(n, plan, t0, step, queue=0):
     js.append(f'tl.fromTo("#{n}-ph", {{ x: 0 }}, {{ x: {COLS * CW}, duration: {COLS * step:.2f}, ease: "none" }}, {t0});')
     return "\n      ".join(h), "\n    ".join(js)
 
-g5, j5 = grid("static", [[(8, ROWC[0])], [(3, ROWC[1])], [(5, ROWC[2])], [(2, ROWC[3])]], 0.9, 0.55)
+g5, j5 = grid("static", [[(8, ROWC[0])], [(3, ROWC[1])], [(5, ROWC[2])], [(2, ROWC[3])]], 1.0, 0.65)
 S["static"] = scene("static", GRID_CSS, f"""
       {BIG("static").replace(">0<", ">2<")}
       <div id="static-kick" class="kick">Rule 1 · wait for the longest</div>
@@ -196,8 +196,8 @@ S["static"] = scene("static", GRID_CSS, f"""
     {KICK("static")}
     {CLIP("#static-ttl", 0.25)}
     {j5}
-    tl.to("#static-m", {{ keyframes: [{{ scaleX: 1, duration: 0.01 }}, {{ scaleX: 0.75, duration: 0.3 }}, {{ scaleX: 0.5, duration: 0.6 }}, {{ scaleX: 0.25, duration: 0.6 }}], ease: "power2.out" }}, 1.9);
-    tl.fromTo("#static-w .gd-i", {{ scale: 1 }}, {{ scale: 0.86, duration: 0.15, yoyo: true, repeat: 1 }}, 5.05);
+    tl.to("#static-m", {{ keyframes: [{{ scaleX: 1, duration: 0.01 }}, {{ scaleX: 0.75, duration: 0.3 }}, {{ scaleX: 0.5, duration: 0.6 }}, {{ scaleX: 0.25, duration: 0.6 }}], ease: "power2.out" }}, 2.3);
+    tl.fromTo("#static-w .gd-i", {{ scale: 1 }}, {{ scale: 0.86, duration: 0.15, yoyo: true, repeat: 1 }}, 6.35);
     {EXIT("static", X("static"))}
 """)
 
@@ -225,18 +225,18 @@ S["dynamic"] = scene("dynamic", """
     {ENTER("dynamic")}
     {KICK("dynamic")}
     {CLIP("#dynamic-ttl", 0.25)}
-    tl.fromTo("#dynamic-reqs .dy-r", {{ x: -500, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35, stagger: 0.55, ease: "power3.out" }}, 0.6);
-    tl.to("#dynamic-arc", {{ strokeDashoffset: 0, duration: 2.75, ease: "none" }}, 1.0);
-    tl.to("#dynamic-reqs", {{ y: 300, scale: 0.5, opacity: 0, transformOrigin: "50% 100%", duration: 0.4, ease: "power2.in" }}, 3.75);
-    tl.to("#dynamic-gpu .cell", {{ backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }}, 4.0);
-    tl.fromTo("#dynamic-wl", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 4.6);
-    tl.fromTo("#dynamic-wait .dy-w", {{ opacity: 0, y: 40 }}, {{ opacity: 1, y: 0, duration: 0.25, stagger: 0.15, ease: "back.out(1.6)" }}, 4.7);
+    tl.fromTo("#dynamic-reqs .dy-r", {{ x: -500, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35, stagger: 0.55, ease: "power3.out" }}, 1.5);
+    tl.to("#dynamic-arc", {{ strokeDashoffset: 0, duration: 3.9, ease: "none" }}, 1.6);
+    tl.to("#dynamic-reqs", {{ y: 300, scale: 0.5, opacity: 0, transformOrigin: "50% 100%", duration: 0.4, ease: "power2.in" }}, 5.5);
+    tl.to("#dynamic-gpu .cell", {{ backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }}, 5.75);
+    tl.fromTo("#dynamic-wl", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 6.2);
+    tl.fromTo("#dynamic-wait .dy-w", {{ opacity: 0, y: 40 }}, {{ opacity: 1, y: 0, duration: 0.25, stagger: 0.15, ease: "back.out(1.6)" }}, 6.8);
     {EXIT("dynamic", X("dynamic"))}
 """)
 
 # 7 continuous: same grid, finished slots refill from the queue ---------------------
 G = "#00C46A"
-g7, j7 = grid("cont", [[(8, ROWC[0])], [(3, ROWC[1]), (5, G)], [(7, ROWC[2]), (1, G)], [(2, ROWC[3]), (6, G)]], 0.6, 0.6, queue=3)
+g7, j7 = grid("cont", [[(8, ROWC[0])], [(3, ROWC[1]), (5, G)], [(7, ROWC[2]), (1, G)], [(2, ROWC[3]), (6, G)]], 0.6, 0.65, queue=3)
 S["cont"] = scene("cont", GRID_CSS, f"""
       {BIG("cont").replace(">0<", ">2<")}
       <div id="cont-kick" class="kick">Rule 3 · refill every step</div>
@@ -251,12 +251,12 @@ S["cont"] = scene("cont", GRID_CSS, f"""
     {KICK("cont")}
     {CLIP("#cont-ttl", 0.25)}
     {j7}
-    tl.to("#cont-q0", {{ x: -640, y: {3 * RH}, duration: 0.35, ease: "power3.inOut" }}, 1.4);
-    tl.to("#cont-q0", {{ opacity: 0, duration: 0.1 }}, 1.8);
-    tl.to("#cont-q1", {{ x: -540, y: 0, duration: 0.35, ease: "power3.inOut" }}, 2.0);
-    tl.to("#cont-q1", {{ opacity: 0, duration: 0.1 }}, 2.4);
-    tl.to("#cont-q2", {{ x: -140, y: 0, scale: 1.1, duration: 0.45, ease: "power3.inOut" }}, 4.3);
-    tl.to("#cont-q2", {{ opacity: 0, duration: 0.1 }}, 4.85);
+    tl.to("#cont-q0", {{ x: -640, y: {3 * RH}, duration: 0.35, ease: "power3.inOut" }}, 1.5);
+    tl.to("#cont-q0", {{ opacity: 0, duration: 0.1 }}, 1.9);
+    tl.to("#cont-q1", {{ x: -540, y: 0, duration: 0.35, ease: "power3.inOut" }}, 2.15);
+    tl.to("#cont-q1", {{ opacity: 0, duration: 0.1 }}, 2.55);
+    tl.to("#cont-q2", {{ x: -140, y: 0, scale: 1.1, duration: 0.45, ease: "power3.inOut" }}, 4.7);
+    tl.to("#cont-q2", {{ opacity: 0, duration: 0.1 }}, 5.15);
     {EXIT("cont", X("cont"))}
 """)
 
@@ -271,6 +271,7 @@ S["thru"] = scene("thru", """
       {gauge("thru-g", 90, 520, 520)}
       <div class="lb" style="left:640px;top:600px">throughput</div>
       <div id="thru-hi" class="lb" style="left:640px;top:660px;font-size:44px">much higher</div>
+      <div id="thru-np" class="lb" style="left:90px;top:420px;font-size:44px">no padding · no idle time</div>
       <div class="lb" style="left:90px;top:920px;opacity:.62">made popular by</div>
       <div id="thru-e0" class="th-e pn" style="left:90px"><div class="lb">vLLM</div></div>
       <div id="thru-e1" class="th-e pn" style="left:570px"><div class="lb">TGI</div></div>
@@ -279,10 +280,11 @@ S["thru"] = scene("thru", """
     {KICK("thru")}
     {CLIP("#thru-ttl", 0.2)}
     tl.set("#thru-g-n", {{ rotation: -60, svgOrigin: "200 200" }}, 0);
-    tl.to("#thru-g-n", {{ rotation: 72, duration: 0.6, svgOrigin: "200 200", ease: "back.out(1.4)" }}, 1.0);
-    {CLIP("#thru-hi", 1.5, 0.35)}
-    tl.fromTo("#thru-e0", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }}, 2.75);
-    tl.fromTo("#thru-e1", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }}, 3.9);
+    tl.to("#thru-g-n", {{ rotation: 72, duration: 0.6, svgOrigin: "200 200", ease: "back.out(1.4)" }}, 2.2);
+    {CLIP("#thru-hi", 2.6, 0.35)}
+    {CLIP("#thru-np", 1.5, 0.35)}
+    tl.fromTo("#thru-e0", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }}, 4.75);
+    tl.fromTo("#thru-e1", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }}, 5.4);
     {EXIT("thru", X("thru"))}
 """)
 
@@ -328,9 +330,10 @@ S["offline"] = scene("offline", c9 + "\n#offline-chat .ck-s { opacity: 0; }", m9
     {ENTER("offline")}
     tl.set("#offline-tp", {{ scaleX: 0.3 }}, 0);
     tl.set("#offline-cs", {{ scaleX: 0.8 }}, 0);
-    tl.fromTo("#offline-tk .ck-t", {{ opacity: 0, y: -30 }}, {{ opacity: 1, y: 0, duration: 0.15, stagger: 0.04, ease: "power2.out" }}, 1.1);
-    tl.to("#offline-tp", {{ scaleX: 0.95, duration: 0.5, ease: "power3.out" }}, 3.55);
-    tl.to("#offline-cs", {{ scaleX: 0.25, duration: 0.5, ease: "power3.out" }}, 4.1);
+    tl.fromTo("#offline-w .ck-sw", {{ scale: 1 }}, {{ scale: 1.12, duration: 0.18, yoyo: true, repeat: 1 }}, 2.3);
+    tl.fromTo("#offline-tk .ck-t", {{ opacity: 0, y: -30 }}, {{ opacity: 1, y: 0, duration: 0.15, stagger: 0.04, ease: "power2.out" }}, 3.7);
+    tl.to("#offline-tp", {{ scaleX: 0.95, duration: 0.5, ease: "power3.out" }}, 5.9);
+    tl.to("#offline-cs", {{ scaleX: 0.25, duration: 0.5, ease: "power3.out" }}, 6.85);
 """, origin="800px 900px")
 c10, m10 = clocks("online", "r")
 S["online"] = scene("online", c10, m10, f"""

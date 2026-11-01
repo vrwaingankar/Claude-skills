@@ -43,12 +43,12 @@ tl.fromTo("#batch-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, durati
     tl.set("#batch-work", { scaleX: 0.25 }, 0);
     tl.set("#batch-cost", { scaleX: 0.85 }, 0);
     tl.fromTo("#batch-reqs .bt-r", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "expo.out" }, 0.4);
-    tl.to("#batch-tray", { opacity: 1, duration: 0.2 }, 1.2);
-    tl.to("#batch-reqs .bt-r", { x: (i) => [-10, -450, -70, -490][i], y: (i) => [0, 50, 10, 70][i], duration: 0.45, stagger: 0.06, ease: "power3.inOut" }, 1.25);
-    tl.to("#batch-gpu .cell", { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }, 2.75);
-    tl.to("#batch-work", { scaleX: 0.92, duration: 0.5, ease: "power3.out" }, 3.65);
-    tl.to("#batch-cost", { scaleX: 0.32, duration: 0.5, ease: "power3.out" }, 4.65);
-    tl.to("#batch-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.33);
+    tl.to("#batch-tray", { opacity: 1, duration: 0.2 }, 1.45);
+    tl.to("#batch-reqs .bt-r", { x: (i) => [-10, -450, -70, -490][i], y: (i) => [0, 50, 10, 70][i], duration: 0.45, stagger: 0.06, ease: "power3.inOut" }, 1.5);
+    tl.to("#batch-gpu .cell", { backgroundColor: "#00C46A", duration: 0.1, stagger: 0.03 }, 3.1);
+    tl.to("#batch-work", { scaleX: 0.92, duration: 0.5, ease: "power3.out" }, 3.95);
+    tl.to("#batch-cost", { scaleX: 0.32, duration: 0.5, ease: "power3.out" }, 5.85);
+    tl.to("#batch-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.5);
     window.__timelines["batch"] = tl;
   </script>
 </template>

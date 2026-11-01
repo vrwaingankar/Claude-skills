@@ -56,9 +56,10 @@
 tl.fromTo("#offline-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
     tl.set("#offline-tp", { scaleX: 0.3 }, 0);
     tl.set("#offline-cs", { scaleX: 0.8 }, 0);
-    tl.fromTo("#offline-tk .ck-t", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.15, stagger: 0.04, ease: "power2.out" }, 1.1);
-    tl.to("#offline-tp", { scaleX: 0.95, duration: 0.5, ease: "power3.out" }, 3.55);
-    tl.to("#offline-cs", { scaleX: 0.25, duration: 0.5, ease: "power3.out" }, 4.1);
+    tl.fromTo("#offline-w .ck-sw", { scale: 1 }, { scale: 1.12, duration: 0.18, yoyo: true, repeat: 1 }, 2.3);
+    tl.fromTo("#offline-tk .ck-t", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.15, stagger: 0.04, ease: "power2.out" }, 3.7);
+    tl.to("#offline-tp", { scaleX: 0.95, duration: 0.5, ease: "power3.out" }, 5.9);
+    tl.to("#offline-cs", { scaleX: 0.25, duration: 0.5, ease: "power3.out" }, 6.85);
     window.__timelines["offline"] = tl;
   </script>
 </template>
