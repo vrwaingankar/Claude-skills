@@ -1,0 +1,52 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.ln { position: absolute; left: 230px; width: 760px; height: 90px; border-radius: 12px; background: rgba(20,33,61,.07); }
+.lnl { position: absolute; left: 90px; font: 900 40px/90px Inter; white-space: nowrap; }
+.bk { position: absolute; height: 90px; border-radius: 12px; transform-origin: 0 50%; font: 700 30px/90px Inter; text-align: center; white-space: nowrap; overflow: hidden; }
+.bk.cpu { background: #14213D; color: #E6D8BF; }
+.bk.gpu { background: #576A99; color: #F3EBDD; }
+.bk.idle { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+
+.ev { position: absolute; width: 8px; height: 80px; background: #00C46A; border-radius: 4px; transform-origin: 50% 0; }
+  </style>
+  <div id="root" data-composition-id="events" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="events-w" class="w">
+<div id="events-big" class="big" data-layout-ignore>4</div>
+      <div id="events-kick" class="kick">Step 2</div>
+      <div id="events-ttl" class="ttl" style="font-size:112px">CUDA <span class="g">events</span></div>
+      <div class="lb" style="left:90px;top:500px;opacity:.62">record → wait: each stream waits for the last</div>
+      <div class="lnl" style="top:560px;font-size:30px;width:130px;line-height:1.1;padding-top:16px">H2D</div><div class="ln" style="top:560px"></div><div class="lnl" style="top:690px;font-size:30px;width:130px;line-height:1.1;padding-top:16px">compute</div><div class="ln" style="top:690px"></div><div class="lnl" style="top:820px;font-size:30px;width:130px;line-height:1.1;padding-top:16px">D2H</div><div class="ln" style="top:820px"></div>
+      <div id="events-h" class="bk cpu" style="left:230px;top:560px;width:220px;">inputs in</div><div id="events-k" class="bk gpu" style="left:450px;top:690px;width:320px;">compute</div><div id="events-o" class="bk cpu" style="left:770px;top:820px;width:220px;">outputs out</div>
+      <div id="events-e1" class="ev" style="left:448px;top:650px"></div>
+      <div id="events-e2" class="ev" style="left:768px;top:780px"></div>
+      <div id="events-lb" class="lb" style="left:90px;top:960px">CPU blocks once per step: on outputs out</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.set("#events-k", { x: -220 }, 0);
+    tl.set("#events-o", { x: -540 }, 0);
+    tl.fromTo("#events-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.35);
+    tl.to("#events-k, #events-o", { x: 0, duration: 0.45, ease: "power3.inOut" }, 1.05);
+    tl.fromTo("#events-e1, #events-e2", { scaleY: 0 }, { scaleY: 1, duration: 0.2, stagger: 0.25, ease: "back.out(2)" }, 1.5);
+    tl.fromTo("#events-lb", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 1.9);
+    tl.to("#events-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.17);
+    window.__timelines["events"] = tl;
+  </script>
+</template>

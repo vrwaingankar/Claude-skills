@@ -1,0 +1,45 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#hook-l1, #hook-l2 { position: absolute; left: 84px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+#hook-l1 { top: 230px; } #hook-l2 { top: 380px; }
+.kt { position: absolute; top: 580px; width: 430px; height: 420px; }
+.burn { position: absolute; width: 130px; height: 130px; border-radius: 50%; border: 10px solid rgba(20,33,61,.3); }
+#hook-board { position: absolute; left: 60px; top: 230px; width: 310px; height: 120px; border-radius: 14px; background: #E6D8BF; border: 4px solid #14213D; }
+#hook-knife { position: absolute; left: 150px; top: 150px; width: 16px; height: 140px; border-radius: 8px; background: #14213D; transform-origin: 50% 100%; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="hook-w" class="w">
+<div id="hook-l1">Your GPU,</div>
+      <div id="hook-l2"><span class="g">waiting</span></div>
+      <div class="kt pn" style="left:90px"><div class="lb" style="left:30px;top:30px">CPU · the prep cook</div><div id="hook-board"></div><div id="hook-knife"></div></div>
+      <div class="kt pn" style="left:560px"><div class="lb" style="left:30px;top:30px">GPU · the stove</div>
+        <div class="burn" style="left:60px;top:120px"></div><div class="burn" style="left:230px;top:120px"></div>
+        <div class="burn" style="left:60px;top:270px"></div><div class="burn" style="left:230px;top:270px"></div></div>
+      <div id="hook-idle" class="lb" style="left:560px;top:1040px;color:#D9442B;font-size:44px">idle ~24% of the time</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#hook-knife", { rotation: 0 }, { rotation: -28, duration: 0.18, yoyo: true, repeat: 13, ease: "power1.inOut" }, 0.2);
+    tl.fromTo(".burn", { borderColor: "rgba(20,33,61,.3)" }, { borderColor: "#D9442B", duration: 0.25, stagger: 0.08 }, 1.8);
+    tl.fromTo("#hook-idle", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 1.9);
+    tl.to("#hook-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.67);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

@@ -1,0 +1,53 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.cv { position: absolute; width: 110px; height: 90px; border-radius: 12px; font: 900 40px/82px Inter; text-align: center; }
+.cl { position: absolute; left: 90px; font: 700 30px/1.1 Inter; width: 130px; }
+#carry-arrow { position: absolute; left: 540px; top: 660px; width: 10px; height: 200px; background: #00C46A; border-radius: 5px; transform-origin: 50% 0; }
+  </style>
+  <div id="root" data-composition-id="carry" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="carry-w" class="w">
+<div id="carry-big" class="big" data-layout-ignore>4</div>
+      <div id="carry-kick" class="kick">Step 4</div>
+      <div id="carry-ttl" class="ttl" style="font-size:112px">Carry-<span class="g">over</span></div>
+      <div class="cl" style="top:590px">batch N output</div>
+      <div  class="cv" style="left:230px;top:570px;background:#14213D;color:#F3EBDD">t</div><div  class="cv" style="left:360px;top:570px;background:#2B3B60;color:#F3EBDD">t</div><div  class="cv" style="left:490px;top:570px;background:#3E5280;color:#F3EBDD">t</div><div  class="cv" style="left:620px;top:570px;background:#576A99;color:#F3EBDD">t</div>
+      <div class="cl" style="top:890px">batch N+1 input</div>
+      <div  class="cv" style="left:230px;top:870px;background:#14213D;color:#F3EBDD">t</div><div  class="cv" style="left:360px;top:870px;background:#2B3B60;color:#F3EBDD">t</div><div id="carry-i-x" class="cv" style="left:490px;top:870px;background:#F3EBDD;border:4px dashed #D9442B;color:#D9442B">?</div><div  class="cv" style="left:620px;top:870px;background:#576A99;color:#F3EBDD">t</div>
+      <div id="carry-arrow"></div>
+      <div class="cl" style="top:1010px">carry-over mask</div>
+      <div id="carry-mask" class="lb" style="left:230px;top:1020px;font-size:40px">[ −1, −1, 2, −1 ]</div>
+      <div id="carry-lb" class="lb" style="left:90px;top:1120px">token not made yet → write 0, patch it on the GPU</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#carry-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#carry-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#carry-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.3);
+    tl.fromTo("#carry-i-x", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 0.9);
+    tl.set("#carry-i-x", { textContent: "0" }, 2.8);
+    tl.to("#carry-i-x", { scale: 1.15, duration: 0.15, yoyo: true, repeat: 1 }, 2.8);
+    tl.fromTo("#carry-mask", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.7);
+    tl.fromTo("#carry-lb", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 2.2);
+    tl.fromTo("#carry-arrow", { scaleY: 0 }, { scaleY: 1, duration: 0.4, ease: "power3.out" }, 5.7);
+    tl.set("#carry-i-x", { textContent: "t", backgroundColor: "#3E5280", color: "#F3EBDD", borderStyle: "solid", borderColor: "#00C46A" }, 6.2);
+    tl.to("#carry-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 7.97);
+    window.__timelines["carry"] = tl;
+  </script>
+</template>

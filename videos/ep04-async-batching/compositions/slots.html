@@ -1,0 +1,53 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.sl { position: absolute; top: 560px; width: 420px; height: 300px; }
+.sl .nm { position: absolute; left: 30px; top: 24px; font: 900 96px/1 Inter; }
+.sl .rl { position: absolute; left: 30px; top: 170px; font: 700 36px/1.2 Inter; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="slots" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="slots-w" class="w">
+<div id="slots-big" class="big" data-layout-ignore>4</div>
+      <div id="slots-kick" class="kick">Step 3 · double buffering</div>
+      <div id="slots-ttl" class="ttl" style="font-size:112px">Slots <span class="g">A + B</span></div>
+      <div id="slots-a" class="sl pn" style="left:90px"><div class="nm">A</div><div class="rl"><span id="slots-ra">GPU reads</span></div></div>
+      <div id="slots-b" class="sl pn" style="left:570px"><div class="nm">B</div><div class="rl"><span id="slots-rb">CPU writes</span></div></div>
+      <div id="slots-l1" class="lb" style="left:90px;top:920px">they swap every step</div>
+      <div id="slots-l2" class="lb" style="left:90px;top:990px">no overwriting data the GPU still reads</div>
+      <div id="slots-l3" class="lb" style="left:90px;top:1060px;opacity:.62">cost: ~2× memory for input/output tensors</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#slots-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#slots-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#slots-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.3);
+    tl.fromTo("#slots-a", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, 1.7);
+    tl.fromTo("#slots-b", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, 2.15);
+    tl.to("#slots-a", { borderColor: "#00C46A", duration: 0.15 }, 2.6);
+    tl.to("#slots-a", { borderColor: "#14213D", duration: 0.15 }, 3.4);
+    tl.to("#slots-b", { borderColor: "#00C46A", duration: 0.15 }, 3.4);
+    tl.set("#slots-ra", { textContent: "CPU writes" }, 3.4);
+    tl.set("#slots-rb", { textContent: "GPU reads" }, 3.4);
+    tl.fromTo("#slots-l1", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "power3.inOut" }, 2.7);
+    tl.fromTo("#slots-l2", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.7);
+    tl.fromTo("#slots-l3", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.3);
+    tl.to("#slots-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.97);
+    window.__timelines["slots"] = tl;
+  </script>
+</template>

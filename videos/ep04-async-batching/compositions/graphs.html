@@ -1,0 +1,46 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.gp { position: absolute; top: 540px; width: 420px; height: 260px; }
+#graphs-pool { position: absolute; left: 90px; top: 860px; width: 900px; height: 110px; border-radius: 16px; background: #576A99; transform-origin: 0 50%; }
+  </style>
+  <div id="root" data-composition-id="graphs" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="graphs-w" class="w">
+<div id="graphs-big" class="big" data-layout-ignore>4</div>
+      <div id="graphs-kick" class="kick">Step 3 · CUDA graphs</div>
+      <div id="graphs-ttl" class="ttl" style="font-size:112px">One <span class="g">pool</span></div>
+      <div id="graphs-a" class="gp pn" style="left:90px"><div class="lb" style="left:24px;top:200px">graph for slot A</div></div>
+      <div id="graphs-b" class="gp pn" style="left:570px"><div class="lb" style="left:24px;top:200px">graph for slot B</div></div>
+      <div id="graphs-ga"><div style="position:absolute;left:170px;top:607px;width:34px;height:34px;border-radius:50%;background:#14213D"></div><div style="position:absolute;left:270px;top:593px;width:34px;height:34px;border-radius:50%;background:#14213D"></div><div style="position:absolute;left:220px;top:663px;width:34px;height:34px;border-radius:50%;background:#14213D"></div><div style="position:absolute;left:330px;top:656px;width:34px;height:34px;border-radius:50%;background:#14213D"></div></div><div id="graphs-gb"><div style="position:absolute;left:650px;top:607px;width:34px;height:34px;border-radius:50%;background:#14213D"></div><div style="position:absolute;left:750px;top:593px;width:34px;height:34px;border-radius:50%;background:#14213D"></div><div style="position:absolute;left:700px;top:663px;width:34px;height:34px;border-radius:50%;background:#14213D"></div><div style="position:absolute;left:810px;top:656px;width:34px;height:34px;border-radius:50%;background:#14213D"></div></div>
+      <div id="graphs-pool"><div class="lb" style="left:30px;top:36px;color:#F3EBDD">shared memory pool</div></div>
+      <div id="graphs-lb" class="lb" style="left:90px;top:1010px">never run together · sized to the largest graph</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#graphs-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#graphs-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#graphs-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 2.9);
+    tl.fromTo("#graphs-a, #graphs-ga", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, 0.5);
+    tl.fromTo("#graphs-b, #graphs-gb", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, 1.1);
+    tl.fromTo("#graphs-pool", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power2.out" }, 2.9);
+    tl.fromTo("#graphs-lb", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 2.0);
+    tl.to("#graphs-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 4.07);
+    window.__timelines["graphs"] = tl;
+  </script>
+</template>

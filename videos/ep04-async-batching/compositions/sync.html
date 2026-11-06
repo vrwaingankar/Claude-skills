@@ -1,0 +1,52 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.ln { position: absolute; left: 230px; width: 760px; height: 90px; border-radius: 12px; background: rgba(20,33,61,.07); }
+.lnl { position: absolute; left: 90px; font: 900 40px/90px Inter; white-space: nowrap; }
+.bk { position: absolute; height: 90px; border-radius: 12px; transform-origin: 0 50%; font: 700 30px/90px Inter; text-align: center; white-space: nowrap; overflow: hidden; }
+.bk.cpu { background: #14213D; color: #E6D8BF; }
+.bk.gpu { background: #576A99; color: #F3EBDD; }
+.bk.idle { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+  </style>
+  <div id="root" data-composition-id="sync" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="sync-w" class="w">
+<div id="sync-big" class="big" data-layout-ignore>4</div>
+      <div id="sync-kick" class="kick">The problem</div>
+      <div id="sync-ttl" class="ttl" style="font-size:112px">Taking <span class="g">turns</span></div>
+      <div class="lb" style="left:90px;top:500px;opacity:.62">time →</div>
+      <div class="lnl" style="top:560px">CPU</div><div class="ln" style="top:560px"></div><div class="lnl" style="top:690px">GPU</div><div class="ln" style="top:690px"></div>
+      <div id="sync-g1" class="bk gpu" style="left:230px;top:690px;width:230px;">compute</div><div id="sync-ci1" class="bk idle" style="left:230px;top:560px;width:230px;"></div><div id="sync-c1" class="bk cpu" style="left:460px;top:560px;width:200px;">prep</div><div id="sync-gi1" class="bk idle" style="left:460px;top:690px;width:200px;"></div><div id="sync-g2" class="bk gpu" style="left:660px;top:690px;width:200px;"></div><div id="sync-ci2" class="bk idle" style="left:660px;top:560px;width:200px;"></div><div id="sync-c2" class="bk cpu" style="left:860px;top:560px;width:130px;"></div><div id="sync-gi2" class="bk idle" style="left:860px;top:690px;width:130px;"></div>
+      <div id="sync-lb" class="lb" style="left:90px;top:860px;color:#D9442B">red = waiting · they never overlap</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#sync-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#sync-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#sync-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.6);
+    tl.fromTo("#sync-g1", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 1.2, ease: "power2.out" }, 2.2);
+    tl.fromTo("#sync-ci1", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power2.out" }, 3.65);
+    tl.fromTo("#sync-c1", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.9, ease: "power2.out" }, 5.4);
+    tl.fromTo("#sync-gi1", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power2.out" }, 6.9);
+    tl.fromTo("#sync-g2, #sync-ci2", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "power2.out" }, 7.15);
+    tl.fromTo("#sync-c2, #sync-gi2", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.25, ease: "power2.out" }, 7.3);
+    tl.fromTo("#sync-lb", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.1);
+    tl.to("#sync-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 7.43);
+    window.__timelines["sync"] = tl;
+  </script>
+</template>
