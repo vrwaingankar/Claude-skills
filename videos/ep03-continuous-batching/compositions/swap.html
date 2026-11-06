@@ -1,0 +1,48 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.c { position: absolute; border-radius: 8px; }
+.pad { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+#swap-cnt { position: absolute; left: 90px; top: 960px; font: 900 72px/1 Inter; color: #D9442B; }
+  </style>
+  <div id="root" data-composition-id="swap" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="swap-w" class="w">
+<div id="swap-big" class="big" data-layout-ignore>3</div>
+      <div id="swap-kick" class="kick">Dynamic scheduling</div>
+      <div id="swap-ttl" class="ttl" style="font-size:112px">Swap <span class="g">in</span></div>
+      <div class="lb" style="left:90px;top:500px;opacity:.62">one step: new prompt prefills, the rest decode 1 token</div>
+      <div class="c pad swap-pad" style="left:90px;top:560px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:162px;top:560px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:234px;top:560px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:306px;top:560px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:378px;top:560px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:450px;top:560px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:522px;top:560px;width:64px;height:70px"></div><div class="c swap-dec" style="left:594px;top:560px;width:64px;height:70px;background:#14213D;opacity:.75"></div><div class="c swap-new" style="left:90px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-new" style="left:162px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-new" style="left:234px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-new" style="left:306px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-new" style="left:378px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-new" style="left:450px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-new" style="left:522px;top:646px;width:64px;height:70px;background:#576A99;border:3px solid #14213D"></div><div class="c swap-dec" style="left:594px;top:646px;width:64px;height:70px;background:#576A99;opacity:.75"></div><div class="c pad swap-pad" style="left:90px;top:732px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:162px;top:732px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:234px;top:732px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:306px;top:732px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:378px;top:732px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:450px;top:732px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:522px;top:732px;width:64px;height:70px"></div><div class="c swap-dec" style="left:594px;top:732px;width:64px;height:70px;background:#3E5280;opacity:.75"></div><div class="c pad swap-pad" style="left:90px;top:818px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:162px;top:818px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:234px;top:818px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:306px;top:818px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:378px;top:818px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:450px;top:818px;width:64px;height:70px"></div><div class="c pad swap-pad" style="left:522px;top:818px;width:64px;height:70px"></div><div class="c swap-dec" style="left:594px;top:818px;width:64px;height:70px;background:#576A99;opacity:.75"></div>
+      <div class="lb" style="left:606px;top:664px">new</div>
+      <div id="swap-cnt">padding: <span id="swap-n">0</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#swap-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#swap-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#swap-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.2);
+    tl.fromTo(".swap-new", { x: 500, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, stagger: 0.05, ease: "power3.out" }, 0.6);
+    tl.fromTo(".swap-new", { borderColor: "#14213D" }, { borderColor: "#00C46A", duration: 0.2, yoyo: true, repeat: 1 }, 2.2);
+    tl.fromTo(".swap-dec", { opacity: 0, scale: 0.5 }, { opacity: 0.75, scale: 1, duration: 0.15, ease: "back.out(2)" }, 3.5);
+    tl.fromTo(".swap-pad", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.18, stagger: 0.03, ease: "back.out(2)" }, 4.4);
+    tl.fromTo("#swap-cnt", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 4.4);
+    tl.fromTo("#swap-n", { textContent: 0 }, { textContent: 18, duration: 0.6, snap: { textContent: 1 }, ease: "none" }, 4.4);
+    tl.to("#swap-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.47);
+    window.__timelines["swap"] = tl;
+  </script>
+</template>

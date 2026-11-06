@@ -1,0 +1,49 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.c { position: absolute; border-radius: 8px; }
+.pad { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+  </style>
+  <div id="root" data-composition-id="goal" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="goal-w" class="w">
+<div id="goal-big" class="big" data-layout-ignore>3</div>
+      <div id="goal-kick" class="kick">The goal</div>
+      <div id="goal-ttl" class="ttl"><span class="g">Throughput</span></div>
+      <svg id="goal-g" style="position:absolute;left:90px;top:470px" width="470" height="282" viewBox="0 0 400 240">
+  <path d="M40 200 A160 160 0 0 1 86.9 86.9" fill="none" stroke="#D9442B" stroke-width="26"/>
+  <path d="M86.9 86.9 A160 160 0 0 1 313.1 86.9" fill="none" stroke="#14213D" stroke-opacity=".25" stroke-width="26"/>
+  <path d="M313.1 86.9 A160 160 0 0 1 360 200" fill="none" stroke="#00C46A" stroke-width="26"/>
+  <line id="goal-g-n" x1="200" y1="200" x2="200" y2="62" stroke="#14213D" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="200" cy="200" r="18" fill="#14213D"/></svg>
+      <div class="lb" style="left:600px;top:560px;font-size:44px">tokens / second</div>
+      <div class="lb" style="left:90px;top:820px">4 prompts, in parallel</div>
+      <div class="c gl-t" style="left:90px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:90px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:90px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:90px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:162px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:162px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:162px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:162px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:234px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:234px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:234px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:234px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:306px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:306px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:306px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:306px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:378px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:378px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:378px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:378px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:450px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:450px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:450px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:450px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:522px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:522px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:522px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:522px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:594px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:594px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:594px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:594px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:666px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:666px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:666px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:666px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:738px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:738px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:738px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:738px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:810px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:810px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:810px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:810px;top:1120px;width:64px;height:60px;background:#576A99"></div><div class="c gl-t" style="left:882px;top:880px;width:64px;height:60px;background:#14213D"></div><div class="c gl-t" style="left:882px;top:960px;width:64px;height:60px;background:#2B3B60"></div><div class="c gl-t" style="left:882px;top:1040px;width:64px;height:60px;background:#3E5280"></div><div class="c gl-t" style="left:882px;top:1120px;width:64px;height:60px;background:#576A99"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#goal-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#goal-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#goal-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.2);
+    tl.set("#goal-g-n", { rotation: -60, svgOrigin: "200 200" }, 0);
+    tl.to("#goal-g-n", { rotation: 70, duration: 0.6, svgOrigin: "200 200", ease: "back.out(1.4)" }, 1.1);
+    tl.fromTo(".gl-t", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.1, stagger: 0.025, ease: "back.out(2)" }, 2.5);
+    tl.to("#goal-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 3.43);
+    window.__timelines["goal"] = tl;
+  </script>
+</template>

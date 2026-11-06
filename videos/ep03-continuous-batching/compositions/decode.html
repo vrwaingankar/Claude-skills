@@ -1,0 +1,99 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.c { position: absolute; border-radius: 8px; }
+.pad { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+.rf { position: absolute; border: 4px solid #14213D; border-radius: 14px; }
+.colh { position: absolute; top: 500px; font: 700 30px/1 Inter; opacity: .62; }
+  </style>
+  <div id="root" data-composition-id="decode" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="decode-w" class="w">
+<div id="decode-big" class="big" data-layout-ignore>3</div>
+      <div id="decode-kick" class="kick">Batched generation</div>
+      <div id="decode-ttl" class="ttl" style="font-size:112px">Then <span class="g">decode</span></div>
+      <div class="colh" style="left:90px">prompt · prefill</div><div class="colh" style="left:666px">decode →</div>
+      <div class="rf" style="left:76px;top:546px;width:596px;height:358px"></div>
+      <div class="c pad decode-pad" style="left:90px;top:560px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:162px;top:560px;width:64px;height:70px"></div>
+      <div class="c decode-pr" style="left:234px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c decode-pr" style="left:306px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c decode-pr" style="left:378px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c decode-pr" style="left:450px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c decode-pr" style="left:522px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c decode-pr" style="left:594px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c decode-d0" style="left:666px;top:560px;width:64px;height:70px;background:#14213D;opacity:.75"></div>
+      <div class="c decode-d1" style="left:738px;top:560px;width:64px;height:70px;background:#14213D;opacity:.75"></div>
+      <div class="c decode-d2" style="left:810px;top:560px;width:64px;height:70px;background:#14213D;opacity:.75"></div>
+      <div class="c decode-d3" style="left:882px;top:560px;width:64px;height:70px;background:#14213D;opacity:.75"></div>
+      <div class="c pad decode-pad" style="left:90px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:162px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:234px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:306px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:378px;top:646px;width:64px;height:70px"></div>
+      <div class="c decode-pr" style="left:450px;top:646px;width:64px;height:70px;background:#2B3B60"></div>
+      <div class="c decode-pr" style="left:522px;top:646px;width:64px;height:70px;background:#2B3B60"></div>
+      <div class="c decode-pr" style="left:594px;top:646px;width:64px;height:70px;background:#2B3B60"></div>
+      <div class="c decode-d0" style="left:666px;top:646px;width:64px;height:70px;background:#2B3B60;opacity:.75"></div>
+      <div id="decode-eos" class="c decode-d1" style="left:738px;top:646px;width:64px;height:70px;background:#F3EBDD;border:4px solid #14213D;font:900 28px/62px Inter;text-align:center">eos</div>
+      <div class="c pad decode-d2 decode-waste" style="left:810px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad decode-d3 decode-waste" style="left:882px;top:646px;width:64px;height:70px"></div>
+      <div class="c decode-pr" style="left:90px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:162px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:234px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:306px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:378px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:450px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:522px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-pr" style="left:594px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c decode-d0" style="left:666px;top:732px;width:64px;height:70px;background:#3E5280;opacity:.75"></div>
+      <div class="c decode-d1" style="left:738px;top:732px;width:64px;height:70px;background:#3E5280;opacity:.75"></div>
+      <div class="c decode-d2" style="left:810px;top:732px;width:64px;height:70px;background:#3E5280;opacity:.75"></div>
+      <div class="c decode-d3" style="left:882px;top:732px;width:64px;height:70px;background:#3E5280;opacity:.75"></div>
+      <div class="c pad decode-pad" style="left:90px;top:818px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:162px;top:818px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:234px;top:818px;width:64px;height:70px"></div>
+      <div class="c pad decode-pad" style="left:306px;top:818px;width:64px;height:70px"></div>
+      <div class="c decode-pr" style="left:378px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c decode-pr" style="left:450px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c decode-pr" style="left:522px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c decode-pr" style="left:594px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c decode-d0" style="left:666px;top:818px;width:64px;height:70px;background:#576A99;opacity:.75"></div>
+      <div class="c decode-d1" style="left:738px;top:818px;width:64px;height:70px;background:#576A99;opacity:.75"></div>
+      <div class="c decode-d2" style="left:810px;top:818px;width:64px;height:70px;background:#576A99;opacity:.75"></div>
+      <div class="c decode-d3" style="left:882px;top:818px;width:64px;height:70px;background:#576A99;opacity:.75"></div>
+      <div id="decode-pf" style="position:absolute;left:84px;top:554px;width:580px;height:344px;border-radius:12px;background:#00C46A;opacity:0"></div>
+      <div id="decode-wl" class="lb" style="left:90px;top:960px;color:#D9442B">wasted until the longest finishes</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.set(".decode-pad", { opacity: 0.45 }, 0);
+    tl.fromTo("#decode-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.1);
+    tl.fromTo("#decode-pf", { opacity: 0 }, { opacity: 0.55, duration: 0.2, yoyo: true, repeat: 1, repeatDelay: 0.3 }, 0.25);
+    tl.fromTo(".decode-d0", { scale: 0 }, { scale: 1, duration: 0.15, ease: "back.out(2)" }, 1.8);
+    tl.fromTo(".decode-d1", { scale: 0 }, { scale: 1, duration: 0.15, ease: "back.out(2)" }, 2.4);
+    tl.fromTo(".decode-d2", { scale: 0 }, { scale: 1, duration: 0.15, ease: "back.out(2)" }, 3.0);
+    tl.fromTo(".decode-d3", { scale: 0 }, { scale: 1, duration: 0.15, ease: "back.out(2)" }, 3.6);
+    
+    tl.fromTo("#decode-eos", { borderColor: "#14213D" }, { borderColor: "#D9442B", duration: 0.2 }, 4.5);
+    tl.to(".decode-waste", { scale: 1.15, duration: 0.2, yoyo: true, repeat: 1 }, 5.4);
+    tl.fromTo("#decode-wl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.4);
+    tl.to("#decode-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.3);
+    window.__timelines["decode"] = tl;
+  </script>
+</template>

@@ -1,0 +1,79 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.c { position: absolute; border-radius: 8px; }
+.pad { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+.rf { position: absolute; border: 4px solid #14213D; border-radius: 14px; }
+  </style>
+  <div id="root" data-composition-id="rect" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="rect-w" class="w">
+<div id="rect-big" class="big" data-layout-ignore>3</div>
+      <div id="rect-kick" class="kick">The naive batch</div>
+      <div id="rect-ttl" class="ttl"><span class="g">Rectangle</span></div>
+      <div class="lb" style="left:90px;top:500px;opacity:.62">4 prompts × tokens</div>
+      <div id="rect-frame"><div class="rf" style="left:76px;top:546px;width:596px;height:358px"></div></div>
+      <div class="c pad rect-pad" style="left:90px;top:560px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:162px;top:560px;width:64px;height:70px"></div>
+      <div class="c rect-pr" style="left:234px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c rect-pr" style="left:306px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c rect-pr" style="left:378px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c rect-pr" style="left:450px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c rect-pr" style="left:522px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c rect-pr" style="left:594px;top:560px;width:64px;height:70px;background:#14213D"></div>
+      <div class="c pad rect-pad" style="left:90px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:162px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:234px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:306px;top:646px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:378px;top:646px;width:64px;height:70px"></div>
+      <div class="c rect-pr" style="left:450px;top:646px;width:64px;height:70px;background:#2B3B60"></div>
+      <div class="c rect-pr" style="left:522px;top:646px;width:64px;height:70px;background:#2B3B60"></div>
+      <div class="c rect-pr" style="left:594px;top:646px;width:64px;height:70px;background:#2B3B60"></div>
+      <div class="c rect-pr" style="left:90px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:162px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:234px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:306px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:378px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:450px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:522px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c rect-pr" style="left:594px;top:732px;width:64px;height:70px;background:#3E5280"></div>
+      <div class="c pad rect-pad" style="left:90px;top:818px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:162px;top:818px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:234px;top:818px;width:64px;height:70px"></div>
+      <div class="c pad rect-pad" style="left:306px;top:818px;width:64px;height:70px"></div>
+      <div class="c rect-pr" style="left:378px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c rect-pr" style="left:450px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c rect-pr" style="left:522px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div class="c rect-pr" style="left:594px;top:818px;width:64px;height:70px;background:#576A99"></div>
+      <div id="rect-ml" class="lb" style="left:90px;top:960px">padding on the left</div>
+      <div id="rect-mask" class="lb" style="left:90px;top:1020px">attention mask: pads → 0, ignored</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#rect-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#rect-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#rect-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.25);
+    tl.fromTo(".rect-pr", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.25, stagger: 0.02, ease: "expo.out" }, 0.5);
+    tl.fromTo("#rect-frame", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.6)" }, 1.45);
+    tl.fromTo(".rect-pad", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.2, stagger: 0.04, ease: "back.out(2)" }, 3.45);
+    tl.fromTo("#rect-ml", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "power3.inOut" }, 3.8);
+    tl.fromTo("#rect-mask", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.3);
+    tl.to(".rect-pad", { opacity: 0.45, duration: 0.3 }, 5.75);
+    window.__timelines["rect"] = tl;
+  </script>
+</template>

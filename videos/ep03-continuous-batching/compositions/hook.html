@@ -1,0 +1,43 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#hook-l1, #hook-l2 { position: absolute; left: 84px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+#hook-l1 { top: 230px; } #hook-l2 { top: 380px; }
+#hook-bed { left: 90px; top: 600px; width: 900px; height: 330px; }
+.hk-cr { position: absolute; top: 80px; width: 180px; height: 200px; border: 4px solid #14213D; border-radius: 10px; overflow: hidden; background: #F3EBDD; }
+.hk-foam { position: absolute; inset: 0; background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); opacity: .85; }
+.hk-load { position: absolute; left: 0; right: 0; bottom: 0; background: #14213D; }
+.hk-wh { position: absolute; top: 905px; width: 110px; height: 110px; border-radius: 50%; background: #14213D; border: 14px solid #F3EBDD; box-shadow: 0 0 0 4px #14213D; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="hook-w" class="w">
+<div id="hook-l1">Your GPU is</div>
+      <div id="hook-l2">shipping <span class="g">air</span></div>
+      <div id="hook-bed" class="pn"><div class="lb" style="left:40px;top:24px">one batch · 4 prompts</div><div class="hk-cr" style="left:40px"><div class="hk-foam"></div><div class="hk-load" style="height:60px"></div></div><div class="hk-cr" style="left:250px"><div class="hk-foam"></div><div class="hk-load" style="height:120px"></div></div><div class="hk-cr" style="left:460px"><div class="hk-foam"></div><div class="hk-load" style="height:40px"></div></div><div class="hk-cr" style="left:670px"><div class="hk-foam"></div><div class="hk-load" style="height:90px"></div></div></div>
+      <div class="hk-wh" style="left:200px"></div><div class="hk-wh" style="left:770px"></div>
+      <div class="lb" style="left:90px;top:1060px">red = padding, not tokens</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#hook-bed", { x: 0 }, { x: 14, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.4);
+    tl.fromTo(".hk-foam", { opacity: 0.85 }, { opacity: 0.45, duration: 0.2, stagger: 0.08, yoyo: true, repeat: 3 }, 1.4);
+    tl.to("#hook-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 3.53);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

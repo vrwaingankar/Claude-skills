@@ -1,0 +1,72 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.c { position: absolute; border-radius: 8px; }
+.pad { background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); }
+  </style>
+  <div id="root" data-composition-id="ragged" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="ragged-w" class="w">
+<div id="ragged-big" class="big" data-layout-ignore>3</div>
+      <div id="ragged-kick" class="kick">The fix</div>
+      <div id="ragged-ttl" class="ttl" style="font-size:112px">Drop the <span class="g">axis</span></div>
+      <div class="c ragged-t" data-dx="-104" data-dy="180" style="left:194px;top:520px;width:38px;height:48px;background:#14213D"></div>
+      <div class="c ragged-t" data-dx="-114" data-dy="180" style="left:246px;top:520px;width:38px;height:48px;background:#14213D"></div>
+      <div class="c ragged-t" data-dx="-124" data-dy="180" style="left:298px;top:520px;width:38px;height:48px;background:#14213D"></div>
+      <div class="c ragged-t" data-dx="-134" data-dy="180" style="left:350px;top:520px;width:38px;height:48px;background:#14213D"></div>
+      <div class="c ragged-t" data-dx="-144" data-dy="180" style="left:402px;top:520px;width:38px;height:48px;background:#14213D"></div>
+      <div class="c ragged-t" data-dx="-154" data-dy="180" style="left:454px;top:520px;width:38px;height:48px;background:#14213D"></div>
+      <div class="c pad ragged-pad" style="left:90px;top:520px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:142px;top:520px;width:46px;height:48px"></div>
+      <div class="c ragged-t" data-dx="-8" data-dy="120" style="left:350px;top:580px;width:38px;height:48px;background:#2B3B60"></div>
+      <div class="c ragged-t" data-dx="-18" data-dy="120" style="left:402px;top:580px;width:38px;height:48px;background:#2B3B60"></div>
+      <div class="c ragged-t" data-dx="-28" data-dy="120" style="left:454px;top:580px;width:38px;height:48px;background:#2B3B60"></div>
+      <div class="c pad ragged-pad" style="left:90px;top:580px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:142px;top:580px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:194px;top:580px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:246px;top:580px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:298px;top:580px;width:46px;height:48px"></div>
+      <div class="c ragged-t" data-dx="378" data-dy="60" style="left:90px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="368" data-dy="60" style="left:142px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="358" data-dy="60" style="left:194px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="348" data-dy="60" style="left:246px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="338" data-dy="60" style="left:298px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="328" data-dy="60" style="left:350px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="318" data-dy="60" style="left:402px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="308" data-dy="60" style="left:454px;top:640px;width:38px;height:48px;background:#3E5280"></div>
+      <div class="c ragged-t" data-dx="506" data-dy="0" style="left:298px;top:700px;width:38px;height:48px;background:#576A99"></div>
+      <div class="c ragged-t" data-dx="496" data-dy="0" style="left:350px;top:700px;width:38px;height:48px;background:#576A99"></div>
+      <div class="c ragged-t" data-dx="486" data-dy="0" style="left:402px;top:700px;width:38px;height:48px;background:#576A99"></div>
+      <div class="c ragged-t" data-dx="476" data-dy="0" style="left:454px;top:700px;width:38px;height:48px;background:#576A99"></div>
+      <div class="c pad ragged-pad" style="left:90px;top:700px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:142px;top:700px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:194px;top:700px;width:46px;height:48px"></div>
+      <div class="c pad ragged-pad" style="left:246px;top:700px;width:46px;height:48px"></div>
+      <div id="ragged-lb" class="lb" style="left:90px;top:780px">one row · 21 tokens · 0 padding</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#ragged-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#ragged-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#ragged-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.35);
+    tl.to(".ragged-pad", { opacity: 0, scale: 0.2, duration: 0.25, stagger: 0.02, ease: "power2.in" }, 0.9);
+    tl.to(".ragged-t", { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, duration: 0.7, stagger: 0.02, ease: "power3.inOut" }, 2.5);
+    tl.fromTo("#ragged-lb", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 2.9);
+    window.__timelines["ragged"] = tl;
+  </script>
+</template>

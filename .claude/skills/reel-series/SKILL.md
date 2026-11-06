@@ -8,7 +8,7 @@ description: Lessons and scripts from making Vinit's AI-inference Instagram Reel
 Read `/hyperframes` first for the render contract; this file holds only what is specific to this series and this environment. Add to it whenever an episode teaches something new.
 
 ## The series
-- Instagram Reel, 1080×1920, 30 fps, **up to ~80 s is fine** (Vinit, ep02: "even if it's 79 seconds, that's fine"). Keep the facts and a natural pace rather than cutting to hit 60. Aim for 60–80 s. One folder per episode: `videos/epNN-<slug>/` with STORYLINES.md → SPEC.md → SCRIPT.md, then index.html + `compositions/` (one scene per script line).
+- Instagram Reel, 1080×1920, 30 fps, **up to ~85 s is fine** (Vinit, ep02: "even if it's 79 seconds, that's fine"). Keep the facts and a natural pace rather than cutting to hit 60. Aim for 60–80 s. One folder per episode: `videos/epNN-<slug>/` with STORYLINES.md → SPEC.md → SCRIPT.md, then index.html + `compositions/` (one scene per script line).
 - Look carried over from ep00 (keep it unless Vinit asks): sand ground #E6D8BF with a 4% navy grid, ink navy #14213D, one green accent #00C46A, Inter 900 titles at x=90, engineering line art, the endless zoom through a green dot at (540,760). Handle on the end card: **@vr_waingankar**. Photo: `videos/ep00-series-intro/assets/vinit.jpg`.
 - Vinit is a **Senior AI Architect and Tech Lead** (name card: "Sr AI Architect · Tech Lead"). His name is spelled **Vinit** on screen but said **"Vineeth"** (vi-NEETH).
 - Vinit follows on his iPhone: keep replies short, send files with SendUserFile, and send A/B samples when a choice is his to make (he picked the voice from three samples).
@@ -49,13 +49,19 @@ Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed
 - A line that is long relative to its visuals leaves dead air: add a beat (ep00 added a small scale punch on "Inference"), or lengthen the pause instead of stretching the line.
 
 ## Episode log
-- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). **ep02** Batching (grid + bus hook + two clocks, 67 s). Next: **ep03 Continuous batching, in depth**, then caching, quantization, speculation, parallelism, disaggregation.
+- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). **ep02** Batching (grid + bus hook + two clocks, 80 s). **ep03** Continuous batching, in depth (padded grid → 693 → ragged row → block-diagonal mask → token budget M, 83 s). Next: **ep04 Asynchronous batching**, then caching, quantization, speculation, parallelism, disaggregation.
 - Vinit tends to answer "Mix" to the three storylines: keep the clearest one as the spine, the most visual opener as the hook, and the bold one as the ending.
 - **Episode opening (Vinit's rule from ep01):** hook → his intro (same name card as ep00: photo, "Vinit", "Sr AI Architect · Tech Lead", spoken "Hi, I'm Vineeth, a senior AI architect and tech lead.") → a 2–3 s recap of the previous episode → the topic. Budget ~10 s for these three.
 - The name reads cleanest at speed 0.95: at 1.04 whisper heard "Vanith", so generate the name line at 0.95 even when the rest runs faster.
 - Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. About **130 words** is ~60 s of narration and **~180 words** is ~80 s. ep01's first draft (~180 words) ran 77 s.
 - Vinit sends source text from a book (Baseten's on inference). Paraphrase it, keep only its facts, and drop first-person company anecdotes.
 - When Vinit says "mix with more of X", keep X's spine and borrow one device each from the others.
+
+## Build lessons (ep03)
+- **Never give an element the id `<scene>-w`**: that's the scene wrapper `scene()` creates, so `#decode-w` hit the wrapper and the label's clip reveal blanked the whole scene. Name labels `-wl`, `-lb` and so on.
+- A later `fromTo` on the same element re-renders its from-state at creation, undoing an earlier hide (e.g. `scale: 0`). Use `tl.to` for pulses on elements that animate in earlier.
+- Counting numbers: `tl.fromTo(el, { textContent: 0 }, { textContent: 693, snap: { textContent: 1 } })` is deterministic and seek-safe.
+- A label carried across a match cut still triggers the check's text-hold warning. Repeating it in the next scene is fine; ignore that warning.
 
 ## Build lessons (ep02)
 - Start a new episode by copying `videos/ep02-batching/{gen_scenes.py,build_index.py}`. Both import the shared look from `scripts/reel_lib.py` (BASE CSS, `gpu()`, `gauge()`, `scene()`, `ENTER`, `EXIT`, `BIG`). Keep the VO text in `vo_lines.py` and the layout in `vo_layout.json` inside the episode folder.
