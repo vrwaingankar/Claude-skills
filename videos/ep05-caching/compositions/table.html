@@ -1,0 +1,45 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.tb-r { left: 90px; width: 900px; height: 105px; }
+.tb-u { position: absolute; left: 26px; top: 34px; font: 700 34px/1 Inter; white-space: nowrap; }
+.tb-l { position: absolute; right: 20px; top: 22px; padding: 10px 20px; border-radius: 12px; background: #14213D; color: #E6D8BF; font: 900 32px/1 Inter; }
+  </style>
+  <div id="root" data-composition-id="table" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="table-w" class="w">
+<div id="table-big" class="big" data-layout-ignore>5</div>
+      <div id="table-kick" class="kick">Use case → layer</div>
+      <div id="table-ttl" class="ttl" style="font-size:112px">Which <span class="g">one?</span></div>
+      <div id="table-rows"><div class="tb-r pn" style="top:480px"><div class="tb-u">Every app, always</div><div class="tb-l">KV</div></div><div class="tb-r pn" style="top:605px"><div class="tb-u">Long shared system prompt</div><div class="tb-l">Prefix</div></div><div class="tb-r pn" style="top:730px"><div class="tb-u">RAG with large shared docs</div><div class="tb-l">Prefix</div></div><div class="tb-r pn" style="top:855px"><div class="tb-u">Agents with large stable context</div><div class="tb-l">Prefix</div></div><div class="tb-r pn" style="top:980px"><div class="tb-u">High volume, paraphrased questions</div><div class="tb-l">Semantic</div></div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#table-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#table-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#table-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.2);
+    tl.fromTo("#table-rows .tb-r:nth-child(1)", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 0.35);
+    tl.fromTo("#table-rows .tb-r:nth-child(2)", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 2.85);
+    tl.fromTo("#table-rows .tb-r:nth-child(3)", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 4.3);
+    tl.fromTo("#table-rows .tb-r:nth-child(4)", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 4.85);
+    tl.fromTo("#table-rows .tb-r:nth-child(5)", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 7.1);
+    
+    tl.to("#table-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 10.03);
+    window.__timelines["table"] = tl;
+  </script>
+</template>

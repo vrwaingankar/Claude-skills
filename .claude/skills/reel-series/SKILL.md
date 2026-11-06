@@ -49,13 +49,19 @@ Chatterbox (MIT) via `scripts/clone_voice.py`: the raw sample is never committed
 - A line that is long relative to its visuals leaves dead air: add a beat (ep00 added a small scale punch on "Inference"), or lengthen the pause instead of stretching the line.
 
 ## Episode log
-- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). **ep02** Batching (grid + bus hook + two clocks, 80 s). **ep03** Continuous batching, in depth (padded grid → 693 → ragged row → block-diagonal mask → token budget M, 83 s). **ep04** Asynchronous batching (kitchen hook → CPU/GPU lanes → streams/events → slots A/B → carry-over → two stopwatches, 85 s; source: HF blog continuous_async). Next: **ep05 Caching**, then quantization, speculation, parallelism, disaggregation.
+- **ep00** series intro (storyline A, endless zoom). **ep01** Chapter 0: Inference (A + B + C mix: stall → stack rebuilds → runtime stack → six dials). **ep02** Batching (grid + bus hook + two clocks, 80 s). **ep03** Continuous batching, in depth (padded grid → 693 → ragged row → block-diagonal mask → token budget M, 83 s). **ep04** Asynchronous batching (kitchen hook → CPU/GPU lanes → streams/events → slots A/B → carry-over → two stopwatches, 85 s; source: HF blog continuous_async). **ep05** Caching overview (barista hook → three-floor building KV/prefix/semantic → use-case table, 86 s). Caching is a mini-series from one article (Machine Learning Mastery, Bala Priya C): **ep06 KV caching**, **ep07 prefix caching**, **ep08 semantic caching**, one concept each, with the plan in `videos/ep05-caching/STORYLINES.md`. After that come quantization, speculation, parallelism and disaggregation.
+- Long sources become mini-series: a high-level overview episode first, then one concept per episode (Vinit's rule from ep05).
 - Vinit tends to answer "Mix" to the three storylines: keep the clearest one as the spine, the most visual opener as the hook, and the bold one as the ending.
 - **Episode opening (Vinit's rule from ep01):** hook → his intro (same name card as ep00: photo, "Vinit", "Sr AI Architect · Tech Lead", spoken "Hi, I'm Vineeth, a senior AI architect and tech lead.") → a 2–3 s recap of the previous episode → the topic. Budget ~10 s for these three.
 - The name reads cleanest at speed 0.95: at 1.04 whisper heard "Vanith", so generate the name line at 0.95 even when the rest runs faster.
 - Script length: Kokoro `am_michael` at 1.0 speaks ≈ 2.4 words/s. About **130 words** is ~60 s of narration and **~180 words** is ~80 s. ep01's first draft (~180 words) ran 77 s.
 - Vinit sends source text from a book (Baseten's on inference). Paraphrase it, keep only its facts, and drop first-person company anecdotes.
 - When Vinit says "mix with more of X", keep X's spine and borrow one device each from the others.
+
+## Build lessons (ep05)
+- A blocked source site: add the exact host to the environment with update_environment (get_environment first). WebFetch may still fail to resolve; plain `curl` (no spoofed User-Agent) works, then extract the text locally with a small HTML-to-text script run with `python -I`.
+- `data-layout-ignore` on small repeated cell labels clears text-hold and type-floor noise, but the check then ignores their motion too: add a caption so a scene doesn't read as "nothing changes".
+- White text on the red hatch fails contrast. Use navy text on a light red (#F6D5CE) with a red border.
 
 ## Build lessons (ep04)
 - Vinit may send just a URL. Fetch it with WebFetch, ask for a faithful summary with exact numbers, and treat that as the notes.

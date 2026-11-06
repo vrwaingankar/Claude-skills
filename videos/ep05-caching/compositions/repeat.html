@@ -1,0 +1,48 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.rp-r { position: absolute; left: 90px; width: 900px; height: 76px; }
+.rp-sp { position: absolute; left: 0; top: 0; width: 700px; height: 76px; border-radius: 12px; background: #F6D5CE; border: 4px solid #D9442B; color: #14213D; font: 900 30px/76px Inter; padding-left: 24px; }
+.rp-u { position: absolute; left: 716px; top: 0; width: 184px; height: 76px; border-radius: 12px; background: #14213D; color: #E6D8BF; font: 700 30px/76px Inter; text-align: center; }
+.rp-q { position: absolute; left: 90px; width: 640px; height: 80px; border-radius: 20px; background: #F3EBDD; border: 4px solid #14213D; font: 700 34px/72px Inter; padding-left: 24px; white-space: nowrap; }
+.rp-n { position: absolute; left: 760px; width: 230px; height: 80px; border-radius: 20px; background: #F6D5CE; border: 4px solid #D9442B; color: #14213D; font: 900 28px/80px Inter; text-align: center; }
+  </style>
+  <div id="root" data-composition-id="repeat" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="repeat-w" class="w">
+<div id="repeat-big" class="big" data-layout-ignore>5</div>
+      <div id="repeat-kick" class="kick">Repeated work</div>
+      <div id="repeat-rq"><div class="rp-r" style="top:500px"><div class="rp-sp">system prompt · recomputed</div><div class="rp-u">user</div></div><div class="rp-r" style="top:592px"><div class="rp-sp">system prompt · recomputed</div><div class="rp-u">user</div></div><div class="rp-r" style="top:684px"><div class="rp-sp">system prompt · recomputed</div><div class="rp-u">user</div></div><div class="rp-r" style="top:776px"><div class="rp-sp">system prompt · recomputed</div><div class="rp-u">user</div></div></div>
+      <div id="repeat-q1" class="rp-q" style="top:910px">How do I reset my password?</div>
+      <div id="repeat-n1" class="rp-n" style="top:910px">new answer</div>
+      <div id="repeat-q2" class="rp-q" style="top:1020px">How can I reset my password?</div>
+      <div id="repeat-n2" class="rp-n" style="top:1020px">new answer</div>
+      <div class="lb" style="left:90px;top:1140px;opacity:.62">example questions</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#repeat-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#repeat-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#repeat-rq .rp-r", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.55, ease: "expo.out" }, 0.6);
+    tl.fromTo("#repeat-q1, #repeat-q2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.5, ease: "expo.out" }, 4.1);
+    tl.fromTo("#repeat-n1", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.0, ease: "back.out(1.8)" }, 4.9);
+    tl.fromTo("#repeat-n2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.0, ease: "back.out(1.8)" }, 5.4);
+    tl.to("#repeat-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 6.07);
+    window.__timelines["repeat"] = tl;
+  </script>
+</template>

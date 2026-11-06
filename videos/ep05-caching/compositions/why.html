@@ -1,0 +1,49 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#why-bill { left: 90px; top: 520px; width: 640px; height: 640px; }
+.bl-l { position: absolute; left: 150px; height: 26px; border-radius: 13px; background: rgba(20,33,61,.25); }
+.bl-r { position: absolute; left: 150px; height: 26px; border-radius: 13px; background: repeating-linear-gradient(45deg, #D9442B 0 7px, #E8806C 7px 14px); transform-origin: 0 50%; }
+.wy-t { position: absolute; left: 780px; font: 900 48px/1 Inter; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="why" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="why-w" class="w">
+<div id="why-big" class="big" data-layout-ignore>5</div>
+      <div id="why-kick" class="kick">Why caching</div>
+      <div id="why-ttl" class="ttl" style="font-size:112px">The <span class="g">bill</span></div>
+      <div id="why-bill" class="pn"><div class="lb" style="left:30px;top:30px">token bill (illustrative)</div></div>
+      <div class="bl-l" style="top:620px;width:520px"></div><div class="bl-l" style="top:672px;width:440px"></div><div class="bl-l" style="top:724px;width:560px"></div><div class="bl-l" style="top:776px;width:480px"></div><div class="bl-l" style="top:828px;width:520px"></div><div class="bl-l" style="top:880px;width:400px"></div><div class="bl-l" style="top:932px;width:540px"></div><div class="bl-r" style="top:672px;width:440px"></div><div class="bl-r" style="top:724px;width:560px"></div><div class="bl-r" style="top:828px;width:520px"></div><div class="bl-r" style="top:880px;width:400px"></div>
+      <div id="why-s" class="wy-t" style="top:600px">slow</div>
+      <div id="why-e" class="wy-t" style="top:690px">costly</div>
+      <div id="why-rl" class="lb" style="left:90px;top:1200px;color:#D9442B;font-size:44px">red = repeated work</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#why-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#why-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#why-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.3);
+    tl.fromTo(".bl-l", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.25, stagger: 0.12, ease: "power2.out" }, 0.6);
+    tl.fromTo("#why-s", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.0, ease: "back.out(1.8)" }, 2.1);
+    tl.fromTo("#why-e", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.0, ease: "back.out(1.8)" }, 2.75);
+    tl.fromTo(".bl-r", { scaleX: 0 }, { scaleX: 1, duration: 0.3, stagger: 0.08, ease: "power2.out" }, 4.85);
+    tl.fromTo("#why-rl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 3.4);
+    tl.to("#why-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.43);
+    window.__timelines["why"] = tl;
+  </script>
+</template>

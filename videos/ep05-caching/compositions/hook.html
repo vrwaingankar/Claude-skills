@@ -1,0 +1,42 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+#hook-l1, #hook-l2 { position: absolute; left: 84px; font: 900 112px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+#hook-l1 { top: 230px; } #hook-l2 { top: 370px; }
+.hk-cup { top: 620px; width: 200px; height: 260px; border-radius: 0 0 40px 40px; }
+.hk-lid { position: absolute; left: -14px; top: -30px; width: 220px; height: 30px; border-radius: 12px; background: #14213D; }
+.hk-tag { position: absolute; left: 10px; right: 10px; top: 100px; padding: 10px 0; border-radius: 10px; background: #F6D5CE; border: 4px solid #D9442B; color: #14213D; font: 900 28px/1 Inter; text-align: center; }
+#hook-app { position: absolute; left: 90px; top: 960px; font: 900 64px/1 Inter; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="hook-w" class="w">
+<div id="hook-l1">Same order.</div>
+      <div id="hook-l2">From <span class="g">scratch.</span></div>
+      <div class="hk-cup pn" style="left:90px"><div class="hk-lid"></div><div class="hk-tag">from scratch</div></div><div class="hk-cup pn" style="left:320px"><div class="hk-lid"></div><div class="hk-tag">from scratch</div></div><div class="hk-cup pn" style="left:550px"><div class="hk-lid"></div><div class="hk-tag">from scratch</div></div><div class="hk-cup pn" style="left:780px"><div class="hk-lid"></div><div class="hk-tag">from scratch</div></div>
+      <div class="lb" style="left:90px;top:900px">every single time</div>
+      <div id="hook-app">= most LLM apps</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo(".hk-cup", { y: 0 }, { y: -18, duration: 0.15, stagger: 0.25, yoyo: true, repeat: 1, ease: "power2.out" }, 1.9);
+    tl.fromTo("#hook-app", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.inOut" }, 4.5);
+    tl.to("#hook-w", { scale: 6, opacity: 0, duration: 0.5, ease: "power2.in" }, 5.43);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>
