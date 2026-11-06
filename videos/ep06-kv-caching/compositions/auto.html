@@ -1,0 +1,40 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: #14213D; }
+.w { position: absolute; inset: 0; transform-origin: 540px 760px; }
+.kick { position: absolute; left: 90px; top: 214px; font: 700 40px/1 Inter; color: #14213D; opacity: .62; white-space: nowrap; }
+.ttl { position: absolute; left: 84px; top: 268px; font: 900 128px/1 Inter; letter-spacing: -0.035em; white-space: nowrap; }
+.sub { position: absolute; left: 90px; top: 1168px; width: 900px; font: 700 44px/1.25 Inter; }
+.big { position: absolute; right: -30px; top: 1270px; font: 900 760px/1 Inter; color: #14213D; opacity: .07; letter-spacing: -0.06em; }
+.pn { position: absolute; background: #F3EBDD; border: 4px solid #14213D; border-radius: 18px; box-shadow: 0 10px 0 rgba(20,33,61,.12); }
+.lb { position: absolute; font: 700 34px/1 Inter; white-space: nowrap; }
+.dot { position: absolute; left: 0; top: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; background: #00C46A; z-index: 50; }
+.g { background: linear-gradient(transparent 64%, #00C46A 64%, #00C46A 92%, transparent 92%); }
+.gpu { position: absolute; width: 300px; height: 170px; }
+.gpu .die { position: absolute; left: 70px; top: 26px; width: 160px; height: 110px; background: #14213D; border-radius: 10px; }
+.gpu .cell { position: absolute; width: 30px; height: 22px; border-radius: 4px; background: #2B3B60; }
+.gpu .gl { position: absolute; left: 22px; top: 62px; font: 900 30px/1 Inter; }
+.tok { position: absolute; width: 56px; height: 40px; border-radius: 8px; background: #14213D; }
+
+.tk { position: absolute; width: 84px; height: 84px; border-radius: 14px; background: #3E5280; color: #F3EBDD; font: 900 30px/84px Inter; text-align: center; }
+.mini { position: absolute; width: 34px; height: 34px; border-radius: 6px; background: #3E5280; }
+.lbl { position: absolute; font: 700 34px/1.2 Inter; white-space: nowrap; }
+.tag { position: absolute; padding: 10px 20px; border-radius: 12px; font: 900 32px/1 Inter; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="auto" data-width="1080" data-height="1920" data-layout-allow-overflow>
+    <div id="auto-w" class="w">
+<div id="auto-big" class="big" data-layout-ignore>6</div>
+      <div id="auto-kick" class="kick">Decoding</div>
+      <div id="auto-ttl" class="ttl" style="font-size:112px">One at a <span class="g">time</span></div>
+      <div class="tk auto-t" style="left:90px;top:560px">1</div><div class="tk auto-t" style="left:214px;top:560px">2</div><div class="tk auto-t" style="left:338px;top:560px">3</div><div class="tk auto-t" style="left:462px;top:560px">4</div><div class="tk auto-t" style="left:586px;top:560px">5</div><div class="tk auto-t" style="left:710px;top:560px">6</div><div class="tk auto-t" style="left:834px;top:560px">7</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#auto-w", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#auto-kick", { opacity: 0 }, { opacity: 0.62, duration: 0.3 }, 0.15);
+    tl.fromTo("#auto-ttl", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.inOut" }, 0.2);
+    tl.fromTo(".auto-t", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.15, stagger: 0.25, ease: "back.out(2)" }, 0.4);
+    window.__timelines["auto"] = tl;
+  </script>
+</template>
